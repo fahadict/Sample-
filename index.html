@@ -3,112 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jamal Fahad Mohamed | ICT Teacher & Digital Trainer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <title>Jamal Fahad Mohamed | Pearson Edexcel ICT Teacher & Digital Skills Trainer Hargeisa</title>
+    <meta name="description" content="Professional ICT Teacher and Digital Skills Trainer in Somaliland. Specializing in Pearson Edexcel ICT, Web Design Instructor Hargeisa, and Microsoft Office training.">
+    <meta name="keywords" content="ICT Teacher Hargeisa, ICT Trainer Somaliland, Pearson Edexcel ICT Teacher, Digital Skills Trainer Somalia, Web Design Instructor Hargeisa, Computer Science Tutor Somaliland">
     
+    <meta property="og:title" content="Jamal Fahad Mohamed | ICT Teacher & Digital Skills Trainer">
+    <meta property="og:description" content="Professional ICT Teacher in Hargeisa specializing in Pearson Edexcel ICT, Web Design, Digital Literacy, and Microsoft Office Training.">
+    <meta property="og:image" content="https://fahadict.github.io/tech/assets/images/jamal-profile.jpg">
+    <meta property="og:url" content="https://fahadict.github.io/tech">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jamal Fahad Mohamed">
+    <meta name="twitter:description" content="Pearson Edexcel ICT Teacher & Digital Skills Trainer">
+    <meta name="twitter:image" content="https://fahadict.github.io/tech/assets/images/jamal-profile.jpg">
+
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"Person",
+     "name":"Jamal Fahad Mohamed",
+     "jobTitle":"ICT Teacher",
+     "url":"https://fahadict.github.io/tech",
+     "email":"teacherfahadh@gmail.com",
+     "telephone":"+252636710907",
+     "address":{
+       "@type":"PostalAddress",
+       "addressLocality":"Hargeisa",
+       "addressCountry":"Somaliland"
+     }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #00B4D8;
-            --secondary: #06D6A0;
-            --dark-bg: #090d16;
-            --card-bg: #131c2e;
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --card-border: rgba(255, 255, 255, 0.08);
-            --transition: all 0.3s ease;
+            --primary: #00B4D8; --primary-glow: rgba(0, 180, 216, 0.15);
+            --secondary: #06D6A0; --secondary-glow: rgba(6, 214, 160, 0.2);
+            --dark-bg: #090d16; --card-bg: #131c2e; --card-border: rgba(255, 255, 255, 0.05);
+            --text-main: #f1f5f9; --text-muted: #94a3b8;
+            --font-display: 'Space Grotesk', sans-serif; --font-body: 'Plus Jakarta Sans', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--dark-bg); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.6; padding-top: 80px; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--dark-bg); color: var(--text-main); font-family: var(--font-body); line-height: 1.7; padding-top: 70px; }
 
-        /* Simplified Navigation */
-        nav {
-            position: fixed; top: 0; width: 100%; height: 70px;
-            background: rgba(9, 13, 22, 0.95); backdrop-filter: blur(10px);
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 0 5%; z-index: 1000; border-bottom: 1px solid var(--card-border);
-        }
-
-        .nav-logo { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.2rem; color: #fff; text-decoration: none; }
+        nav { position: fixed; top: 0; left: 0; width: 100%; height: 70px; background: rgba(9, 13, 22, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--card-border); z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; }
+        .nav-logo { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 8px; }
         .nav-logo span { color: var(--primary); }
-
-        .nav-links { display: flex; list-style: none; gap: 30px; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: var(--transition); }
+        .nav-links { display: flex; gap: 25px; list-style: none; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: var(--transition); }
         .nav-links a:hover { color: var(--primary); }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+        .nav-toggle span { width: 25px; height: 2px; background: var(--text-main); }
 
-        /* Mobile Menu */
-        .nav-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-        .nav-toggle span { width: 25px; height: 2px; background: white; }
+        header { min-height: calc(100vh - 70px); display: flex; justify-content: center; align-items: center; text-align: center; padding: 60px 24px; }
+        .profile { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--primary); margin-bottom: 25px; object-fit: cover; }
+        .btn { display: inline-flex; padding: 16px 36px; border-radius: 10px; font-weight: 700; text-decoration: none; transition: var(--transition); cursor: pointer; margin: 10px; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-outline { border: 2px solid #1e293b; color: white; }
+
+        section { padding: 80px 10%; }
+        .section-title { font-family: var(--font-display); text-align: center; font-size: 2.6rem; margin-bottom: 60px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+        .card { background: var(--card-bg); padding: 40px; border-radius: 16px; border: 1px solid var(--card-border); }
+        .form-control { width: 100%; padding: 14px; background: var(--dark-bg); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; color: white; margin-bottom: 20px; }
 
         @media (max-width: 992px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: var(--dark-bg); padding: 20px; text-align: center; }
             .nav-toggle { display: flex; }
-            .nav-links { 
-                display: none; flex-direction: column; position: absolute; top: 70px; left: 0; 
-                width: 100%; background: var(--dark-bg); padding: 20px; border-bottom: 1px solid var(--card-border);
-            }
-            .nav-links.active { display: flex; }
         }
-
-        /* Responsive Hero */
-        header { padding: 80px 5%; text-align: center; }
-        .hero-title { font-size: 3rem; margin-bottom: 1rem; }
-        .btn { padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; }
-        .btn-primary { background: var(--primary); color: #090d16; }
-
-        /* Responsive Grids */
-        section { padding: 80px 5%; max-width: 1200px; margin: auto; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--card-border); }
     </style>
 </head>
 <body>
 
     <nav>
         <a href="#" class="nav-logo">JAMAL<span>.ICT</span></a>
-        <ul class="nav-links" id="menu">
-            <li><a href="#home">Home</a></li>
+        <ul class="nav-links">
+            <li><a href="#hero-header">Home</a></li>
             <li><a href="#about">Profile</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#capabilities">Capabilities</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Engagement</a></li>
         </ul>
-        <div class="nav-toggle" onclick="document.getElementById('menu').classList.toggle('active')">
+        <div class="nav-toggle" onclick="toggleMobileMenu()">
             <span></span><span></span><span></span>
         </div>
     </nav>
 
-    <header id="home">
-        <h1>Jamal Fahad Mohamed</h1>
-        <p>Pearson Edexcel ICT Teacher & Digital Skills Trainer</p>
-        <div style="margin-top: 30px;">
-            <a href="#contact" class="btn btn-primary">Work With Me</a>
+    <header id="hero-header">
+        <div class="hero">
+            <img src="assets/images/jamal-profile.jpg" alt="Jamal Fahad Mohamed" class="profile">
+            <h1>Jamal Fahad Mohamed</h1>
+            <p>Pearson Edexcel ICT Teacher | Digital Skills Trainer | Hargeisa</p>
+            <div class="buttons">
+                <a href="assets/documents/cv.pdf" class="btn btn-outline">View CV</a>
+                <a href="assets/documents/cv.pdf" download class="btn btn-primary">Download CV</a>
+            </div>
         </div>
     </header>
 
     <section id="about">
-        <h2>Professional Profile</h2>
+        <h2 class="section-title">Professional Profile</h2>
         <div class="card">
-            <p>Dedicated ICT professional with 7+ years of experience bridging academic theory and technical practice in Hargeisa.</p>
+            <p>Dedicated ICT Teacher and Digital Skills Trainer based in Hargeisa. Specialized in Pearson Edexcel curriculum, web design, and school digital infrastructure.</p>
         </div>
     </section>
 
     <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="grid">
-            <div class="card"><h3>Teaching Evidence</h3><p>Lesson plans and syllabus resources.</p></div>
-            <div class="card"><h3>Projects</h3><p>Web development and database systems.</p></div>
-            <div class="card"><h3>Certifications</h3><p>Professional credentials and milestones.</p></div>
+        <h2 class="section-title">Projects</h2>
+        <div class="portfolio-filters">
+            <button class="filter-btn" onclick="filterGallery(event, 'all')">All</button>
+            <button class="filter-btn" onclick="filterGallery(event, 'web')">Web</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="project" data-category="web"><h3>School Portal</h3></div>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Get In Touch</h2>
-        <p>Email: teacherfahadh@gmail.com | Phone: +252 63 6710907</p>
+        <h2 class="section-title">Contact</h2>
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <input type="text" name="name" class="form-control" placeholder="Institution Name" required>
+            <input type="email" name="email" class="form-control" placeholder="Official Email" required>
+            <textarea name="message" class="form-control" placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <div class="social-link-matrix">
+            <a href="mailto:teacherfahadh@gmail.com" class="social-badge">Email</a>
+            <a href="https://wa.me/252636710907" class="social-badge">WhatsApp</a>
+            <a href="https://so.linkedin.com/in/jamal-mohamed-b547993bb" class="social-badge">LinkedIn</a>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Jamal Fahad Mohamed. All Rights Reserved.</p>
-    </footer>
-
+    <script>
+        function toggleMobileMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+        }
+        function filterGallery(e, cat) {
+            document.querySelectorAll('.project').forEach(p => {
+                p.style.display = (cat === 'all' || p.getAttribute('data-category') === cat) ? 'block' : 'none';
+            });
+        }
+        function toggleFaq(el) {
+            const ans = el.nextElementSibling;
+            ans.style.maxHeight = ans.style.maxHeight ? null : ans.scrollHeight + "px";
+        }
+    </script>
 </body>
 </html>
