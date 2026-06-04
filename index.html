@@ -841,26 +841,47 @@ JAMAL<span>.ICT</span>
 
             <form>
 
-                <input type="text"
-                       placeholder="Your Name"
-                       style="width:100%;padding:15px;margin-bottom:15px;border-radius:12px;border:none;">
+                <style>
+  .contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; 
+    /* Increased padding for a larger, more comfortable click area */
+    padding: 22px 30px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    /* Larger, more prominent text */
+    font-size: 1.3rem; 
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  .contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  }
+</style>
 
-                <input type="email"
-                       placeholder="Your Email"
-                       style="width:100%;padding:15px;margin-bottom:15px;border-radius:12px;border:none;">
+<div style="margin-top: 40px; padding: 0 10px;">
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/252636710907" 
+     class="contact-btn" 
+     style="background: linear-gradient(135deg, #25d366, #128c7e);">
+     <i class="fa-brands fa-whatsapp" style="font-size: 1.6rem;"></i>
+     Chat on WhatsApp
+  </a>
 
-                <textarea
-                    placeholder="Your Message"
-                    rows="6"
-                    style="width:100%;padding:15px;margin-bottom:15px;border-radius:12px;border:none;"></textarea>
-
-                <button class="btn btn-primary"
-                        type="submit"
-                        style="border:none;cursor:pointer;">
-                    Send Message
-                </button>
-
-            </form>
+  <!-- Call Button -->
+  <a href="tel:+252636710907" 
+     class="contact-btn" 
+     style="background: linear-gradient(135deg, #007bff, #0056b3);">
+     <i class="fa-solid fa-phone" style="font-size: 1.4rem;"></i>
+     Call Directly
+  </a>
+</div>
 
         </div>
 
