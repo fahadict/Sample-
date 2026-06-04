@@ -10,14 +10,20 @@
 
 <meta name="keywords" content="ICT Teacher Hargeisa, ICT Trainer Somaliland, Pearson Edexcel ICT Teacher, Digital Skills Trainer Somalia, Web Design Instructor Hargeisa, Computer Science Tutor Somaliland">
 
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
+<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-/* ================= ROOT ================= */
+/* =========================================================
+   DESIGN SYSTEM (ELITE FOUNDATION)
+========================================================= */
+
 :root{
+
     --primary:#38bdf8;
     --secondary:#22c55e;
     --accent:#8b5cf6;
@@ -26,16 +32,25 @@
     --bg2:#0f172a;
 
     --card:rgba(255,255,255,.05);
+    --card-hover:rgba(255,255,255,.08);
+
     --border:rgba(255,255,255,.08);
 
     --text:#f8fafc;
     --muted:#94a3b8;
 
-    --radius:24px;
+    --radius-lg:28px;
+    --radius-md:20px;
+
+    --shadow:0 20px 60px rgba(0,0,0,.4);
+
     --transition:.35s ease;
 }
 
-/* ================= RESET ================= */
+/* =========================================================
+   RESET
+========================================================= */
+
 *{
     margin:0;
     padding:0;
@@ -48,32 +63,33 @@ html{
 
 body{
     font-family:'Plus Jakarta Sans',sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(56,189,248,.15), transparent 40%),
+        radial-gradient(circle at top right, rgba(139,92,246,.15), transparent 40%),
+        radial-gradient(circle at bottom, rgba(34,197,94,.10), transparent 50%),
+        var(--bg);
+
     color:var(--text);
     line-height:1.7;
     overflow-x:hidden;
-
-    background:
-    radial-gradient(circle at top left, rgba(56,189,248,.15), transparent 35%),
-    radial-gradient(circle at top right, rgba(139,92,246,.15), transparent 35%),
-    radial-gradient(circle at bottom center, rgba(34,197,94,.10), transparent 40%),
-    var(--bg);
 }
 
-/* grid background */
+/* GRID BACKGROUND */
 body::before{
-    content:'';
+    content:"";
     position:fixed;
     inset:0;
-
-    background-image:
-    linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
-
+    background:
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
     background-size:40px 40px;
     z-index:-1;
 }
 
-/* ================= NAV ================= */
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
 nav{
     position:fixed;
     top:0;
@@ -91,15 +107,16 @@ nav{
     backdrop-filter:blur(20px);
 
     border-bottom:1px solid var(--border);
+
     z-index:999;
 }
 
 .nav-logo{
-    color:white;
-    text-decoration:none;
     font-family:'Space Grotesk',sans-serif;
     font-size:1.4rem;
     font-weight:700;
+    color:#fff;
+    text-decoration:none;
 }
 
 .nav-logo span{
@@ -108,7 +125,7 @@ nav{
 
 .nav-links{
     display:flex;
-    gap:24px;
+    gap:26px;
     list-style:none;
 }
 
@@ -123,7 +140,10 @@ nav{
     color:var(--primary);
 }
 
-/* ================= HERO ================= */
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
 header{
     min-height:100vh;
     display:flex;
@@ -137,6 +157,7 @@ header{
     max-width:1000px;
 }
 
+/* PROFILE */
 .profile-wrapper{
     position:relative;
     display:inline-block;
@@ -149,13 +170,13 @@ header{
     border-radius:50%;
     object-fit:cover;
 
-    border:5px solid rgba(255,255,255,.1);
-
+    border:5px solid rgba(255,255,255,.08);
     box-shadow:
-    0 0 0 10px rgba(56,189,248,.08),
-    0 0 80px rgba(56,189,248,.25);
+        0 0 0 12px rgba(56,189,248,.08),
+        0 0 90px rgba(56,189,248,.25);
 }
 
+/* STATUS */
 .status-badge{
     position:absolute;
     right:10px;
@@ -171,33 +192,34 @@ header{
     font-weight:700;
 }
 
+/* HERO TEXT */
 .hero h1{
     font-size:clamp(3rem,7vw,5.5rem);
+    font-family:'Space Grotesk',sans-serif;
     line-height:1.1;
     margin-bottom:10px;
-    font-family:'Space Grotesk',sans-serif;
 }
 
 .hero-title{
-    background:linear-gradient(135deg,#fff,var(--primary));
+    background:linear-gradient(135deg,#ffffff,var(--primary));
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
 .hero h2{
+    font-size:1.2rem;
     color:var(--secondary);
     margin-bottom:25px;
-    font-size:1.2rem;
 }
 
 .hero p{
     max-width:850px;
     margin:auto;
     color:var(--muted);
-    font-size:1.1rem;
+    font-size:1.05rem;
 }
 
-/* ================= BUTTONS ================= */
+/* BUTTONS */
 .buttons{
     display:flex;
     justify-content:center;
@@ -207,9 +229,9 @@ header{
 }
 
 .btn{
-    text-decoration:none;
     padding:16px 32px;
     border-radius:16px;
+    text-decoration:none;
     font-weight:700;
     transition:var(--transition);
 }
@@ -220,13 +242,13 @@ header{
 }
 
 .btn-primary:hover{
-    transform:translateY(-4px);
+    transform:translateY(-5px);
 }
 
 .btn-outline{
     border:1px solid var(--border);
-    color:white;
     background:var(--card);
+    color:white;
 }
 
 .btn-outline:hover{
@@ -234,23 +256,27 @@ header{
     color:black;
 }
 
-/* ================= SECTIONS ================= */
+/* =========================================================
+   SECTION SYSTEM
+========================================================= */
+
 section{
-    padding:100px 8%;
+    padding:110px 8%;
 }
 
 .section-title{
     text-align:center;
     font-size:clamp(2rem,5vw,4rem);
     margin-bottom:60px;
+
     font-family:'Space Grotesk',sans-serif;
 
-    background:linear-gradient(135deg,white,var(--primary));
+    background:linear-gradient(135deg,#fff,var(--primary));
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
-/* ================= GRID ================= */
+/* GRID */
 .grid-2{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -263,42 +289,37 @@ section{
     gap:30px;
 }
 
-/* ================= CARDS ================= */
-.card,
-.benefit-card,
-.skill-bar,
-.project,
-.timeline-item,
-.testimonial-card,
-.ref-card,
-.cert-badge-item{
+/* =========================================================
+   CARDS SYSTEM
+========================================================= */
+
+.card{
     background:var(--card);
-    backdrop-filter:blur(20px);
     border:1px solid var(--border);
-    border-radius:var(--radius);
+    border-radius:var(--radius-lg);
     padding:32px;
+    backdrop-filter:blur(20px);
     transition:var(--transition);
 }
 
-.card:hover,
-.benefit-card:hover,
-.project:hover,
-.timeline-item:hover{
+.card:hover{
     transform:translateY(-8px);
+    background:var(--card-hover);
 }
 
-.card h3,
-.benefit-card h3{
+.card h3{
     color:var(--primary);
     margin-bottom:15px;
 }
 
-.card p,
-.benefit-card p{
+.card p{
     color:var(--muted);
 }
 
-/* ================= CONTACT BUTTONS ================= */
+/* =========================================================
+   CONTACT BUTTONS
+========================================================= */
+
 .contact-btn{
     display:flex;
     align-items:center;
@@ -306,24 +327,26 @@ section{
     gap:15px;
 
     padding:22px 30px;
-    margin-bottom:20px;
-
     border-radius:18px;
     text-decoration:none;
 
-    color:white;
     font-weight:700;
-    font-size:1.3rem;
+    font-size:1.2rem;
 
-    transition:.2s ease;
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    margin-bottom:18px;
+
+    box-shadow:var(--shadow);
+    transition:.25s ease;
 }
 
 .contact-btn:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
 }
 
-/* ================= RESPONSIVE ================= */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
 @media(max-width:900px){
 
     .grid-2{
@@ -347,12 +370,13 @@ section{
         padding:80px 5%;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- ================= NAV ================= -->
 <nav>
     <a href="#" class="nav-logo">JAMAL<span>.ICT</span></a>
 
@@ -365,12 +389,13 @@ section{
     </ul>
 </nav>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 <header id="hero-header">
 <div class="hero">
 
     <div class="profile-wrapper">
         <img src="assets/images/jamal-profile.jpg" class="profile" alt="Jamal Fahad Mohamed">
+
         <div class="status-badge">Available</div>
     </div>
 
@@ -389,98 +414,426 @@ section{
     </p>
 
     <div class="buttons">
-        <a href="assets/documents/cv.pdf" class="btn btn-outline" target="_blank">View CV</a>
+        <a href="assets/documents/cv.pdf" class="btn btn-outline">View CV</a>
         <a href="assets/documents/cv.pdf" class="btn btn-primary" download>Download CV</a>
     </div>
 
 </div>
 </header>
 
-<!-- ABOUT -->
+</body>
+</html>
+<!-- ================= ABOUT ================= -->
 <section id="about">
-<h2 class="section-title">Professional Profile</h2>
 
-<div class="grid-2">
+    <h2 class="section-title">Professional Profile</h2>
 
-    <div class="card">
-        <h3>Empowering Learners for a Digital World</h3>
-        <p>
-            I am an ICT educator and digital skills trainer dedicated to preparing learners for academic success and modern workplace demands. Holding a Bachelor of Business Information Technology (BBIT), I combine technical expertise with practical teaching methods to create engaging and effective learning environments. My focus is on helping students build confidence in technology, develop problem-solving abilities, and gain hands-on experience with digital tools that support lifelong learning and career growth.
-        </p>
+    <div class="grid-2">
+
+        <div class="card">
+            <h3>Empowering Learners for a Digital World</h3>
+
+            <p>
+                I am an ICT educator and digital skills trainer dedicated to preparing learners for academic success and modern workplace demands. Holding a Bachelor of Business Information Technology (BBIT), I combine technical expertise with practical teaching methods to create engaging and effective learning environments.
+
+                My focus is on helping students build confidence in technology, develop problem-solving abilities, and gain hands-on experience with digital tools that support lifelong learning and career growth.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Contact Information</h3>
+
+            <p><strong>Location:</strong> Hargeisa, Somaliland</p>
+            <p><strong>Phone:</strong> +252 63 6710907</p>
+            <p><strong>Email:</strong> teacherfahadh@gmail.com</p>
+            <p><strong>Website:</strong> fahadict.github.io/tech</p>
+        </div>
+
     </div>
-
-    <div class="card">
-        <h3>Contact Information</h3>
-        <p><strong>Location:</strong> Hargeisa, Somaliland</p>
-        <p><strong>Phone:</strong> +252 63 6710907</p>
-        <p><strong>Email:</strong> teacherfahadh@gmail.com</p>
-        <p><strong>Website:</strong> fahadict.github.io/tech</p>
-    </div>
-
-</div>
 </section>
 
-<!-- CONTACT -->
+<!-- ================= ACHIEVEMENTS ================= -->
+<section id="achievements">
+
+    <h2 class="section-title">Key Achievements</h2>
+
+    <div class="grid-3">
+
+        <div class="card">
+            <h3>500+ Students Trained</h3>
+            <p>Successfully trained students in ICT, digital literacy, and computer studies.</p>
+        </div>
+
+        <div class="card">
+            <h3>7 Years Experience</h3>
+            <p>Extensive classroom and laboratory teaching experience.</p>
+        </div>
+
+        <div class="card">
+            <h3>Pearson Edexcel Specialist</h3>
+            <p>Experienced in Pearson Edexcel ICT curriculum delivery and assessment.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="grid-3">
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, Responsive Design</p>
+        </div>
+
+        <div class="card">
+            <h3>Microsoft Office</h3>
+            <p>Word, Excel, PowerPoint, Access</p>
+        </div>
+
+        <div class="card">
+            <h3>Computer Lab Management</h3>
+            <p>Maintenance, Networking, Troubleshooting</p>
+        </div>
+
+        <div class="card">
+            <h3>Graphic Design</h3>
+            <p>Digital Content and Creative Design</p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Skills Training</h3>
+            <p>Beginner to Advanced Level Training</p>
+        </div>
+
+        <div class="card">
+            <h3>Educational Technology</h3>
+            <p>Learning Platforms and ICT Integration</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+
+    <h2 class="section-title">Professional Experience</h2>
+
+    <div class="timeline">
+
+        <div class="card">
+            <h3>ICT Teacher</h3>
+            <p><strong>Elm High School</strong><br>2018 – 2025</p>
+            <p>
+                Delivered ICT lessons, managed computer laboratories, and supported digital learning projects.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Library Support Officer</h3>
+            <p><strong>Elm High School</strong><br>2021 – 2023</p>
+            <p>
+                Assisted with library systems, digital cataloguing, and resource management.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Computer Studies Teacher</h3>
+            <p><strong>Turkana School of Technology</strong><br>2017</p>
+            <p>
+                Taught computer studies and supported website development projects.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="grid-2">
+
+        <div class="card">
+            <h3>Bachelor of Business Information Technology</h3>
+            <p>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
+        </div>
+
+        <div class="card">
+            <h3>Certificate in E-Commerce & Web Design</h3>
+            <p>East Africa Solution</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= PORTFOLIO ================= -->
+<section id="portfolio">
+
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="grid-3">
+
+        <div class="card">
+            <img src="assets/images/school-portal.jpg" style="width:100%;height:200px;object-fit:cover;border-radius:18px;">
+            <h3>School Portal</h3>
+            <p>Educational website platform for communication, resources, and learning.</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/images/library-system.jpg" style="width:100%;height:200px;object-fit:cover;border-radius:18px;">
+            <h3>Library Management System</h3>
+            <p>Database-driven system for book tracking and library administration.</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/images/student-database.jpg" style="width:100%;height:200px;object-fit:cover;border-radius:18px;">
+            <h3>Student Database</h3>
+            <p>Microsoft Access project designed for managing student records.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certifications">
+
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="grid-3">
+
+        <div class="card">
+            <h3>Pearson Edexcel ICT</h3>
+            <p>ICT curriculum specialist.</p>
+        </div>
+
+        <div class="card">
+            <h3>Microsoft Office</h3>
+            <p>Advanced office productivity skills.</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Design</h3>
+            <p>Responsive website development.</p>
+        </div>
+
+        <div class="card">
+            <h3>Graphic Design</h3>
+            <p>Creative digital content production.</p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Skills Training</h3>
+            <p>Technology skills development.</p>
+        </div>
+
+        <div class="card">
+            <h3>Educational Technology</h3>
+            <p>Technology integration in education.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials">
+
+    <h2 class="section-title">Testimonials</h2>
+
+    <div class="grid-2">
+
+        <div class="card">
+            <h3>Ahmed Hassan</h3>
+            <p>"Mr. Jamal explains ICT concepts clearly and practically."</p>
+        </div>
+
+        <div class="card">
+            <h3>Mohamoud Ali</h3>
+            <p>"Excellent trainer in Microsoft Office and Digital Skills."</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= REFERENCES ================= -->
+<section id="references">
+
+    <h2 class="section-title">Professional References</h2>
+
+    <div class="grid-2">
+
+        <div class="card">
+            <h3>Mr. Yusuf Lutta</h3>
+            <p>Principal, Elm High School</p>
+            <p>+252 63 323426</p>
+        </div>
+
+        <div class="card">
+            <h3>Mr. Awale Adam</h3>
+            <p>Administrator, Elm High School</p>
+            <p>+252 63 4763674</p>
+        </div>
+
+    </div>
+</section>
+<!-- ================= CONTACT ================= -->
 <section id="contact">
-<h2 class="section-title">Contact Me</h2>
 
-<div class="grid-2">
+    <h2 class="section-title">Contact Me</h2>
 
-    <div class="card">
-        <h3>Get In Touch</h3>
-        <p>
-            Available for ICT teaching positions, training programs, educational projects, and technology consulting.
-        </p>
+    <div class="grid-2">
+
+        <!-- CONTACT INFO -->
+        <div class="card">
+
+            <h3>Get In Touch</h3>
+
+            <p>
+                Available for ICT teaching positions, training programs, educational projects, and technology consulting.
+            </p>
+
+            <br>
+
+            <p><strong>Phone:</strong> +252 63 6710907</p>
+            <p><strong>Email:</strong> teacherfahadh@gmail.com</p>
+            <p><strong>Location:</strong> Hargeisa, Somaliland</p>
+
+        </div>
+
+        <!-- CONTACT ACTIONS -->
+        <div class="card">
+
+            <a href="https://wa.me/252636710907"
+               class="contact-btn"
+               style="background:linear-gradient(135deg,#25d366,#128c7e);">
+
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp Me
+            </a>
+
+            <a href="tel:+252636710907"
+               class="contact-btn"
+               style="background:linear-gradient(135deg,#007bff,#0056b3);">
+
+                <i class="fa-solid fa-phone"></i>
+                Call Directly
+            </a>
+
+        </div>
+
     </div>
-
-    <div class="card">
-
-        <a href="https://wa.me/252636710907" class="contact-btn" style="background:linear-gradient(135deg,#25d366,#128c7e);">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp Me
-        </a>
-
-        <a href="tel:+252636710907" class="contact-btn" style="background:linear-gradient(135deg,#007bff,#0056b3);">
-            <i class="fa-solid fa-phone"></i> Call Directly
-        </a>
-
-    </div>
-
-</div>
 </section>
 
-<!-- FOOTER -->
-<footer style="padding:40px;text-align:center;border-top:1px solid rgba(255,255,255,.08);">
+<!-- ================= FOOTER ================= -->
+<footer style="
+    padding:60px 8%;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+">
 
-    <h3>Jamal Fahad Mohamed</h3>
-    <p style="color:#94a3b8;">
+    <h3 style="margin-bottom:10px;">
+        Jamal Fahad Mohamed
+    </h3>
+
+    <p style="color:#94a3b8; max-width:700px; margin:auto;">
         Pearson Edexcel ICT Teacher • Digital Skills Trainer • Web Design Instructor
     </p>
 
-    <p style="margin-top:20px;color:#94a3b8;">
+    <p style="margin-top:20px; color:#64748b;">
         © 2026 All Rights Reserved
     </p>
 
 </footer>
 
+<!-- ================= ANIMATION SYSTEM ================= -->
 <script>
+
+/* Scroll reveal animation engine */
 const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(entries => {
+
     entries.forEach(entry => {
+
         if(entry.isIntersecting){
+
             entry.target.animate(
                 [
-                    {opacity:0, transform:'translateY(40px)'},
-                    {opacity:1, transform:'translateY(0)'}
+                    { opacity:0, transform:'translateY(40px)' },
+                    { opacity:1, transform:'translateY(0px)' }
                 ],
-                {duration:800, fill:'forwards'}
+                {
+                    duration:800,
+                    fill:'forwards',
+                    easing:'ease-out'
+                }
             );
-        }
-    });
-},{threshold:.15});
 
-sections.forEach(section => observer.observe(section));
+        }
+
+    });
+
+},{ threshold:0.15 });
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
 </script>
+
+<!-- ================= SEO STRUCTURED DATA ================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jamal Fahad Mohamed",
+  "jobTitle": "ICT Teacher",
+  "description": "Pearson Edexcel ICT Teacher and Digital Skills Trainer based in Hargeisa, Somaliland.",
+  "email": "teacherfahadh@gmail.com",
+  "telephone": "+252636710907",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hargeisa",
+    "addressCountry": "Somalia"
+  },
+  "sameAs": [
+    "https://fahadict.github.io/tech"
+  ]
+}
+</script>
+
+<!-- ================= FINAL POLISH ================= -->
+<style>
+
+/* smooth section spacing consistency */
+section{
+    scroll-margin-top:100px;
+}
+
+/* improved hover feel globally */
+.card{
+    transition:transform .3s ease, background .3s ease;
+}
+
+/* better button interaction */
+.btn,
+.contact-btn{
+    will-change:transform;
+}
+
+/* reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce){
+    *{
+        animation:none !important;
+        transition:none !important;
+    }
+}
+
+</style>
 
 </body>
 </html>
