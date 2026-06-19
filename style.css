@@ -1,0 +1,9 @@
+:root { --primary:#0b1120; --accent:#facc15; --text:#ffffff; }
+body { background:var(--primary); color:var(--text); font-family:'Inter', sans-serif; }
+.container { width:90%; margin:auto; padding:20px 0; }
+.navbar { display:flex; justify-content:space-between; align-items:center; }
+.menu { display:flex; list-style:none; gap:20px; }
+.show { display:flex !important; flex-direction:column; position:absolute; top:60px; background:#111827; width:100%; left:0; }
+.menu-toggle { display:none; cursor:pointer; }
+@media(max-width:768px) { .menu { display:none; } .menu-toggle { display:block; } }
+.availability-box { background: #1f2937; padding: 20px; border-radius: 10px; }
