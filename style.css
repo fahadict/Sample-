@@ -1,9 +1,71 @@
-:root { --primary:#0b1120; --accent:#facc15; --text:#ffffff; }
-body { background:var(--primary); color:var(--text); font-family:'Inter', sans-serif; }
-.container { width:90%; margin:auto; padding:20px 0; }
-.navbar { display:flex; justify-content:space-between; align-items:center; }
-.menu { display:flex; list-style:none; gap:20px; }
-.show { display:flex !important; flex-direction:column; position:absolute; top:60px; background:#111827; width:100%; left:0; }
-.menu-toggle { display:none; cursor:pointer; }
-@media(max-width:768px) { .menu { display:none; } .menu-toggle { display:block; } }
-.availability-box { background: #1f2937; padding: 20px; border-radius: 10px; }
+:root{
+--primary:#0b1120;
+--accent:#facc15;
+--text:#fff;
+--muted:#cbd5e1;
+--card:#111827;
+--shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif;}
+
+body{
+background:var(--primary);
+color:var(--text);
+}
+
+.container{width:92%;margin:auto;}
+
+/* NAV */
+header{position:fixed;top:0;width:100%;background:#0b1120;z-index:999;}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:18px 0;}
+
+.menu{display:flex;gap:20px;}
+.menu a{color:#fff;font-weight:600;}
+
+.menu-toggle{display:none;font-size:26px;cursor:pointer;}
+
+@media(max-width:900px){
+.menu{display:none;position:absolute;right:20px;top:70px;background:#111827;padding:20px;flex-direction:column;}
+.menu.show{display:flex;}
+.menu-toggle{display:block;}
+}
+
+/* HERO */
+.hero{padding:140px 0;}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;}
+
+@media(max-width:900px){
+.hero-grid{grid-template-columns:1fr;text-align:center;}
+}
+
+/* SNAPSHOT */
+.snapshot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.snapshot-card{background:#111827;padding:30px;text-align:center;border-radius:16px;}
+
+@media(max-width:800px){
+.snapshot-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+/* COMMON SECTIONS */
+section{padding:80px 0;}
+
+.section-title{text-align:center;margin-bottom:40px;}
+
+/* CARDS */
+.impact-grid,.competency-grid,.highlights-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.impact-card,.competency-card,.highlight-item{
+background:#111827;
+padding:25px;
+border-radius:14px;
+}
+
+/* BUTTONS */
+.btn{padding:12px 18px;border-radius:10px;display:inline-block;}
+
+.btn-primary{background:var(--accent);color:#000;}
