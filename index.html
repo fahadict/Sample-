@@ -6,17 +6,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jamal Fahadh Mohamed | ICT Support Officer | IT Support Specialist | Hargeisa Somaliland</title>
+<title>Jamal Fahadh Mohamed | ICT Support Officer | IT Support Specialist | Administrative & Executive Support Professional</title>
 
-<meta name="description" content="Professional ICT Support Officer portfolio of Jamal Fahadh Mohamed. ICT Support, Help Desk, Networking, Microsoft 365, Technical Support, Systems Administration, ICT Training and Digital Solutions.">
+<meta name="description" content="Professional portfolio of Jamal Fahadh Mohamed. ICT Support Officer, IT Support Specialist, Administrative Officer, Executive Assistant, Secretariat Support, Microsoft 365 Support, Networking, Systems Administration and Digital Solutions.">
 
-<meta name="keywords" content="ICT Officer Somaliland, ICT Assistant Hargeisa, ICT Support Officer, IT Support Specialist, NGO ICT Officer, Embassy ICT Support, Help Desk Technician, Systems Administrator">
+<meta name="keywords" content="ICT Officer Somaliland, ICT Support Officer, IT Support Specialist, Administrative Officer, Executive Assistant, Secretariat Officer, Help Desk Technician, Microsoft 365 Support, Systems Administrator, Hargeisa Somaliland">
 
 <meta name="author" content="Jamal Fahadh Mohamed">
 
+<meta name="robots" content="index,follow">
+
 <meta property="og:title" content="Jamal Fahadh Mohamed | ICT Support Officer">
-<meta property="og:description" content="Experienced ICT professional with 7+ years supporting users, networks, systems and digital transformation initiatives.">
+<meta property="og:description" content="Experienced ICT and Administrative Support Professional with 7+ years of experience supporting users, systems, networks and office operations.">
 <meta property="og:type" content="website">
+
+<meta name="theme-color" content="#0b1120">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,7 +79,28 @@ width:min(1400px,92%);
 margin:auto;
 }
 
-/* NAVIGATION */
+section{
+padding:100px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:2.5rem;
+font-weight:900;
+margin-bottom:12px;
+}
+
+.section-title p{
+color:var(--muted);
+max-width:700px;
+margin:auto;
+}
+
+/* HEADER */
 
 header{
 position:fixed;
@@ -207,32 +232,24 @@ text-align:center;
 }
 
 .availability{
-
 display:inline-flex;
 align-items:center;
 gap:10px;
-
 padding:10px 18px;
 border-radius:999px;
-
 background:rgba(250,204,21,.15);
 border:1px solid rgba(250,204,21,.3);
-
 color:var(--accent);
 font-size:.85rem;
 font-weight:700;
-
 margin-bottom:25px;
-
 }
 
 .hero h1{
-
 font-size:4rem;
 font-weight:900;
 line-height:1.1;
 margin-bottom:15px;
-
 }
 
 .hero h1 span{
@@ -240,160 +257,144 @@ color:var(--accent);
 }
 
 .hero-role{
-
 display:inline-block;
-
 padding:10px 18px;
-
 background:var(--accent);
 color:black;
-
 font-weight:800;
 font-size:.85rem;
 text-transform:uppercase;
-
 border-radius:10px;
-
 margin-bottom:25px;
-
 }
 
 .hero-subtitle{
-
 font-size:1.15rem;
 color:var(--muted);
 font-weight:500;
-
 margin-bottom:20px;
-
 }
 
 .hero-description{
-
 font-size:1.05rem;
 color:var(--muted);
 max-width:800px;
-
 margin-bottom:35px;
-
 }
 
 .hero-buttons{
-
 display:flex;
 flex-wrap:wrap;
 gap:15px;
-
-}
-
-@media(max-width:1000px){
-
-.hero-buttons{
-justify-content:center;
-}
-
 }
 
 .btn{
-
 padding:14px 24px;
 border-radius:12px;
 font-weight:700;
 transition:.3s;
-
 }
 
 .btn-primary{
-
 background:var(--accent);
 color:black;
-
-}
-
-.btn-primary:hover{
-transform:translateY(-4px);
 }
 
 .btn-secondary{
-
 border:1px solid rgba(255,255,255,.15);
 color:white;
-
 }
 
-.btn-secondary:hover{
-
-background:white;
-color:black;
-
+.profile-wrapper{
+display:flex;
+justify-content:center;
+padding:40px 20px;
 }
 
-/* Profile Wrapper - Adding horizontal/vertical padding to prevent touching edges */
-.profile-wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px; 
+.profile-ring{
+width:300px;
+height:300px;
+padding:8px;
+background:linear-gradient(135deg,var(--accent),#fff);
+border-radius:50%;
+box-shadow:var(--shadow);
 }
 
-/* Profile Ring - Centering and ensuring consistent size */
-.profile-ring {
-    width: 280px; 
-    height: 280px;
-    padding: 8px; 
-    margin: 0 auto; 
-    background: linear-gradient(135deg, var(--accent), #ffffff);
-    border-radius: 50%;
-    box-shadow: var(--shadow);
+.profile-img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+border:6px solid var(--primary);
 }
 
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid var(--primary);
-}
+/* SNAPSHOT */
 
-/* RECRUITER SNAPSHOT - Removed negative margin to stop overlapping */
-.snapshot {
-    margin-top: 40px; 
-    position: relative;
-    z-index: 5;
+.snapshot{
+padding-top:20px;
 }
 
 .snapshot-grid{
-
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:25px;
-
 }
 
 .snapshot-card{
-
 background:#111827;
 padding:35px;
 border-radius:20px;
 text-align:center;
-
 border:1px solid rgba(255,255,255,.05);
-
-box-shadow:var(--shadow);
-
 }
 
 .snapshot-card h3{
-
 font-size:2.3rem;
-color:var(--accent);
 font-weight:900;
-
+color:var(--accent);
 }
 
 .snapshot-card p{
-
 color:var(--muted);
+}
 
+/* ABOUT */
+
+.executive-profile{
+max-width:1000px;
+margin:auto;
+}
+
+.profile-card{
+background:#111827;
+padding:45px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.05);
+box-shadow:var(--shadow);
+}
+
+.profile-card h3{
+color:var(--accent);
+margin-bottom:20px;
+font-size:1.6rem;
+}
+
+.profile-card p{
+color:var(--muted);
+margin-bottom:18px;
+}
+
+.highlights-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.highlight-item{
+background:#111827;
+padding:22px;
+border-radius:16px;
+border:1px solid rgba(255,255,255,.05);
 }
 
 @media(max-width:900px){
@@ -404,44 +405,20 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.8rem;
+}
+
+.hero-buttons{
+justify-content:center;
+}
 
 .snapshot-grid{
 grid-template-columns:1fr;
 }
 
-.hero h1{
-font-size:2.6rem;
-}
-
-.profile-ring{
-width:260px;
-height:260px;
-}
-
-}
-
-section{
-padding:100px 0;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:60px;
-}
-
-.section-title h2{
-
-font-size:2.5rem;
-font-weight:900;
-margin-bottom:12px;
-
-}
-
-.section-title p{
-color:var(--muted);
-max-width:700px;
-margin:auto;
 }
 
 </style>
@@ -467,7 +444,7 @@ margin:auto;
 
 <li><a href="#about">About</a></li>
 <li><a href="#experience">Experience</a></li>
-<li><a href="#skills">Skills</a></li>
+<li><a href="#competencies">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#certificates">Certificates</a></li>
 <li><a href="#contact">Contact</a></li>
@@ -482,8 +459,6 @@ View CV
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="container">
@@ -494,7 +469,7 @@ View CV
 
 <div class="availability">
 <i class="fas fa-circle-check"></i>
-Available Immediately For ICT-Related Positions
+Available Immediately For ICT, Administrative & Executive Support Roles
 </div>
 
 <h1>
@@ -507,13 +482,11 @@ ICT & Administrative Support Professional
 </div>
 
 <p class="hero-subtitle">
-
-Executive Support • Secretariat Administration • ICT Support • Office Coordination • Documentation Management • Customer Service
-
+Executive Support • Secretariat & Office Administration • ICT Operations • Documentation Management • Customer Service • Organizational Coordination
 </p>
 
-<p class="hero-description">ICT Support Professional with over 7 years of experience supporting enterprise users, computer systems, networks, Microsoft 365 environments, internet connectivity, ICT infrastructure and digital platforms. Skilled in troubleshooting hardware, software, networking and business-critical systems while ensuring operational continuity, service excellence and user satisfaction.
-
+<p class="hero-description">
+ICT Support Professional with over 7 years of experience supporting enterprise users, computer systems, networks, Microsoft 365 environments, internet connectivity, ICT infrastructure and digital platforms. Skilled in troubleshooting hardware, software, networking and business-critical systems while ensuring operational continuity, service excellence and user satisfaction.
 </p>
 
 <div class="hero-buttons">
@@ -556,14 +529,17 @@ class="profile-img">
 
 </section>
 
-
 <section id="industries">
+
 <div class="container">
+
 <div class="section-title">
 <h2>Industries I Can Support</h2>
 <p>Professional support experience applicable across multiple sectors.</p>
 </div>
+
 <div class="highlights-grid">
+
 <div class="highlight-item">Telecommunications</div>
 <div class="highlight-item">Logistics & Supply Chain</div>
 <div class="highlight-item">Shipping & Transit Services</div>
@@ -573,11 +549,12 @@ class="profile-img">
 <div class="highlight-item">Education</div>
 <div class="highlight-item">Executive Offices</div>
 <div class="highlight-item">International Organizations</div>
-</div>
-</div>
-</section>
 
-<!-- RECRUITER SNAPSHOT -->
+</div>
+
+</div>
+
+</section>
 
 <section class="snapshot">
 
@@ -610,7 +587,6 @@ class="profile-img">
 </div>
 
 </section>
-<!-- ABOUT -->
 
 <section id="about">
 
@@ -630,23 +606,17 @@ Dedicated ICT Support Officer dedicated to serving organizations across Somalila
 
 <div class="profile-card">
 
-<div class="profile-content">
-
-<h3>
-Professional Overview
-</h3>
+<h3>Professional Overview</h3>
 
 <p>
-
-Professional and dependable ICT & Administrative Support Professional with more than seven years of experience supporting office operations, executive teams, information systems, customer service functions, and digital workplace environments.</p>
+Professional and dependable ICT & Administrative Support Professional with more than seven years of experience supporting office operations, executive teams, information systems, customer service functions, and digital workplace environments.
+</p>
 
 <p>
-
 Experienced in administrative coordination, document management, correspondence handling, records administration, scheduling, report preparation, Microsoft Office applications, ICT support, and stakeholder communication.
 </p>
 
 <p>
-    
 Recognized for strong organizational skills, attention to detail, confidentiality, professionalism, and the ability to support management teams in achieving operational objectives.
 </p>
 
@@ -656,11 +626,8 @@ Recognized for strong organizational skills, attention to detail, confidentialit
 
 </div>
 
-</div>
-
 </section>
-
-<!-- CAREER HIGHLIGHTS -->
+    <!-- CAREER HIGHLIGHTS -->
 
 <section id="highlights">
 
@@ -671,7 +638,7 @@ Recognized for strong organizational skills, attention to detail, confidentialit
 <h2>Career Highlights</h2>
 
 <p>
-Key achievements and professional contributions throughout my ICT career.
+Key achievements and professional contributions throughout my ICT and administrative support career.
 </p>
 
 </div>
@@ -680,42 +647,42 @@ Key achievements and professional contributions throughout my ICT career.
 
 <div class="highlight-item">
 <i class="fas fa-circle-check"></i>
-Supported over 100+ users across multiple environments
+Delivered end-user ICT support across academic and professional environments.
 </div>
 
 <div class="highlight-item">
 <i class="fas fa-circle-check"></i>
-Delivered ICT training to students and staff
+Provided ICT training and computer literacy programs for students and staff.
 </div>
 
 <div class="highlight-item">
 <i class="fas fa-circle-check"></i>
-Maintained ICT infrastructure and computer laboratories
+Maintained computer laboratories, networking infrastructure and digital resources.
 </div>
 
 <div class="highlight-item">
 <i class="fas fa-circle-check"></i>
-Managed websites and online platforms
+Managed websites, digital platforms and online information systems.
 </div>
 
 <div class="highlight-item">
 <i class="fas fa-circle-check"></i>
-Supported Microsoft 365 environments
+Supported Microsoft 365 and productivity environments.
 </div>
 
 <div class="highlight-item">
 <i class="fas fa-circle-check"></i>
-Resolved technical issues efficiently
+Resolved technical incidents while improving service continuity.
 </div>
 
 <div class="highlight-item">
 <i class="fas fa-circle-check"></i>
-Improved digital literacy and productivity
+Improved digital literacy, operational efficiency and user productivity.
 </div>
 
 <div class="highlight-item">
 <i class="fas fa-circle-check"></i>
-Supported organizational digital transformation initiatives
+Supported organizational digital transformation initiatives.
 </div>
 
 </div>
@@ -723,7 +690,6 @@ Supported organizational digital transformation initiatives
 </div>
 
 </section>
-
 
 <!-- CORE COMPETENCIES -->
 
@@ -736,7 +702,7 @@ Supported organizational digital transformation initiatives
 <h2>Core Competencies</h2>
 
 <p>
-Technical areas where I consistently deliver value.
+Technical, administrative and organizational capabilities that consistently deliver value.
 </p>
 
 </div>
@@ -744,7 +710,7 @@ Technical areas where I consistently deliver value.
 <div class="competency-grid">
 
 <div class="competency-card">
-    
+
 <h3>Administration & Secretariat</h3>
 
 <ul>
@@ -757,20 +723,22 @@ Technical areas where I consistently deliver value.
 <li>Report Preparation</li>
 <li>Office Administration</li>
 </ul>
-    
+
 </div>
 
 <div class="competency-card">
-    
+
 <h3>ICT Support</h3>
 
 <ul>
-
 <li>Help Desk Support</li>
 <li>Hardware Troubleshooting</li>
 <li>Software Installation</li>
-<li>User Assistance</li>
-
+<li>User Support</li>
+<li>Remote Assistance</li>
+<li>Printer Support</li>
+<li>Email Support</li>
+<li>Technical Troubleshooting</li>
 </ul>
 
 </div>
@@ -780,12 +748,14 @@ Technical areas where I consistently deliver value.
 <h3>Networking</h3>
 
 <ul>
-
 <li>LAN / WAN Support</li>
 <li>Routers & Switches</li>
-<li>Network Devices</li>
+<li>Network Troubleshooting</li>
+<li>Wireless Connectivity</li>
+<li>Internet Connectivity</li>
+<li>Network Monitoring</li>
+<li>Device Configuration</li>
 <li>Printer Connectivity</li>
-
 </ul>
 
 </div>
@@ -795,12 +765,14 @@ Technical areas where I consistently deliver value.
 <h3>Systems Administration</h3>
 
 <ul>
-
 <li>Microsoft 365</li>
 <li>Windows Administration</li>
+<li>User Accounts</li>
 <li>Backup Systems</li>
 <li>System Maintenance</li>
-
+<li>Software Deployment</li>
+<li>Endpoint Management</li>
+<li>Security Best Practices</li>
 </ul>
 
 </div>
@@ -810,12 +782,31 @@ Technical areas where I consistently deliver value.
 <h3>Training & Documentation</h3>
 
 <ul>
-
 <li>ICT Training</li>
 <li>User Manuals</li>
-<li>Digital Learning Resources</li>
 <li>Technical Documentation</li>
+<li>Knowledge Transfer</li>
+<li>Digital Learning Resources</li>
+<li>Training Delivery</li>
+<li>Reporting</li>
+<li>Process Documentation</li>
+</ul>
 
+</div>
+
+<div class="competency-card">
+
+<h3>Professional Skills</h3>
+
+<ul>
+<li>Communication</li>
+<li>Customer Service</li>
+<li>Problem Solving</li>
+<li>Attention to Detail</li>
+<li>Team Collaboration</li>
+<li>Time Management</li>
+<li>Confidentiality</li>
+<li>Stakeholder Engagement</li>
 </ul>
 
 </div>
@@ -826,93 +817,109 @@ Technical areas where I consistently deliver value.
 
 </section>
 
+<!-- EXPERIENCE STYLES -->
+
 <style>
 
-.executive-profile{
-max-width:1000px;
+.timeline{
+max-width:1100px;
 margin:auto;
 }
 
-.profile-card{
-background:#111827;
-padding:45px;
-border-radius:24px;
-border:1px solid rgba(255,255,255,.05);
-box-shadow:var(--shadow);
-}
-
-.profile-card h3{
-font-size:1.6rem;
-margin-bottom:20px;
-color:var(--accent);
-}
-
-.profile-card p{
-color:var(--muted);
-margin-bottom:18px;
-}
-
-.impact-grid,
-.why-grid,
-.competency-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+.timeline-item{
+display:flex;
 gap:25px;
+margin-bottom:40px;
 }
 
-.impact-card,
-.why-card,
-.competency-card{
+.timeline-dot{
+width:18px;
+height:18px;
+background:var(--accent);
+border-radius:50%;
+margin-top:12px;
+flex-shrink:0;
+}
+
+.timeline-content{
 background:#111827;
-padding:30px;
-border-radius:20px;
+padding:35px;
+border-radius:24px;
+flex:1;
 border:1px solid rgba(255,255,255,.05);
-transition:.3s;
 }
 
-.impact-card:hover,
-.why-card:hover,
-.competency-card:hover{
-transform:translateY(-8px);
-}
-
-.impact-icon,
-.why-card i{
-font-size:2rem;
+.timeline-year{
+display:inline-block;
+padding:8px 14px;
+background:rgba(250,204,21,.15);
 color:var(--accent);
+font-weight:700;
+border-radius:999px;
+margin-bottom:15px;
+}
+
+.timeline-content h3{
+margin-bottom:8px;
+}
+
+.timeline-content h4{
+color:var(--muted);
 margin-bottom:20px;
 }
 
-.highlights-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+.experience-block{
+margin-top:20px;
 }
 
-.highlight-item{
-background:#111827;
-padding:22px;
-border-radius:16px;
-border:1px solid rgba(255,255,255,.05);
-}
-
-.highlight-item i{
+.experience-block h5{
 color:var(--accent);
-margin-right:10px;
+margin-bottom:10px;
+font-size:1rem;
 }
 
-.competency-card ul{
-padding-left:18px;
+.experience-block p{
+color:var(--muted);
 }
 
-.competency-card li{
+.experience-block ul{
+padding-left:20px;
+}
+
+.experience-block li{
 color:var(--muted);
 margin-bottom:10px;
 }
 
+.tech-tags{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
+}
+
+.tech-tags span{
+background:#1f2937;
+padding:8px 14px;
+border-radius:999px;
+font-size:.85rem;
+}
+
+@media(max-width:768px){
+
+.timeline-item{
+flex-direction:column;
+}
+
+.timeline-dot{
+display:none;
+}
+
+}
+
 </style>
 
-<!-- EXPERIENCE -->
+<!-- PROFESSIONAL EXPERIENCE -->
 
 <section id="experience">
 
@@ -923,7 +930,7 @@ margin-bottom:10px;
 <h2>Professional Experience</h2>
 
 <p>
-Hands-on ICT support experience across multiple environments.
+Hands-on ICT support, administrative coordination and digital operations experience across multiple environments.
 </p>
 
 </div>
@@ -1092,7 +1099,7 @@ Independent Projects
 <h5>Impact</h5>
 
 <p>
-Supported websites, digital platforms and technical projects for various organizations and individuals.
+Supported websites, digital platforms and technical projects for organizations, educational institutions and individual clients.
 </p>
 
 </div>
@@ -1139,11 +1146,18 @@ Supported websites, digital platforms and technical projects for various organiz
 </div>
 
 </section>
+    <!-- ROLES I AM SEEKING -->
+
+<section id="roles">
+
+<div class="container">
+
+<div class="section-title">
 
 <h2>Roles I Am Seeking</h2>
 
 <p>
-Open to immediate employment opportunities.
+Open to immediate employment opportunities across ICT, administration, executive support and organizational operations functions.
 </p>
 
 </div>
@@ -1151,6 +1165,11 @@ Open to immediate employment opportunities.
 <div class="highlights-grid">
 
 <div class="highlight-item">ICT Officer</div>
+<div class="highlight-item">ICT Support Officer</div>
+<div class="highlight-item">IT Support Specialist</div>
+<div class="highlight-item">Help Desk Technician</div>
+<div class="highlight-item">Systems Support Officer</div>
+<div class="highlight-item">Network Support Technician</div>
 <div class="highlight-item">Executive Assistant</div>
 <div class="highlight-item">Personal Assistant</div>
 <div class="highlight-item">Administrative Officer</div>
@@ -1162,6 +1181,7 @@ Open to immediate employment opportunities.
 <div class="highlight-item">Executive Support Officer</div>
 <div class="highlight-item">Office Coordinator</div>
 <div class="highlight-item">Project Support Assistant</div>
+<div class="highlight-item">Administrative Assistant</div>
 
 </div>
 
@@ -1169,6 +1189,112 @@ Open to immediate employment opportunities.
 
 </section>
 
+<!-- PROJECTS STYLES -->
+
+<style>
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+gap:30px;
+}
+
+.project-card{
+background:#111827;
+border-radius:24px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.05);
+box-shadow:var(--shadow);
+transition:.3s ease;
+height:100%;
+display:flex;
+flex-direction:column;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+}
+
+.project-image{
+overflow:hidden;
+}
+
+.project-image img{
+width:100%;
+height:260px;
+object-fit:cover;
+transition:.4s ease;
+}
+
+.project-card:hover .project-image img{
+transform:scale(1.05);
+}
+
+.project-content{
+padding:30px;
+flex:1;
+display:flex;
+flex-direction:column;
+}
+
+.project-tag{
+display:inline-block;
+background:rgba(250,204,21,.15);
+color:var(--accent);
+padding:8px 14px;
+border-radius:999px;
+font-size:.8rem;
+font-weight:700;
+margin-bottom:18px;
+}
+
+.project-content h3{
+margin-bottom:20px;
+font-size:1.4rem;
+}
+
+.project-content h4{
+color:var(--accent);
+margin-top:15px;
+margin-bottom:8px;
+font-size:1rem;
+}
+
+.project-content p{
+color:var(--muted);
+}
+
+@media(max-width:768px){
+
+.projects-grid{
+grid-template-columns:1fr;
+}
+
+.project-image img{
+height:220px;
+}
+
+}
+
+</style>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Projects & Professional Contributions</h2>
+
+<p>
+Selected ICT, systems support, information management and digital transformation initiatives demonstrating practical experience and organizational impact.
+</p>
+
+</div>
+
+<div class="projects-grid">
 
 <!-- PROJECT 1 -->
 
@@ -1180,26 +1306,28 @@ Open to immediate employment opportunities.
 
 <div class="project-content">
 
-<span class="project-tag">Information Management</span>
+<span class="project-tag">
+Information Management
+</span>
 
 <h3>Library Management System</h3>
 
 <h4>Challenge</h4>
 
 <p>
-Need for efficient organization and access to educational resources.
+Need for efficient organization, tracking and access to educational resources and institutional records.
 </p>
 
 <h4>Solution</h4>
 
 <p>
-Implemented digital cataloging and structured information management practices.
+Implemented digital cataloging practices and structured information management processes to improve accessibility and resource utilization.
 </p>
 
 <h4>Outcome</h4>
 
 <p>
-Improved resource tracking, accessibility and operational efficiency.
+Improved resource tracking, reporting capabilities, accessibility and operational efficiency.
 </p>
 
 </div>
@@ -1211,31 +1339,33 @@ Improved resource tracking, accessibility and operational efficiency.
 <div class="project-card">
 
 <div class="project-image">
-<img src="network_project.jpg" alt="Network Infrastructure">
+<img src="network_project.jpg" alt="Network Infrastructure Support">
 </div>
 
 <div class="project-content">
 
-<span class="project-tag">Infrastructure</span>
+<span class="project-tag">
+Infrastructure & Connectivity
+</span>
 
 <h3>Network Infrastructure Support</h3>
 
 <h4>Challenge</h4>
 
 <p>
-Need for reliable connectivity and improved network stability.
+Requirement for reliable connectivity, stable network performance and uninterrupted access to digital services.
 </p>
 
 <h4>Solution</h4>
 
 <p>
-Configured networking devices and implemented troubleshooting procedures.
+Configured networking equipment, performed diagnostics and implemented troubleshooting procedures to maintain operational continuity.
 </p>
 
 <h4>Outcome</h4>
 
 <p>
-Improved uptime and reduced connectivity disruptions.
+Improved network stability, increased uptime and reduced connectivity disruptions.
 </p>
 
 </div>
@@ -1247,31 +1377,33 @@ Improved uptime and reduced connectivity disruptions.
 <div class="project-card">
 
 <div class="project-image">
-<img src="school-portal.jpg" alt="School Portal">
+<img src="school-portal.jpg" alt="School Portal Development">
 </div>
 
 <div class="project-content">
 
-<span class="project-tag">Web Systems</span>
+<span class="project-tag">
+Web Systems
+</span>
 
 <h3>School Portal Development</h3>
 
 <h4>Challenge</h4>
 
 <p>
-Need for centralized access to educational information and resources.
+Need for centralized access to educational information, announcements and digital learning resources.
 </p>
 
 <h4>Solution</h4>
 
 <p>
-Designed and maintained web-based systems for information sharing.
+Designed, maintained and supported web-based platforms that enabled information sharing and communication.
 </p>
 
 <h4>Outcome</h4>
 
 <p>
-Improved communication and access to digital resources.
+Improved communication, collaboration and access to digital resources for stakeholders.
 </p>
 
 </div>
@@ -1283,31 +1415,109 @@ Improved communication and access to digital resources.
 <div class="project-card">
 
 <div class="project-image">
-<img src="student-database.jpg" alt="Student Database">
+<img src="student-database.jpg" alt="Student Database System">
 </div>
 
 <div class="project-content">
 
-<span class="project-tag">Database</span>
+<span class="project-tag">
+Database & Records Management
+</span>
 
 <h3>Student Database System</h3>
 
 <h4>Challenge</h4>
 
 <p>
-Need for better organization of student information.
+Need for improved organization, management and retrieval of student information and records.
 </p>
 
 <h4>Solution</h4>
 
 <p>
-Implemented structured digital record management.
+Implemented structured digital records management practices and data organization standards.
 </p>
 
 <h4>Outcome</h4>
 
 <p>
-Improved data accessibility and reporting processes.
+Improved data accessibility, reporting accuracy and administrative efficiency.
+</p>
+
+</div>
+
+</div>
+
+<!-- PROJECT 5 -->
+
+<div class="project-card">
+
+<div class="project-image">
+<img src="website-management.jpg" alt="Website Management">
+</div>
+
+<div class="project-content">
+
+<span class="project-tag">
+Digital Platforms
+</span>
+
+<h3>Website Administration & Content Management</h3>
+
+<h4>Challenge</h4>
+
+<p>
+Organizations required professional online presence, updated information and reliable web platform support.
+</p>
+
+<h4>Solution</h4>
+
+<p>
+Provided website maintenance, content updates, performance monitoring and user-focused improvements.
+</p>
+
+<h4>Outcome</h4>
+
+<p>
+Enhanced digital visibility, improved user experience and ensured up-to-date organizational information.
+</p>
+
+</div>
+
+</div>
+
+<!-- PROJECT 6 -->
+
+<div class="project-card">
+
+<div class="project-image">
+<img src="ict-support.jpg" alt="ICT Support Operations">
+</div>
+
+<div class="project-content">
+
+<span class="project-tag">
+ICT Operations
+</span>
+
+<h3>ICT Support & Service Delivery</h3>
+
+<h4>Challenge</h4>
+
+<p>
+Need for timely technical support, system reliability and user productivity across various environments.
+</p>
+
+<h4>Solution</h4>
+
+<p>
+Delivered help desk support, troubleshooting services, hardware maintenance and user assistance.
+</p>
+
+<h4>Outcome</h4>
+
+<p>
+Improved service quality, reduced downtime and increased user satisfaction.
 </p>
 
 </div>
@@ -1319,7 +1529,6 @@ Improved data accessibility and reporting processes.
 </div>
 
 </section>
-
 <!-- CERTIFICATES -->
 
 <section id="certificates">
@@ -1331,7 +1540,7 @@ Improved data accessibility and reporting processes.
 <h2>Certificates & Qualifications</h2>
 
 <p>
-Academic achievements and professional credentials.
+Academic achievements, professional qualifications and training credentials supporting my ICT and administrative career.
 </p>
 
 </div>
@@ -1344,7 +1553,9 @@ Academic achievements and professional credentials.
 
 <div class="certificate-content">
 
-<h3>Bachelor of Business Information Technology(BBIT)</h3>
+<h3>
+Bachelor of Business Information Technology (BBIT)
+</h3>
 
 <p>
 Jomo Kenyatta University of Agriculture and Technology (JKUAT)
@@ -1360,10 +1571,12 @@ Jomo Kenyatta University of Agriculture and Technology (JKUAT)
 
 <div class="certificate-content">
 
-<h3>Web Development</h3>
+<h3>
+Web Development Certificate
+</h3>
 
 <p>
-E-commerce, Web Design and Entrepreneurship Certificate 
+E-Commerce, Web Design and Entrepreneurship
 </p>
 
 </div>
@@ -1372,14 +1585,16 @@ E-commerce, Web Design and Entrepreneurship Certificate
 
 <div class="certificate-card">
 
-<img src="kcse.jpg" alt="High School Certificate">
+<img src="kcse.jpg" alt="KCSE Certificate">
 
 <div class="certificate-content">
 
-<h3>Kenya Certificate of Secondary Education (KCSE)</h3>
+<h3>
+Kenya Certificate of Secondary Education (KCSE)
+</h3>
 
 <p>
-Pesoda Annex High School, Migori Kenya 🇰🇪 
+Pesoda Annex High School, Migori, Kenya
 </p>
 
 </div>
@@ -1403,7 +1618,7 @@ Pesoda Annex High School, Migori Kenya 🇰🇪
 <h2>Languages</h2>
 
 <p>
-Professional communication across multiple environments.
+Professional communication capabilities across multicultural and international environments.
 </p>
 
 </div>
@@ -1412,9 +1627,9 @@ Professional communication across multiple environments.
 
 <div class="language-card">
 
-<h3>English/h3>
+<h3>English</h3>
 
-<span>Native</span>
+<span>Professional Working Proficiency</span>
 
 </div>
 
@@ -1422,7 +1637,7 @@ Professional communication across multiple environments.
 
 <h3>Somali</h3>
 
-<span>Professional</span>
+<span>Native / Fluent</span>
 
 </div>
 
@@ -1430,7 +1645,7 @@ Professional communication across multiple environments.
 
 <h3>Swahili</h3>
 
-<spanBilingual</span>
+<span>Bilingual Proficiency</span>
 
 </div>
 
@@ -1440,7 +1655,6 @@ Professional communication across multiple environments.
 
 </section>
 
-<!-
 <!-- DOCUMENTS CENTER -->
 
 <section id="documents">
@@ -1452,7 +1666,7 @@ Professional communication across multiple environments.
 <h2>Professional Documents Center</h2>
 
 <p>
-Quick access to professional documents and credentials.
+Quick access to professional documents, qualifications and supporting credentials.
 </p>
 
 </div>
@@ -1463,10 +1677,10 @@ Quick access to professional documents and credentials.
 
 <i class="fas fa-file-pdf"></i>
 
-<h3>View CV</h3>
+<h3>Curriculum Vitae</h3>
 
 <p>
-Download professional curriculum vitae.
+Download and review my latest professional CV.
 </p>
 
 </a>
@@ -1475,10 +1689,10 @@ Download professional curriculum vitae.
 
 <i class="fas fa-file-lines"></i>
 
-<h3>View Cover Letter</h3>
+<h3>Cover Letter</h3>
 
 <p>
-Professional application cover letter.
+Professional cover letter for employment applications.
 </p>
 
 </a>
@@ -1487,10 +1701,10 @@ Professional application cover letter.
 
 <i class="fas fa-graduation-cap"></i>
 
-<h3>View Degree</h3>
+<h3>Degree Certificate</h3>
 
 <p>
-Bachelor of Business Information Technology.
+Bachelor of Business Information Technology qualification.
 </p>
 
 </a>
@@ -1499,10 +1713,10 @@ Bachelor of Business Information Technology.
 
 <i class="fas fa-award"></i>
 
-<h3>Certificates</h3>
+<h3>Professional Qualifications</h3>
 
 <p>
-Professional qualifications and achievements.
+View academic and professional credentials.
 </p>
 
 </a>
@@ -1521,10 +1735,12 @@ Professional qualifications and achievements.
 
 <div class="availability-box">
 
-<h2>Available Immediately</h2>
+<h2>
+Available Immediately
+</h2>
 
 <p>
-Open to ICT Support Officer, IT Support Specialist, Help Desk Technician, Systems Support Officer, Network Support Technician, Technical Support Engineer and ICT Administrator opportunities.
+Open to ICT Support, Systems Administration, Help Desk, Technical Support, Administrative Support, Executive Assistance, Secretariat and Operations Support opportunities.
 </p>
 
 <div class="availability-items">
@@ -1557,50 +1773,9 @@ Available Immediately
 
 </section>
 
+<!-- PART 4 STYLES -->
+
 <style>
-
-/* PROJECTS */
-
-.projects-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-gap:30px;
-}
-
-.project-card{
-background:#111827;
-border-radius:24px;
-overflow:hidden;
-border:1px solid rgba(255,255,255,.05);
-}
-
-.project-image img{
-width:100%;
-height:260px;
-object-fit:cover;
-}
-
-.project-content{
-padding:30px;
-}
-
-.project-tag{
-background:rgba(250,204,21,.15);
-color:var(--accent);
-padding:8px 14px;
-border-radius:40px;
-font-size:.8rem;
-font-weight:700;
-}
-
-.project-content h3{
-margin:18px 0;
-}
-
-.project-content h4{
-color:var(--accent);
-margin-top:16px;
-}
 
 /* CERTIFICATES */
 
@@ -1612,8 +1787,15 @@ gap:25px;
 
 .certificate-card{
 background:#111827;
-border-radius:20px;
+border-radius:24px;
 overflow:hidden;
+border:1px solid rgba(255,255,255,.05);
+box-shadow:var(--shadow);
+transition:.3s ease;
+}
+
+.certificate-card:hover{
+transform:translateY(-8px);
 }
 
 .certificate-card img{
@@ -1624,6 +1806,14 @@ object-fit:cover;
 
 .certificate-content{
 padding:25px;
+}
+
+.certificate-content h3{
+margin-bottom:10px;
+}
+
+.certificate-content p{
+color:var(--muted);
 }
 
 /* LANGUAGES */
@@ -1637,34 +1827,18 @@ gap:25px;
 .language-card{
 background:#111827;
 padding:35px;
-text-align:center;
 border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.language-card h3{
+margin-bottom:12px;
 }
 
 .language-card span{
 color:var(--accent);
 font-weight:700;
-}
-
-/* ACHIEVEMENTS */
-
-.achievement-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.achievement-card{
-background:#111827;
-padding:30px;
-border-radius:20px;
-text-align:center;
-}
-
-.achievement-card i{
-font-size:2rem;
-color:var(--accent);
-margin-bottom:20px;
 }
 
 /* DOCUMENTS */
@@ -1678,10 +1852,11 @@ gap:25px;
 .document-card{
 background:#111827;
 padding:35px;
-border-radius:20px;
+border-radius:24px;
 text-align:center;
 color:white;
-transition:.3s;
+border:1px solid rgba(255,255,255,.05);
+transition:.3s ease;
 }
 
 .document-card:hover{
@@ -1690,8 +1865,16 @@ transform:translateY(-8px);
 
 .document-card i{
 font-size:2rem;
-color:var(--accent);
 margin-bottom:20px;
+color:var(--accent);
+}
+
+.document-card h3{
+margin-bottom:10px;
+}
+
+.document-card p{
+color:var(--muted);
 }
 
 /* AVAILABILITY */
@@ -1701,11 +1884,18 @@ background:linear-gradient(135deg,#111827,#1e293b);
 padding:60px;
 border-radius:30px;
 text-align:center;
+box-shadow:var(--shadow);
 }
 
 .availability-box h2{
-font-size:2.4rem;
+font-size:2.5rem;
 margin-bottom:20px;
+}
+
+.availability-box p{
+max-width:850px;
+margin:auto;
+color:var(--muted);
 }
 
 .availability-items{
@@ -1719,6 +1909,7 @@ gap:20px;
 background:rgba(255,255,255,.05);
 padding:20px;
 border-radius:16px;
+font-weight:600;
 }
 
 .availability-items i{
@@ -1726,12 +1917,42 @@ color:var(--accent);
 margin-right:10px;
 }
 
-     </style>
+/* RESPONSIVE */
 
+@media(max-width:768px){
 
-<!-- INFO -->
+.language-grid{
+grid-template-columns:1fr;
+}
 
-<div class="contact-info">
+.availability-box{
+padding:40px 25px;
+}
+
+.availability-box h2{
+font-size:2rem;
+}
+
+}
+
+</style>
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Contact Me</h2>
+
+<p>
+Let's discuss how I can support your organization through ICT support, systems administration, executive support, administration and digital operations.
+</p>
+
+</div>
+
+<div class="contact-wrapper">
 
 <div class="contact-card">
 
@@ -1794,6 +2015,10 @@ margin-right:10px;
 
 </div>
 
+<div class="contact-card">
+
+<h3>Quick Actions</h3>
+
 <div class="action-buttons">
 
 <a href="Jamal_Fahadh_CV.pdf" class="action-btn">
@@ -1811,10 +2036,22 @@ View Cover Letter
 Call Me
 </a>
 
+<a href="mailto:teacherfahadh@gmail.com" class="action-btn">
+<i class="fas fa-envelope"></i>
+Email Me
+</a>
+
 <a href="https://wa.me/252636710907" class="action-btn">
 <i class="fab fa-whatsapp"></i>
-WhatsApp Me
+WhatsApp
 </a>
+
+<a href="https://fahadict.github.io/hub/" class="action-btn">
+<i class="fas fa-globe"></i>
+Portfolio
+</a>
+
+</div>
 
 </div>
 
@@ -1824,7 +2061,7 @@ WhatsApp Me
 
 </section>
 
-<!-- FINAL CTA -->
+<!-- ENTERPRISE CTA -->
 
 <section class="final-cta">
 
@@ -1837,7 +2074,7 @@ Ready to Strengthen Your ICT Operations?
 </h2>
 
 <p>
-I am available immediately to support telecommunications, logistics, energy, construction, corporate and international organizations with professional ICT support, network administration, systems support and technical operations services.
+I am available immediately to support telecommunications, logistics, education, corporate organizations, NGOs, embassies and international institutions through professional ICT support, systems administration, technical operations, administrative support and executive coordination services.
 </p>
 
 <div class="cta-buttons">
@@ -1869,23 +2106,23 @@ Email Me
 <h3>Jamal Fahadh Mohamed</h3>
 
 <p>
-ICT Support Officer | IT Support Specialist | Help Desk Technician | Systems Support Officer | ICT Trainer
+ICT Support Officer | IT Support Specialist | Systems Support | Executive Support | Administrative Professional
 </p>
 
 <div class="footer-links">
 
 <a href="#about">About</a>
 <a href="#experience">Experience</a>
-<a href="#skills">Skills</a>
+<a href="#competencies">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#certificates">Certificates</a>
 <a href="#contact">Contact</a>
 
 </div>
 
 <p class="copyright">
 
-© 2026 Jamal Fahadh Mohamed |
-Built for ICT, Telecommunications, Corporate and International Recruitment
+© 2026 Jamal Fahadh Mohamed. All Rights Reserved.
 
 </p>
 
@@ -1903,7 +2140,7 @@ Built for ICT, Telecommunications, Corporate and International Recruitment
 
 </a>
 
-<!-- FLOATING WHATSAPP -->
+<!-- FLOATING WHATSAPP BUTTON -->
 
 <a href="https://wa.me/252636710907" class="whatsapp-float">
 
@@ -1911,48 +2148,28 @@ Built for ICT, Telecommunications, Corporate and International Recruitment
 
 </a>
 
+<!-- PART 5 STYLES -->
+
 <style>
 
 /* CONTACT */
 
 .contact-wrapper{
 display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:40px;
+grid-template-columns:1fr 1fr;
+gap:30px;
 }
 
-.contact-form,
 .contact-card{
 background:#111827;
 padding:35px;
 border-radius:24px;
+border:1px solid rgba(255,255,255,.05);
+box-shadow:var(--shadow);
 }
 
-.contact-form h3,
 .contact-card h3{
 margin-bottom:25px;
-}
-
-.contact-form input,
-.contact-form textarea{
-width:100%;
-padding:16px;
-margin-bottom:16px;
-border:none;
-border-radius:12px;
-background:#1f2937;
-color:white;
-}
-
-.send-btn{
-width:100%;
-padding:16px;
-background:var(--accent);
-color:#000;
-font-weight:700;
-border:none;
-border-radius:12px;
-cursor:pointer;
 }
 
 .contact-item{
@@ -1968,20 +2185,29 @@ font-size:1.2rem;
 margin-top:4px;
 }
 
+.contact-item p{
+color:var(--muted);
+}
+
 .action-buttons{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:15px;
-margin-top:25px;
 }
 
 .action-btn{
-background:#111827;
+background:#1f2937;
 padding:16px;
 border-radius:14px;
 text-align:center;
 color:white;
 border:1px solid rgba(255,255,255,.05);
+transition:.3s ease;
+font-weight:600;
+}
+
+.action-btn:hover{
+transform:translateY(-4px);
 }
 
 .action-btn i{
@@ -2001,25 +2227,26 @@ padding:70px 40px;
 border-radius:30px;
 text-align:center;
 color:#000;
+box-shadow:var(--shadow);
 }
 
 .cta-box h2{
-font-size:2.4rem;
+font-size:2.5rem;
 margin-bottom:20px;
 }
 
 .cta-box p{
-max-width:800px;
+max-width:850px;
 margin:auto;
 font-size:1.05rem;
 }
 
 .cta-buttons{
-margin-top:35px;
 display:flex;
 justify-content:center;
 gap:20px;
 flex-wrap:wrap;
+margin-top:35px;
 }
 
 .btn-primary-cta,
@@ -2053,6 +2280,10 @@ text-align:center;
 
 .footer-content h3{
 margin-bottom:15px;
+}
+
+.footer-content p{
+color:#cbd5e1;
 }
 
 .footer-links{
@@ -2103,9 +2334,22 @@ display:flex;
 align-items:center;
 justify-content:center;
 font-size:1.5rem;
-color:white;
+color:#fff;
 box-shadow:0 10px 30px rgba(0,0,0,.25);
 z-index:999;
+}
+
+/* SCROLL ANIMATION */
+
+.animate-section{
+opacity:0;
+transform:translateY(30px);
+transition:all .7s ease;
+}
+
+.show-animation{
+opacity:1;
+transform:translateY(0);
 }
 
 /* MOBILE */
@@ -2120,34 +2364,64 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
+.cta-box{
+padding:50px 25px;
+}
+
 .cta-box h2{
-font-size:1.8rem;
+font-size:1.9rem;
 }
 
 }
 
 </style>
 
+<!-- JAVASCRIPT -->
+
 <script>
 
-/* MOBILE MENU */
+/* MOBILE MENU FIX */
 
 function toggleMenu(){
-document.getElementById('mobileMenu').classList.toggle('show');
+document.getElementById('menu').classList.toggle('show');
 }
+
+/* CLOSE MENU AFTER CLICK */
+
+document.querySelectorAll('.menu a').forEach(link => {
+
+link.addEventListener('click', () => {
+
+document.getElementById('menu').classList.remove('show');
+
+});
+
+});
 
 /* SCROLL ANIMATION */
 
 const observer = new IntersectionObserver((entries)=>{
+
 entries.forEach((entry)=>{
+
 if(entry.isIntersecting){
+
 entry.target.classList.add('show-animation');
+
 }
-});
+
 });
 
-document.querySelectorAll('section').forEach((el)=>{
-observer.observe(el);
+},{
+threshold:0.1
+});
+
+document.querySelectorAll('section').forEach(section=>{
+
+section.classList.add('animate-section');
+
+observer.observe(section);
+
 });
 
 </script>
