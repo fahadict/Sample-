@@ -1,147 +1,1138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JAMAL FAHADH MOHAMED | ICT Educator</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<title>JAMAL FAHADHMOHAMED | Pearson Edexcel ICT Teacher | Digital Skills Trainer | Web Design Instructor</title>
+
+<meta name="description" content="Professional ICT Teacher, Digital Skills Trainer and Web Design Instructor in Hargeisa Somaliland. Specializing in Pearson Edexcel ICT, Microsoft Office, Educational Technology and Computer Lab Management.">
+
+<meta name="keywords" content="ICT Teacher Hargeisa, Pearson Edexcel ICT, Digital Skills Trainer Somaliland, Web Design Instructor, Computer Studies Teacher, ICT Trainer Somalia">
+
+<meta name="author" content="Jamal Fahadh Mohamed">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root { --primary: #004a99; --secondary: #0066cc; --success: #00d084; --light: #f4f8fc; --dark: #0f172a; --gray: #64748b; --radius: 18px; }
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-body { background: var(--light); color: #333; line-height: 1.7; }
-.container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-section { padding: 40px 0; }
-.card { background: white; padding: 30px; border-radius: var(--radius); box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.btn { display: inline-block; padding: 12px 25px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: 0.3s; margin: 5px; text-align: center; }
-.btn-primary { background: var(--primary); color: white; }
-.btn-success { background: var(--success); color: white; }
-h2 { color: var(--primary); margin-bottom: 25px; text-align: center; font-size: 2rem; }
-h3 { color: var(--primary); margin-bottom: 10px; }
+
+:root{
+--primary:#004a99;
+--secondary:#0066cc;
+--accent:#00bfff;
+--success:#00d084;
+--dark:#0f172a;
+--light:#f4f8fc;
+--white:#ffffff;
+--gray:#64748b;
+--shadow:0 12px 30px rgba(0,0,0,.12);
+--radius:18px;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--light);
+color:#333;
+line-height:1.8;
+overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+}
+
+ul{
+list-style:none;
+}
+
+.container{
+max-width:1300px;
+margin:auto;
+}
+
+/* NAVIGATION */
+
+header{
+position:sticky;
+top:0;
+z-index:9999;
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+.navbar{
+max-width:1400px;
+margin:auto;
+padding:16px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:1.3rem;
+font-weight:800;
+color:white;
+}
+
+.menu{
+display:flex;
+gap:22px;
+}
+
+.menu a{
+color:white;
+font-size:14px;
+font-weight:500;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#d9f6ff;
+}
+
+.menu-toggle{
+display:none;
+font-size:28px;
+color:white;
+cursor:pointer;
+}
+
+@media(max-width:900px){
+
+.menu{
+display:none;
+position:absolute;
+top:70px;
+right:0;
+background:var(--primary);
+width:260px;
+flex-direction:column;
+padding:20px;
+box-shadow:var(--shadow);
+}
+
+.menu.show{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
+
+/* HERO */
+
+.hero{
+background:
+linear-gradient(rgba(0,74,153,.92),rgba(0,74,153,.88)),
+url("assets/images/hero-bg.jpg");
+
+background-size:cover;
+background-position:center;
+
+color:white;
+text-align:center;
+padding:90px 20px;
+}
+
+.badge{
+display:inline-block;
+background:#00ffcc;
+color:#000;
+padding:8px 18px;
+border-radius:50px;
+font-weight:700;
+font-size:.85rem;
+margin-bottom:25px;
+}
+
+.profile-container{
+width:min(240px,80vw);
+aspect-ratio:1/1;
+margin:25px auto;
+padding:6px;
+border-radius:50%;
+background:linear-gradient(135deg,#ffffff,#00ffcc);
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+.profile-img{
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+border:4px solid white;
+}
+
+.hero h1{
+font-size:3.4rem;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.hero h2{
+font-size:1.25rem;
+font-weight:500;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:900px;
+margin:auto;
+font-size:1.05rem;
+}
+
+.hero-buttons{
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+border-radius:50px;
+font-weight:700;
+transition:.3s;
+}
+
+.btn-primary{
+background:white;
+color:var(--primary);
+}
+
+.btn-secondary{
+background:transparent;
+border:2px solid white;
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.availability{
+margin-top:25px;
+display:inline-block;
+background:rgba(255,255,255,.12);
+padding:12px 24px;
+border-radius:50px;
+backdrop-filter:blur(10px);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.hero h2{
+font-size:1rem;
+}
+
+}
+
+/* SECTION STYLES */
+
+section{
+padding:90px 5%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:2.4rem;
+color:var(--primary);
+margin-bottom:10px;
+font-weight:800;
+}
+
+.section-title p{
+color:var(--gray);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+color:var(--primary);
+margin-bottom:15px;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.stat{
+background:white;
+padding:30px;
+border-radius:var(--radius);
+text-align:center;
+box-shadow:var(--shadow);
+}
+
+.stat h3{
+font-size:2.4rem;
+color:var(--primary);
+font-weight:800;
+}
+
+.stat p{
+color:var(--gray);
+}
+
 </style>
 </head>
+
 <body>
 
-<header style="background:var(--primary); padding:20px 5%; color:white; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000;">
-    <div style="font-weight:800;">Jamal Fahadh Mohamed</div>
-    <nav style="display:flex; gap:15px; font-size:0.9rem;">
-        <a href="#about" style="color:white;">Profile</a>
-        <a href="#experience" style="color:white;">Experience</a>
-        <a href="#contact" style="color:white;">Contact</a>
-    </nav>
-</header>
+<header>
 
-<section style="background:linear-gradient(135deg,var(--primary),var(--secondary)); color:white; text-align:center; padding:80px 20px;">
-    <h1>Jamal Fahadh Mohamed</h1>
-    <p>Pearson Edexcel ICT Teacher | Digital Skills Trainer | Web Design Instructor</p>
-    <div style="margin-top:20px;">
-        <a href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" class="btn" style="background:white; color:var(--primary);">View CV</a>
-    </div>
-</section>
+<div class="navbar">
 
-<div class="container">
-    <section id="about">
-        <h2>Professional Profile</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>ICT Educator & Trainer</h3>
-                <p>I am an ICT educator and digital skills trainer dedicated to preparing learners for academic success. Holding a BBIT, I combine technical expertise with practical teaching methods.</p>
-            </div>
-            <div class="card">
-                <h3>Contact Details</h3>
-                <p><strong>Location:</strong> Hargeisa, Somaliland<br><strong>Phone:</strong> +252 63 6710907<br><strong>Email:</strong> teacherfahadh@gmail.com</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="achievements">
-        <h2>Key Achievements</h2>
-        <div class="grid">
-            <div class="card"><h3>500+</h3><p>Students Trained</p></div>
-            <div class="card"><h3>7+</h3><p>Years Experience</p></div>
-            <div class="card"><h3>20+</h3><p>ICT Projects</p></div>
-            <div class="card"><h3>100%</h3><p>Pearson Edexcel Focus</p></div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="grid">
-            <div class="card"><h3>Web Development</h3><p>HTML, CSS, Responsive Design</p></div>
-            <div class="card"><h3>Microsoft Office</h3><p>Word, Excel, PowerPoint, Access</p></div>
-            <div class="card"><h3>Computer Lab Management</h3><p>Maintenance, Networking, Troubleshooting</p></div>
-            <div class="card"><h3>Graphic Design</h3><p>Digital Content and Creative Design</p></div>
-            <div class="card"><h3>Digital Skills</h3><p>Beginner to Advanced Level Training</p></div>
-            <div class="card"><h3>EdTech</h3><p>Learning Platforms and ICT Integration</p></div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <div class="card">
-            <h3>ICT Teacher | Elm High School (2018–2025)</h3>
-            <p>Delivered ICT lessons, managed computer laboratories, and supported digital learning initiatives.</p>
-        </div>
-        <div class="card">
-            <h3>Library Support Officer | Elm High School (2021–2023)</h3>
-            <p>Supported library systems through digital cataloguing and resource management.</p>
-        </div>
-        <div class="card">
-            <h3>Computer Studies Teacher | Turkana School of Technology (2017)</h3>
-            <p>Delivered computer studies lessons, introducing foundational digital skills.</p>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <div class="card">
-            <h3>Bachelor of Business Information Technology (BBIT)</h3>
-            <p>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
-        </div>
-        <div class="card">
-            <h3>Certificate in E-Commerce & Web Design</h3>
-            <p>East Africa Solution</p>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <h2>Featured Projects</h2>
-        <div class="grid">
-            <div class="card"><h3>School Portal</h3><p>Platform for communication and learning support.</p></div>
-            <div class="card"><h3>Library Management System</h3><p>Database-driven solution for book tracking.</p></div>
-            <div class="card"><h3>Student Database</h3><p>Microsoft Access record management.</p></div>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="grid">
-            <div class="card"><p>"Mr. Jamal explains ICT concepts clearly and practically." — Ahmed Hassan</p></div>
-            <div class="card"><p>"Excellent trainer in Microsoft Office and Digital Skills." — Mohamoud Ali</p></div>
-        </div>
-    </section>
-
-    <section id="references">
-        <h2>Professional References</h2>
-        <div class="grid">
-            <div class="card"><h3>Yusuf Lutta Osinga</h3><p>Principal, Elm High School<br>+252 63 323426</p></div>
-            <div class="card"><h3>Awale Adam</h3><p>Administrator, Elm High School<br>+252 63 4763674</p></div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="card" style="text-align:center;">
-            <p style="margin-bottom:20px;">Available for ICT Teaching and Consulting.</p>
-            <a href="assets/documents/ICT_COVER_LETTER.pdf" target="_blank" class="btn btn-primary">View Cover Letter</a>
-            <a href="assets/documents/sample-lesson-plan.pdf" target="_blank" class="btn btn-success">View Lesson Plan</a>
-        </div>
-    </section>
+<div class="logo">
+Jamal Fahadh Mohamed
 </div>
 
-<footer style="text-align:center; padding:40px; color:var(--gray); font-size:0.8rem;">
-    &copy; 2026 Jamal Fahadh Mohamed
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<ul class="menu" id="menu">
+
+<li><a href="#about">Profile</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#portfolio">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="badge">
+✔ ICT professional based in Hargeisa, Somaliland, available for immediate employment.
+</div>
+
+<div class="profile-container">
+<img src="assets/images/jamal-profile.jpg"
+     alt="Jamal Fahadh Mohamed"
+     class="profile-img">
+</div>
+
+<h1>Jamal Fahadh Mohamed</h1>
+
+<h2>
+Pearson Edexcel ICT Teacher |
+Digital Skills Trainer |
+Web Design Instructor
+</h2>
+
+<p>
+Helping students develop practical ICT, digital literacy, and workplace
+technology skills through engaging, industry-relevant learning experiences.
+Experienced in Pearson Edexcel ICT, Microsoft Office, Web Design,
+Graphic Design, and Computer Lab Management.
+</p>
+
+<div class="hero-buttons">
+
+<a href="assets/documents/Jamal_Fahadh_CV.pdf"
+   class="btn btn-primary"
+   download>
+Download CV
+</a>
+
+<a href="#contact"
+   class="btn btn-secondary">
+Contact Me
+</a>
+
+</div>
+
+<div class="availability">
+Available for Pearson Edexcel ICT teaching with practical classroom delivery, digital skills training, and computer lab management.
+</div>
+
+</section>
+
+<!-- PROFESSIONAL PROFILE -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Professional Profile</h2>
+<p>Empowering learners for a digital world.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+
+<h3>ICT Educator & Digital Skills Trainer</h3>
+
+<p>
+I am an ICT educator and digital skills trainer dedicated to preparing learners
+for academic success and modern workplace demands. Holding a Bachelor of
+Business Information Technology (BBIT), I combine technical expertise with
+practical teaching methods to create engaging and effective learning environments.
+</p>
+
+<br>
+
+<p>
+My focus is on helping students build confidence in technology, develop
+problem-solving abilities, and gain hands-on experience with digital tools that
+support lifelong learning and career growth.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Contact Information</h3>
+
+<p><strong>Location:</strong> Hargeisa, Somaliland</p>
+<p><strong>Phone:</strong> +252 63 6710907</p>
+<p><strong>Email:</strong> teacherfahadh@gmail.com</p>
+<p><strong>Website:</strong> fahadict.github.io/tech</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Key Achievements</h2>
+<p>Professional impact and accomplishments.</p>
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>500+</h3>
+<p>Students Trained</p>
+</div>
+
+<div class="stat">
+<h3>7+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h3>20+</h3>
+<p>ICT Projects</p>
+</div>
+
+<div class="stat">
+<h3>100%</h3>
+<p>Pearson Edexcel Focus</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+   <!-- SKILLS -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Technical Skills</h2>
+<p>Core competencies and areas of expertise.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Web Development</h3>
+<p>HTML, CSS, Responsive Design</p>
+</div>
+
+<div class="card">
+<h3>Microsoft Office</h3>
+<p>Word, Excel, PowerPoint, Access</p>
+</div>
+
+<div class="card">
+<h3>Computer Lab Management</h3>
+<p>Maintenance, Networking, Troubleshooting</p>
+</div>
+
+<div class="card">
+<h3>Graphic Design</h3>
+<p>Digital Content and Creative Design</p>
+</div>
+
+<div class="card">
+<h3>Digital Skills Training</h3>
+<p>Beginner to Advanced Level Training</p>
+</div>
+
+<div class="card">
+<h3>Educational Technology</h3>
+<p>Learning Platforms and ICT Integration</p>
+</div>
+
+<div class="card">
+<h3>ICT Support</h3>
+<p>Technical Support, Troubleshooting, User Assistance</p>
+</div>
+
+<div class="card">
+<h3>Networking</h3>
+<p>LAN, Routers, Switches, Connectivity</p>
+</div>
+
+<div class="card">
+<h3>Pearson Edexcel ICT</h3>
+<p>Curriculum Delivery and Assessment</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Professional Experience</h2>
+<p>Teaching, ICT support and educational technology experience.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>ICT Teacher</h3>
+
+<p>
+<strong>Elm High School</strong><br>
+2018 – 2025
+</p>
+
+<br>
+
+<p>
+Delivered ICT lessons across different levels, effectively managed computer laboratories, and supported the integration of digital learning initiatives within the school environment. I guided students in developing strong practical ICT competencies, including computer applications, digital literacy, and problem-solving skills, while ensuring alignment with academic standards and modern workplace expectations. I also designed engaging lesson activities, maintained ICT resources, and supported learners in confidently applying technology to real-world tasks and academic work.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Library Support Officer</h3>
+
+<p>
+<strong>Elm High School</strong><br>
+2021 – 2023
+</p>
+
+<br>
+
+<p>
+Supported library systems through effective digital cataloguing, resource management, and the organization of learning materials. Assisted in maintaining and improving library operations while promoting technology-assisted learning services to enhance access to academic resources and support students’ research and study needs.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Computer Studies Teacher</h3>
+
+<p>
+<strong>Turkana School of Technology</strong><br>
+2017
+</p>
+
+<br>
+
+<p>
+Delivered computer studies lessons to learners, introducing foundational digital skills and supporting simple website development activities. I trained on basic computer applications, typing skills, and safe use of technology, while designing interactive and engaging lessons to make learning accessible and enjoyable for young students.”
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Education</h2>
+<p>Academic qualifications and training.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+
+<h3>Bachelor of Business Information Technology (BBIT)</h3>
+
+<p>
+Jomo Kenyatta University of Agriculture
+and Technology (JKUAT)
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Certificate in E-Commerce & Web Design</h3>
+
+<p>
+East Africa Solution
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Featured Projects</h2>
+<p>Selected educational and technology projects.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="assets/images/school-portal.jpg"
+alt="School Portal"
+style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:15px;">
+
+<h3>School Portal</h3>
+
+<p>
+Educational website platform for communication,
+resources, announcements and learning support.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="assets/images/library-system.jpg"
+alt="Library Management System"
+style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:15px;">
+
+<h3>Library Management System</h3>
+
+<p>
+Database-driven solution for book tracking,
+resource management and library administration.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="assets/images/student-database.jpg"
+alt="Student Database"
+style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:15px;">
+
+<h3>Student Database</h3>
+
+<p>
+Microsoft Access project designed for managing
+student information and academic records.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section id="certifications">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Certifications & Qualifications</h2>
+<p>Academic achievements and professional competencies.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="assets/images/degree.jpg"
+alt="BBIT Degree"
+style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:15px;">
+
+<h3>Bachelor of Business Information Technology</h3>
+
+<p>
+University Degree in Business Information Technology.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="assets/images/web_cert.jpg"
+alt="Web Design Certificate"
+style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:15px;">
+
+<h3>Web Design & Development</h3>
+
+<p>
+Responsive website design and development skills.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="assets/images/kcse.jpg"
+alt="KCSE Certificate"
+style="width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:15px;">
+
+<h3>KCSE Certificate</h3>
+
+<p>
+Kenya Certificate of Secondary Education.
+</p>
+
+</div>
+
+</div>
+
+<br><br>
+
+<div class="grid">
+
+<div class="card">
+<h3>Pearson Edexcel ICT</h3>
+<p>ICT curriculum specialist.</p>
+</div>
+
+<div class="card">
+<h3>Microsoft Office</h3>
+<p>Advanced office productivity skills.</p>
+</div>
+
+<div class="card">
+<h3>Graphic Design</h3>
+<p>Creative digital content production.</p>
+</div>
+
+<div class="card">
+<h3>Digital Skills Training</h3>
+<p>Technology skills development.</p>
+</div>
+
+<div class="card">
+<h3>Educational Technology</h3>
+<p>Technology integration in education.</p>
+</div>
+
+<div class="card">
+<h3>Computer Lab Management</h3>
+<p>ICT laboratory administration and support.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+   <!-- TESTIMONIALS -->
+
+<section id="testimonials">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Testimonials</h2>
+<p>Feedback from learners and colleagues.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+
+<h3>Ahmed Hassan</h3>
+
+<p>
+"Mr. Jamal explains ICT concepts clearly and practically.
+His lessons are engaging and easy to understand."
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Mohamoud Ali</h3>
+
+<p>
+"Excellent trainer in Microsoft Office and Digital Skills.
+His teaching style makes learning enjoyable."
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- REFERENCES -->
+
+<section id="references">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Professional References</h2>
+<p>Reference letters available upon request, and I can facilitate contact with my referees if needed.</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+
+<h3>Mr. Yusuf Lutta Osinga </h3>
+
+<p>Principal, Elm High School</p>
+<p>
+lutta72osinga@gmail.com
+</p>
+<p>
++252 63 323426
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Mr. Awale Adam</h3>
+
+<p>Administrator, Elm High School</p>
+<p>
+adan76ers@yahoo.com
+</p>
+<p>
++252 63 4763674
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contact Me</h2>
+<p>
+Available for ICT Teaching, Digital Skills Training,
+Educational Technology Projects and Consulting.
+</p>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+
+<h3>Get In Touch</h3>
+
+<p>
+I am available for:
+</p>
+
+<br>
+
+<ul style="padding-left:20px;">
+
+<li>✓ ICT Teaching Positions</li>
+<li>✓ Digital Skills Training</li>
+<li>✓ Educational Technology Projects</li>
+<li>✓ Computer Lab Management</li>
+<li>✓ ICT Support & Technical Assistance</li>
+<li>✓ Website Development Projects</li>
+
+</ul>
+
+<br>
+
+<p>
+Let's discuss how I can contribute to your organization.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Contact Information</h3>
+
+<p><strong>Name:</strong> Jamal Fahadh Mohamed</p>
+<p><strong>Phone:</strong> +252 63 6710907</p>
+<p><strong>Email:</strong> teacherfahadh@gmail.com</p>
+<p><strong>Location:</strong> Hargeisa, Somaliland</p>
+<p><strong>Website:</strong> fahadict.github.io/tech</p>
+
+<br>
+
+<div style="display:flex;flex-direction:column;gap:15px;">
+
+<a href="https://wa.me/252636710907"
+style="
+display:block;
+padding:14px;
+background:#25D366;
+color:white;
+text-align:center;
+border-radius:12px;
+font-weight:700;">
+WhatsApp Me
+</a>
+
+<a href="tel:+252636710907"
+style="
+display:block;
+padding:14px;
+background:#0066cc;
+color:white;
+text-align:center;
+border-radius:12px;
+font-weight:700;">
+Call Me
+</a>
+
+<a href="mailto:teacherfahadh@gmail.com"
+style="
+display:block;
+padding:14px;
+background:#0f172a;
+color:white;
+text-align:center;
+border-radius:12px;
+font-weight:700;">
+Email Me
+</a>
+
+<a href="assets/documents/Jamal_Fahadh_CV.pdf"
+download
+style="
+display:block;
+padding:14px;
+background:#00d084;
+color:white;
+text-align:center;
+border-radius:12px;
+font-weight:700;">
+Download CV
+</a>
+<a href="assets/documents/ICT_COVER_LETTER.pdf" target="_blank" class="btn btn-primary">View Cover Letter</a>
+            <a href="assets/documents/sample-lesson-plan.pdf" target="_blank" class="btn btn-success">View Lesson Plan</a>
+        
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer
+style="
+background:linear-gradient(135deg,#004a99,#0066cc);
+color:white;
+padding:50px 20px;
+text-align:center;">
+
+<h3 style="margin-bottom:10px;">
+Jamal Fahadh Mohamed
+</h3>
+
+<p>
+Pearson Edexcel ICT Teacher •
+Digital Skills Trainer •
+Web Design Instructor
+</p>
+
+<p style="margin-top:15px;">
+Hargeisa, Somaliland
+</p>
+
+<p style="margin-top:20px;opacity:.9;">
+© 2026 All Rights Reserved
+</p>
+
 </footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+
+<a href="https://wa.me/252636710907"
+target="_blank"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+font-weight:700;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+z-index:999;
+">
+WhatsApp
+</a>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("show");
+}
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},{threshold:0.1});
+
+document.querySelectorAll("section").forEach(section=>{
+
+section.style.opacity="0";
+section.style.transform="translateY(40px)";
+section.style.transition="all .8s ease";
+
+observer.observe(section);
+
+});
+
+</script>
 
 </body>
 </html>
+    
+        
+            
