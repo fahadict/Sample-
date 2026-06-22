@@ -984,29 +984,38 @@ Let's discuss how I can contribute to your organization.
 <p><strong>Website:</strong> fahadict.github.io/tech</p>
 
 <br>
+<!-- CV View Button -->
+<a href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" 
+   style="display:block; padding:14px; background:#00d084; color:white; text-align:center; border-radius:12px; font-weight:700; text-decoration:none; transition:transform 0.2s, background 0.2s;">
+   View CV
+</a>
 
-<div style="display:flex;flex-direction:column;gap:15px;">
+<!-- Other Buttons Updated for Consistency -->
+<a href="assets/documents/ICT_COVER_LETTER.pdf" target="_blank" 
+   style="display:block; padding:14px; background:#64748b; color:white; text-align:center; border-radius:12px; font-weight:700; text-decoration:none; transition:transform 0.2s, background 0.2s;">
+   View Cover Letter
+</a>
 
-    <!-- WhatsApp -->
-    <a href="https://wa.me/252636710907" style="display:block;padding:14px;background:#25D366;color:white;text-align:center;border-radius:12px;font-weight:700;text-decoration:none;">WhatsApp Me</a>
+<a href="assets/documents/sample-lesson-plan.pdf" target="_blank" 
+   style="display:block; padding:14px; background:#64748b; color:white; text-align:center; border-radius:12px; font-weight:700; text-decoration:none; transition:transform 0.2s, background 0.2s;">
+   View Lesson Plan
+</a>
 
-    <!-- Call -->
-    <a href="tel:+252636710907" style="display:block;padding:14px;background:#0066cc;color:white;text-align:center;border-radius:12px;font-weight:700;text-decoration:none;">Call Me</a>
-
-    <!-- Email -->
-    <a href="mailto:teacherfahadh@gmail.com" style="display:block;padding:14px;background:#0f172a;color:white;text-align:center;border-radius:12px;font-weight:700;text-decoration:none;">Email Me</a>
-
-    <!-- CV -->
-    <a href="assets/documents/Jamal_Fahadh_CV.pdf" download style="display:block;padding:14px;background:#00d084;color:white;text-align:center;border-radius:12px;font-weight:700;text-decoration:none;">Download CV</a>
-
-    <!-- Cover Letter -->
-    <a href="assets/documents/ICT_COVER_LETTER.pdf" target="_blank" style="display:block;padding:14px;background:#64748b;color:white;text-align:center;border-radius:12px;font-weight:700;text-decoration:none;">View Cover Letter</a>
-
-    <!-- Lesson Plan -->
-    <a href="assets/documents/sample-lesson-plan.pdf" target="_blank" style="display:block;padding:14px;background:#64748b;color:white;text-align:center;border-radius:12px;font-weight:700;text-decoration:none;">View Lesson Plan</a>
-
-</div>
-
+<!-- JAVASCRIPT FOR HOVER EFFECTS -->
+<script>
+    // Adding hover effect to buttons
+    const buttons = document.querySelectorAll('a[style*="background"]');
+    buttons.forEach(btn => {
+        btn.addEventListener('mouseover', () => {
+            btn.style.transform = 'scale(1.02)';
+            btn.style.filter = 'brightness(1.1)';
+        });
+        btn.addEventListener('mouseout', () => {
+            btn.style.transform = 'scale(1)';
+            btn.style.filter = 'brightness(1)';
+        });
+    });
+</script>
 
 <!-- FOOTER -->
 
