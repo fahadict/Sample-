@@ -984,39 +984,135 @@ Let's discuss how I can contribute to your organization.
 <p><strong>Website:</strong> fahadict.github.io/tech</p>
 
 <br>
-<!-- CV View Button -->
-<a href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" 
-   style="display:block; padding:14px; background:#00d084; color:white; text-align:center; border-radius:12px; font-weight:700; text-decoration:none; transition:transform 0.2s, background 0.2s;">
-   View CV
+
+<div style="display:flex;flex-direction:column;gap:15px;">
+
+<a href="https://wa.me/252636710907"
+style="
+display:block;
+padding:14px;
+background:#25D366;
+color:white;
+text-align:center;
+border-radius:12px;
+font-weight:700;">
+WhatsApp Me
 </a>
 
-<!-- Other Buttons Updated for Consistency -->
-<a href="assets/documents/ICT_COVER_LETTER.pdf" target="_blank" 
-   style="display:block; padding:14px; background:#64748b; color:white; text-align:center; border-radius:12px; font-weight:700; text-decoration:none; transition:transform 0.2s, background 0.2s;">
-   View Cover Letter
+<a href="tel:+252636710907"
+style="
+display:block;
+padding:14px;
+background:#0066cc;
+color:white;
+text-align:center;
+border-radius:12px;
+font-weight:700;">
+Call Me
 </a>
 
-<a href="assets/documents/sample-lesson-plan.pdf" target="_blank" 
-   style="display:block; padding:14px; background:#64748b; color:white; text-align:center; border-radius:12px; font-weight:700; text-decoration:none; transition:transform 0.2s, background 0.2s;">
-   View Lesson Plan
+<a href="mailto:teacherfahadh@gmail.com"
+style="
+display:block;
+padding:14px;
+background:#0f172a;
+color:white;
+text-align:center;
+border-radius:12px;
+font-weight:700;">
+Email Me
 </a>
 
-<!-- JAVASCRIPT FOR HOVER EFFECTS -->
-<script>
-    // Adding hover effect to buttons
-    const buttons = document.querySelectorAll('a[style*="background"]');
-    buttons.forEach(btn => {
-        btn.addEventListener('mouseover', () => {
-            btn.style.transform = 'scale(1.02)';
-            btn.style.filter = 'brightness(1.1)';
-        });
-        btn.addEventListener('mouseout', () => {
-            btn.style.transform = 'scale(1)';
-            btn.style.filter = 'brightness(1)';
-        });
-    });
-</script>
+<a href="assets/documents/Jamal_Fahadh_CV.pdf"
+download
+style="
+display:block;
+padding:14px;
+background:#00d084;
+color:white;
+text-align:center;
+border-radius:12px;
+font-weight:700;">
+Download CV
+</a>
 
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<style>
+    .doc-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 40px 20px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .doc-card {
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: #1e293b;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+    }
+    .doc-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-color: #0066cc;
+    }
+    .doc-card h4 { margin: 10px 0; font-size: 1.1rem; }
+    .doc-card p { font-size: 0.85rem; color: #64748b; margin-bottom: 15px; }
+</style>
+
+<section class="doc-container">
+    
+    <a href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" class="doc-card">
+        <div style="font-size: 2rem;">📄</div>
+        <h4>Professional CV</h4>
+        <p>My academic and work history</p>
+        <span style="color:#00d084; font-weight:700;">View Document →</span>
+    </a>
+
+    <a href="assets/documents/ICT_COVER_LETTER.pdf" target="_blank" class="doc-card">
+        <div style="font-size: 2rem;">✉️</div>
+        <h4>Cover Letter</h4>
+        <p>Professional introduction</p>
+        <span style="color:#64748b; font-weight:700;">View Document →</span>
+    </a>
+
+    <a href="assets/documents/sample-lesson-plan.pdf" target="_blank" class="doc-card">
+        <div style="font-size: 2rem;">🍎</div>
+        <h4>Lesson Plan</h4>
+        <p>Sample teaching methodology</p>
+        <span style="color:#64748b; font-weight:700;">View Document →</span>
+    </a>
+
+</section>
+
+
+
+
+
+     
 <!-- FOOTER -->
 
 <footer
@@ -1102,6 +1198,3 @@ observer.observe(section);
 
 </body>
 </html>
-    
-        
-            
