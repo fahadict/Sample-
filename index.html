@@ -22,15 +22,19 @@
 --shadow:0 22px 60px rgba(0,0,0,.30);
 --radius:24px;
 }
-*{box-sizing:border-box}
+html, body{
+margin:0;
+padding:0;
+overflow-x:hidden;
+box-sizing:border-box;
+}
+*, *::before, *::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-margin:0;
 font-family:'Inter',sans-serif;
 background:radial-gradient(circle at top, rgba(78,203,255,.12), transparent 28%), linear-gradient(180deg,var(--bg),var(--bg2));
 color:var(--text);
 line-height:1.8;
-overflow-x:hidden;
 padding-left:max(16px, env(safe-area-inset-left));
 padding-right:max(16px, env(safe-area-inset-right));
 }
@@ -38,8 +42,7 @@ img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 ul{margin:0;padding:0;list-style:none}
 .container{
-width:min(1200px,100%);
-max-width:calc(1200px - 32px);
+width:min(1200px,calc(100% - 32px));
 margin:0 auto;
 }
 .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -51,8 +54,6 @@ z-index:9999;
 background:rgba(5,10,18,.82);
 backdrop-filter:blur(18px);
 border-bottom:1px solid var(--line);
-padding-left:max(16px, env(safe-area-inset-left));
-padding-right:max(16px, env(safe-area-inset-right));
 }
 .navbar{
 display:flex;
@@ -60,7 +61,7 @@ align-items:center;
 justify-content:space-between;
 gap:16px;
 padding:14px 0;
-position:relative;
+min-width:0;
 }
 .logo{
 display:flex;
@@ -70,13 +71,19 @@ font-family:'Sora',sans-serif;
 font-weight:800;
 font-size:1rem;
 white-space:nowrap;
+min-width:0;
 }
 .logo-mark{
 width:42px;height:42px;border-radius:14px;
 background:linear-gradient(135deg,var(--brand),var(--brand2));
 box-shadow:0 10px 30px rgba(78,203,255,.25);
 }
-.menu-wrap{display:flex;align-items:center;gap:12px}
+.logo span{
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+.menu-wrap{display:flex;align-items:center;gap:12px;min-width:0}
 .menu{display:flex;align-items:center;gap:8px}
 .menu a{
 color:var(--muted);
@@ -100,6 +107,7 @@ border-radius:14px;
 padding:10px 14px;
 font-size:1rem;
 cursor:pointer;
+flex-shrink:0;
 }
 .menu-toggle:focus,.btn:focus,.doc-card:focus,.contact-link:focus,.nav-cta a:focus{
 outline:2px solid var(--brand);
@@ -420,10 +428,11 @@ box-shadow:var(--shadow);
 .floating-wa{right:12px;bottom:12px}
 .section{padding:44px 0}
 .profile-wrap{width:min(360px,90vw)}
-.container{max-width:100%;width:100%}
+.container{width:100%;max-width:100%}
 header,.container{padding-left:16px;padding-right:16px}
 .navbar{padding-left:0;padding-right:0}
 .menu{right:0;min-width:min(250px, calc(100vw - 32px))}
+.logo span{max-width:180px}
 }
 </style>
 </head>
