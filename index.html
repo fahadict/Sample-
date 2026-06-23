@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Jamal Fahadh Mohamed | Pearson Edexcel ICT Teacher | Digital Skills Trainer | Program Support | Web Design Instructor</title>
 <meta name="description" content="Professional ICT Teacher, Digital Skills Trainer, Program Support professional, and Web Design Instructor in Hargeisa, Somaliland. Specializing in Pearson Edexcel ICT, Microsoft Office, Educational Technology, Computer Lab Management, documentation, and coordination support." />
 <meta name="keywords" content="ICT Teacher Hargeisa, Pearson Edexcel ICT, Digital Skills Trainer Somaliland, Program Support, Administrative Support, Web Design Instructor, Computer Studies Teacher, ICT Trainer Somalia" />
@@ -21,7 +21,6 @@
 --muted:#a8b7d1;
 --brand:#4ecbff;
 --brand2:#7c8cff;
---accent:#22c55e;
 --shadow:0 22px 60px rgba(0,0,0,.30);
 --radius:24px;
 }
@@ -30,9 +29,7 @@ html{scroll-behavior:smooth}
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:
-radial-gradient(circle at top, rgba(78,203,255,.12), transparent 28%),
-linear-gradient(180deg,var(--bg),var(--bg2));
+background:radial-gradient(circle at top, rgba(78,203,255,.12), transparent 28%), linear-gradient(180deg,var(--bg),var(--bg2));
 color:var(--text);
 line-height:1.8;
 overflow-x:hidden;
@@ -40,7 +37,7 @@ overflow-x:hidden;
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 ul{margin:0;padding:0;list-style:none}
-.container{width:min(1200px,92vw);margin:auto}
+.container{width:min(1200px,calc(100% - 32px));margin:0 auto}
 .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
 .skip-link:focus{left:16px;top:16px;width:auto;height:auto;padding:10px 14px;background:#fff;color:#000;border-radius:10px;z-index:10000}
 header{
@@ -69,9 +66,7 @@ font-size:1rem;
 white-space:nowrap;
 }
 .logo-mark{
-width:42px;
-height:42px;
-border-radius:14px;
+width:42px;height:42px;border-radius:14px;
 background:linear-gradient(135deg,var(--brand),var(--brand2));
 box-shadow:0 10px 30px rgba(78,203,255,.25);
 }
@@ -238,19 +233,11 @@ border-radius:18px;
 background:rgba(255,255,255,.06);
 border:1px solid var(--line);
 }
-.mini strong{
-display:block;
-font-size:1.2rem;
-line-height:1.2;
-}
+.mini strong{display:block;font-size:1.2rem;line-height:1.2}
 .mini span{color:var(--muted);font-size:.92rem}
 .section{padding:52px 0}
 .section-title{text-align:center;margin-bottom:26px}
-.section-title h2{
-font-size:clamp(1.7rem,3vw,2.6rem);
-margin:0 0 8px;
-letter-spacing:-.03em;
-}
+.section-title h2{font-size:clamp(1.7rem,3vw,2.6rem);margin:0 0 8px;letter-spacing:-.03em}
 .section-title p{margin:0;color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
@@ -276,11 +263,7 @@ font-size:.92rem;
 }
 .list{padding-left:20px;list-style:disc}
 .list li{margin:10px 0}
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:16px;
-}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
 .stat{
 padding:22px;
 border-radius:22px;
@@ -288,24 +271,13 @@ background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.05));
 border:1px solid var(--line);
 text-align:center;
 }
-.stat strong{
-display:block;
-font-size:2.2rem;
-line-height:1;
-color:#fff;
-}
+.stat strong{display:block;font-size:2.2rem;line-height:1;color:#fff}
 .stat span{color:var(--muted)}
-.experience-item{
-position:relative;
-overflow:hidden;
-}
+.experience-item{position:relative;overflow:hidden}
 .experience-item::before{
 content:'';
 position:absolute;
-left:0;
-top:0;
-bottom:0;
-width:4px;
+left:0;top:0;bottom:0;width:4px;
 background:linear-gradient(180deg,var(--brand),var(--brand2));
 }
 .experience-top{
@@ -408,9 +380,7 @@ border-radius:999px;
 font-weight:800;
 box-shadow:0 16px 35px rgba(0,0,0,.26);
 }
-@media(max-width:1080px){
-.nav-cta{display:none}
-}
+@media(max-width:1080px){.nav-cta{display:none}}
 @media(max-width:980px){
 .hero-grid{grid-template-columns:1fr}
 .menu-toggle{display:inline-flex}
@@ -440,6 +410,8 @@ box-shadow:var(--shadow);
 .floating-wa{right:12px;bottom:12px}
 .section{padding:44px 0}
 .profile-wrap{width:min(360px,90vw)}
+.container{width:calc(100% - 24px)}
+.navbar{padding-left:4px;padding-right:4px}
 }
 </style>
 </head>
@@ -699,19 +671,19 @@ box-shadow:var(--shadow);
 </div>
 <div class="grid">
 <div class="card">
-<img src="assets/images/school-portal.jpg" alt="Screenshot of the school portal project" class="project-img" />
+<img src="assets/images/school-portal.jpg" alt="School portal project preview" class="project-img" />
 <h3>School Portal</h3>
-<p>Educational website platform for communication, resources, announcements and learning support.</p>
+<p>I contributed to the design and content structure of the portal to support communication and learning access.</p>
 </div>
 <div class="card">
-<img src="assets/images/library-system.jpg" alt="Screenshot of the library management system project" class="project-img" />
+<img src="assets/images/library-system.jpg" alt="Library management system project preview" class="project-img" />
 <h3>Library Management System</h3>
-<p>Database-driven solution for book tracking, resource management and library administration.</p>
+<p>I supported the project by helping organize the database workflow and user records.</p>
 </div>
 <div class="card">
-<img src="assets/images/student-database.jpg" alt="Screenshot of the student database project" class="project-img" />
+<img src="assets/images/student-database.jpg" alt="Student database project preview" class="project-img" />
 <h3>Student Database</h3>
-<p>Microsoft Access project designed for managing student information and academic records.</p>
+<p>I contributed to the development of a structured student record system using Microsoft Access.</p>
 </div>
 </div>
 </div>
