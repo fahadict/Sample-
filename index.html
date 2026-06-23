@@ -1,939 +1,1202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Jamal Fahadh Mohamed | Pearson Edexcel ICT Teacher | Digital Skills Trainer | Program Support | Software Skills Instructor</title>
-<meta name="description" content="Professional ICT Teacher, Digital Skills Trainer, Program Support professional, and Software Skills Instructor in Hargeisa, Somaliland. Specializing in Pearson Edexcel ICT, Microsoft Office, Educational Technology, Computer Lab Management, documentation, and coordination support." />
-<meta name="keywords" content="ICT Teacher Hargeisa, Pearson Edexcel ICT, Digital Skills Trainer Somaliland, Program Support, Administrative Support, Software Skills Instructor, Computer Studies Teacher, ICT Trainer Somalia" />
-<meta name="author" content="Jamal Fahadh Mohamed" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<style>
-:root{
---bg:#08111d;
---bg2:#0b1626;
---line:rgba(255,255,255,.10);
---text:#eef4ff;
---muted:#a8b7d1;
---brand:#4ecbff;
---brand2:#7c8cff;
---shadow:0 22px 60px rgba(0,0,0,.30);
---radius:24px;
-}
-html, body{
-margin:0;
-padding:0;
-overflow-x:hidden;
-box-sizing:border-box;
-}
-*, *::before, *::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-font-family:'Inter',sans-serif;
-background:radial-gradient(circle at top, rgba(78,203,255,.12), transparent 28%), linear-gradient(180deg,var(--bg),var(--bg2));
-color:var(--text);
-line-height:1.8;
-padding-left:max(16px, env(safe-area-inset-left));
-padding-right:max(16px, env(safe-area-inset-right));
-}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-ul{margin:0;padding:0;list-style:none}
-.container{
-width:min(1200px,calc(100% - 32px));
-margin:0 auto;
-}
-.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-.skip-link:focus{left:16px;top:16px;width:auto;height:auto;padding:10px 14px;background:#fff;color:#000;border-radius:10px;z-index:10000}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Jamal Fahadh Mohamed | Pearson Edexcel ICT Teacher | Digital Skills Trainer | Program Support | Software Skills Instructor</title>
+  <meta name="description" content="Professional ICT Teacher, Digital Skills Trainer, Program Support professional, and Software Skills Instructor in Hargeisa, Somaliland. Specializing in Pearson Edexcel ICT, Microsoft Office, Educational Technology, Computer Lab Management, documentation, and coordination support." />
+  <meta name="keywords" content="ICT Teacher Hargeisa, Pearson Edexcel ICT, Digital Skills Trainer Somaliland, Program Support, Administrative Support, Software Skills Instructor, Computer Studies Teacher, ICT Trainer Somalia" />
+  <meta name="author" content="Jamal Fahadh Mohamed" />
 
-.site-header{
-position:sticky;
-top:0;
-z-index:9999;
-background:rgba(5,10,18,.90);
-backdrop-filter:blur(18px);
-border-bottom:1px solid var(--line);
-padding-left:max(16px, env(safe-area-inset-left));
-padding-right:max(16px, env(safe-area-inset-right));
-}
-.header-top{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:12px;
-padding:12px 0;
-}
-.header-nav-wrap{
-padding-bottom:12px;
-}
-.logo{
-display:flex;
-align-items:center;
-gap:12px;
-min-width:0;
-font-family:'Sora',sans-serif;
-font-weight:800;
-}
-.logo-img{
-width:42px;
-height:42px;
-border-radius:12px;
-object-fit:cover;
-flex-shrink:0;
-}
-.logo span{
-white-space:nowrap;
-overflow:hidden;
-text-overflow:ellipsis;
-max-width:180px;
-}
-.menu-toggle{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-background:transparent;
-border:1px solid var(--line);
-color:var(--text);
-border-radius:14px;
-padding:10px 14px;
-font-size:1rem;
-cursor:pointer;
-flex-shrink:0;
-}
-.menu-toggle:focus,.btn:focus,.doc-card:focus,.contact-link:focus,.nav-cta a:focus{
-outline:2px solid var(--brand);
-outline-offset:3px;
-}
-.menu{
-display:none;
-flex-direction:column;
-gap:8px;
-padding-top:8px;
-}
-.menu.show{
-display:flex;
-}
-.menu a{
-display:block;
-padding:12px 14px;
-border-radius:12px;
-background:rgba(255,255,255,.04);
-color:#dfe8fb;
-font-weight:600;
-}
-.menu a:hover,.menu a:focus{
-background:rgba(255,255,255,.08);
-color:#fff;
-outline:none;
-}
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-padding:12px 18px;
-border-radius:16px;
-font-weight:800;
-transition:.25s;
-border:1px solid transparent;
-white-space:nowrap;
-}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{
-background:linear-gradient(135deg,var(--brand),var(--brand2));
-color:#08111d;
-box-shadow:0 15px 35px rgba(78,203,255,.18);
-}
-.btn-secondary{
-background:rgba(255,255,255,.04);
-border-color:var(--line);
-color:#fff;
-}
-.hero{
-padding:70px 0 34px;
-position:relative;
-overflow:hidden;
-}
-.hero::before{
-content:'';
-position:absolute;
-right:-90px;
-top:-120px;
-width:420px;
-height:420px;
-border-radius:50%;
-background:radial-gradient(circle,rgba(78,203,255,.20),rgba(78,203,255,0) 68%);
-pointer-events:none;
-}
-.hero-grid{
-display:grid;
-grid-template-columns:1.05fr .95fr;
-gap:36px;
-align-items:center;
-}
-.hero .container{
-padding-left:16px;
-padding-right:16px;
-}
-.eyebrow{
-display:inline-flex;
-align-items:center;
-gap:10px;
-padding:10px 16px;
-border:1px solid rgba(78,203,255,.22);
-background:rgba(78,203,255,.08);
-color:#dff6ff;
-border-radius:999px;
-font-weight:700;
-font-size:.92rem;
-}
-h1,h2,h3,h4{font-family:'Sora',sans-serif}
-.hero h1{
-font-size:clamp(2.6rem,5vw,5rem);
-line-height:1.02;
-letter-spacing:-.04em;
-margin:18px 0 14px;
-}
-.hero h2{
-font-size:clamp(1rem,1.8vw,1.25rem);
-font-weight:600;
-color:#d5def1;
-margin:0 0 18px;
-max-width:60ch;
-}
-.hero p{
-margin:0;
-max-width:62ch;
-color:var(--muted);
-font-size:1.03rem;
-}
-.hero-actions{
-display:flex;
-flex-wrap:wrap;
-gap:14px;
-margin-top:28px;
-}
-.hero-meta{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-top:18px;
-}
-.pill{
-padding:10px 14px;
-border-radius:999px;
-background:rgba(255,255,255,.05);
-border:1px solid var(--line);
-color:#d7e2f4;
-font-size:.92rem;
-}
-.hero-card{
-background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.06));
-border:1px solid var(--line);
-border-radius:30px;
-padding:24px;
-box-shadow:var(--shadow);
-}
-.profile-wrap{
-position:relative;
-width:min(420px,88vw);
-aspect-ratio:1/1;
-margin:auto;
-border-radius:34px;
-padding:10px;
-background:linear-gradient(135deg,rgba(78,203,255,.35),rgba(124,140,255,.18));
-box-shadow:0 20px 50px rgba(0,0,0,.25);
-}
-.profile-img{
-width:100%;
-height:100%;
-object-fit:cover;
-border-radius:26px;
-border:1px solid rgba(255,255,255,.18);
-}
-.mini-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:14px;
-margin-top:18px;
-}
-.mini{
-padding:16px;
-border-radius:18px;
-background:rgba(255,255,255,.06);
-border:1px solid var(--line);
-}
-.mini strong{display:block;font-size:1.2rem;line-height:1.2}
-.mini span{color:var(--muted);font-size:.92rem}
-.section{padding:52px 0}
-.section-title{text-align:center;margin-bottom:26px}
-.section-title h2{font-size:clamp(1.7rem,3vw,2.6rem);margin:0 0 8px;letter-spacing:-.03em}
-.section-title p{margin:0;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
-.card{
-background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.05));
-border:1px solid var(--line);
-border-radius:var(--radius);
-padding:24px;
-box-shadow:var(--shadow);
-}
-.card h3{margin:0 0 12px;font-size:1.18rem}
-.card p,.card li{color:#d4deef}
-.skill-chip{
-display:inline-flex;
-padding:8px 12px;
-border-radius:999px;
-background:rgba(78,203,255,.08);
-border:1px solid rgba(78,203,255,.16);
-margin:0 8px 8px 0;
-color:#eafcff;
-font-weight:600;
-font-size:.92rem;
-}
-.list{padding-left:20px;list-style:disc}
-.list li{margin:10px 0}
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:16px;
-}
-.stat{
-padding:22px;
-border-radius:22px;
-background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.05));
-border:1px solid var(--line);
-text-align:center;
-}
-.stat strong{display:block;font-size:2.2rem;line-height:1;color:#fff}
-.stat span{color:var(--muted)}
-.experience-item{position:relative;overflow:hidden}
-.experience-item::before{
-content:'';
-position:absolute;
-left:0;top:0;bottom:0;width:4px;
-background:linear-gradient(180deg,var(--brand),var(--brand2));
-}
-.experience-top{
-display:flex;
-justify-content:space-between;
-gap:14px;
-flex-wrap:wrap;
-align-items:flex-start;
-margin-bottom:10px;
-}
-.experience-title{margin:0;font-size:1.18rem}
-.experience-meta{color:var(--muted);font-weight:600}
-.experience-bullets{padding-left:20px;list-style:disc}
-.experience-bullets li{margin:10px 0;color:#d7e2f3}
-.project-img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:18px;
-margin-bottom:16px;
-border:1px solid var(--line);
-}
-.doc-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:16px;
-}
-.doc-card{
-display:block;
-text-align:center;
-padding:22px;
-border-radius:20px;
-background:rgba(255,255,255,.06);
-border:1px solid var(--line);
-transition:.25s;
-}
-.doc-card:hover{transform:translateY(-4px)}
-.doc-card h4{margin:10px 0 6px}
-.doc-card p{margin:0 0 12px;color:var(--muted)}
-.contact-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:18px;
-}
-.contact-link{
-display:block;
-padding:14px 16px;
-border-radius:16px;
-font-weight:800;
-text-align:center;
-}
-.wa{background:#25D366;color:#08110f}
-.call{background:#0a76ff;color:#fff}
-.mail{background:#101827;color:#fff;border:1px solid var(--line)}
-footer{
-background:linear-gradient(180deg,#09111e,#070d17);
-border-top:1px solid var(--line);
-padding:46px 0 30px;
-color:var(--muted);
-}
-.footer-grid{
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:24px;
-align-items:start;
-}
-.footer-brand{
-font-family:'Sora',sans-serif;
-font-size:1.25rem;
-font-weight:800;
-color:#fff;
-margin:0 0 10px;
-}
-.footer-links{
-display:grid;
-grid-template-columns:repeat(2,minmax(0,1fr));
-gap:10px;
-}
-.footer-links a{
-color:#d7e2f3;
-padding:8px 0;
-}
-.footer-links a:hover{color:#fff}
-.footer-note{
-text-align:center;
-margin-top:28px;
-padding-top:18px;
-border-top:1px solid var(--line);
-font-size:.95rem;
-}
-.floating-wa{
-position:fixed;
-right:18px;
-bottom:18px;
-z-index:999;
-background:#25D366;
-color:#fff;
-padding:14px 18px;
-border-radius:999px;
-font-weight:800;
-box-shadow:0 16px 35px rgba(0,0,0,.26);
-}
-@media(min-width:981px){
-.menu{
-display:flex;
-flex-direction:row;
-justify-content:center;
-flex-wrap:wrap;
-gap:8px;
-padding-top:0;
-}
-.menu-toggle{display:none}
-}
-@media(max-width:980px){
-.hero-grid{grid-template-columns:1fr}
-}
-@media(max-width:640px){
-.site-header{
-padding-left:12px;
-padding-right:12px;
-}
-.hero{
-padding-top:44px;
-}
-.hero-actions,.hero-meta{justify-content:flex-start}
-.mini-grid{grid-template-columns:1fr}
-.floating-wa{right:12px;bottom:12px}
-.section{padding:44px 0}
-.profile-wrap{width:min(360px,90vw)}
-.container{width:100%;max-width:100%}
-.hero .container{
-padding-left:16px;
-padding-right:16px;
-}
-.logo span{max-width:140px}
-}
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#08111d;
+      --bg2:#0b1626;
+      --line:rgba(255,255,255,.10);
+      --text:#eef4ff;
+      --muted:#a8b7d1;
+      --brand:#4ecbff;
+      --brand2:#7c8cff;
+      --shadow:0 22px 60px rgba(0,0,0,.30);
+      --radius:24px;
+    }
+
+    html{
+      scroll-behavior:smooth;
+      box-sizing:border-box;
+      overflow-x:hidden;
+    }
+
+    *, *::before, *::after{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:radial-gradient(circle at top, rgba(78,203,255,.12), transparent 28%), linear-gradient(180deg,var(--bg),var(--bg2));
+      color:var(--text);
+      line-height:1.8;
+      overflow-x:hidden;
+      padding-left:max(0px, env(safe-area-inset-left));
+      padding-right:max(0px, env(safe-area-inset-right));
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+
+    .container{
+      width:min(1200px, 100%);
+      margin:0 auto;
+      padding-left:16px;
+      padding-right:16px;
+    }
+
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+
+    .skip-link:focus{
+      left:16px;
+      top:16px;
+      width:auto;
+      height:auto;
+      padding:10px 14px;
+      background:#fff;
+      color:#000;
+      border-radius:10px;
+      z-index:10000;
+    }
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:9999;
+      background:rgba(5,10,18,.92);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--line);
+      padding-left:max(12px, env(safe-area-inset-left));
+      padding-right:max(12px, env(safe-area-inset-right));
+    }
+
+    .header-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:12px 0;
+    }
+
+    .header-nav-wrap{
+      padding-bottom:12px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+      font-family:'Sora',sans-serif;
+      font-weight:800;
+    }
+
+    .logo-img{
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      object-fit:cover;
+      flex-shrink:0;
+      background:#0f1724;
+    }
+
+    .logo span{
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:220px;
+      display:block;
+    }
+
+    .menu-toggle{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:transparent;
+      border:1px solid var(--line);
+      color:var(--text);
+      border-radius:14px;
+      padding:10px 14px;
+      font-size:1rem;
+      cursor:pointer;
+      flex-shrink:0;
+    }
+
+    .menu-toggle:focus,
+    .btn:focus,
+    .doc-card:focus,
+    .contact-link:focus,
+    .nav-cta a:focus{
+      outline:2px solid var(--brand);
+      outline-offset:3px;
+    }
+
+    .menu{
+      display:none;
+      flex-direction:column;
+      gap:8px;
+      padding-top:8px;
+    }
+
+    .menu.show{
+      display:flex;
+    }
+
+    .menu a{
+      display:block;
+      padding:12px 14px;
+      border-radius:12px;
+      background:rgba(255,255,255,.04);
+      color:#dfe8fb;
+      font-weight:600;
+    }
+
+    .menu a:hover,
+    .menu a:focus{
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      outline:none;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 18px;
+      border-radius:16px;
+      font-weight:800;
+      transition:.25s;
+      border:1px solid transparent;
+      white-space:nowrap;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#08111d;
+      box-shadow:0 15px 35px rgba(78,203,255,.18);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.04);
+      border-color:var(--line);
+      color:#fff;
+    }
+
+    .hero{
+      padding:70px 0 34px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      right:-90px;
+      top:-120px;
+      width:420px;
+      height:420px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(78,203,255,.20),rgba(78,203,255,0) 68%);
+      pointer-events:none;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:36px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border:1px solid rgba(78,203,255,.22);
+      background:rgba(78,203,255,.08);
+      color:#dff6ff;
+      border-radius:999px;
+      font-weight:700;
+      font-size:.92rem;
+      max-width:100%;
+    }
+
+    h1,h2,h3,h4{
+      font-family:'Sora',sans-serif;
+    }
+
+    .hero h1{
+      font-size:clamp(2.6rem,5vw,5rem);
+      line-height:1.02;
+      letter-spacing:-.04em;
+      margin:18px 0 14px;
+      word-break:break-word;
+    }
+
+    .hero h2{
+      font-size:clamp(1rem,1.8vw,1.25rem);
+      font-weight:600;
+      color:#d5def1;
+      margin:0 0 18px;
+      max-width:60ch;
+      word-break:break-word;
+    }
+
+    .hero p{
+      margin:0;
+      max-width:62ch;
+      color:var(--muted);
+      font-size:1.03rem;
+      word-break:break-word;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:28px;
+    }
+
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .pill{
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--line);
+      color:#d7e2f4;
+      font-size:.92rem;
+    }
+
+    .hero-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.06));
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .profile-wrap{
+      position:relative;
+      width:min(420px,88vw);
+      aspect-ratio:1/1;
+      margin:auto;
+      border-radius:34px;
+      padding:10px;
+      background:linear-gradient(135deg,rgba(78,203,255,.35),rgba(124,140,255,.18));
+      box-shadow:0 20px 50px rgba(0,0,0,.25);
+    }
+
+    .profile-img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:26px;
+      border:1px solid rgba(255,255,255,.18);
+    }
+
+    .mini-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .mini{
+      padding:16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--line);
+    }
+
+    .mini strong{
+      display:block;
+      font-size:1.2rem;
+      line-height:1.2;
+    }
+
+    .mini span{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .section{
+      padding:52px 0;
+      overflow:hidden;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:26px;
+    }
+
+    .section-title h2{
+      font-size:clamp(1.7rem,3vw,2.6rem);
+      margin:0 0 8px;
+      letter-spacing:-.03em;
+    }
+
+    .section-title p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:18px;
+    }
+
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.05));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h3{
+      margin:0 0 12px;
+      font-size:1.18rem;
+    }
+
+    .card p,.card li{
+      color:#d4deef;
+    }
+
+    .skill-chip{
+      display:inline-flex;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(78,203,255,.08);
+      border:1px solid rgba(78,203,255,.16);
+      margin:0 8px 8px 0;
+      color:#eafcff;
+      font-weight:600;
+      font-size:.92rem;
+    }
+
+    .list{
+      padding-left:20px;
+      list-style:disc;
+    }
+
+    .list li{
+      margin:10px 0;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:16px;
+    }
+
+    .stat{
+      padding:22px;
+      border-radius:22px;
+      background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.05));
+      border:1px solid var(--line);
+      text-align:center;
+    }
+
+    .stat strong{
+      display:block;
+      font-size:2.2rem;
+      line-height:1;
+      color:#fff;
+    }
+
+    .stat span{
+      color:var(--muted);
+    }
+
+    .experience-item{
+      position:relative;
+      overflow:hidden;
+    }
+
+    .experience-item::before{
+      content:'';
+      position:absolute;
+      left:0;
+      top:0;
+      bottom:0;
+      width:4px;
+      background:linear-gradient(180deg,var(--brand),var(--brand2));
+    }
+
+    .experience-top{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      margin-bottom:10px;
+    }
+
+    .experience-title{
+      margin:0;
+      font-size:1.18rem;
+    }
+
+    .experience-meta{
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .experience-bullets{
+      padding-left:20px;
+      list-style:disc;
+    }
+
+    .experience-bullets li{
+      margin:10px 0;
+      color:#d7e2f3;
+    }
+
+    .project-img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:18px;
+      margin-bottom:16px;
+      border:1px solid var(--line);
+    }
+
+    .doc-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+    }
+
+    .doc-card{
+      display:block;
+      text-align:center;
+      padding:22px;
+      border-radius:20px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      transition:.25s;
+    }
+
+    .doc-card:hover{
+      transform:translateY(-4px);
+    }
+
+    .doc-card h4{
+      margin:10px 0 6px;
+    }
+
+    .doc-card p{
+      margin:0 0 12px;
+      color:var(--muted);
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:18px;
+    }
+
+    .contact-link{
+      display:block;
+      padding:14px 16px;
+      border-radius:16px;
+      font-weight:800;
+      text-align:center;
+    }
+
+    .wa{
+      background:#25D366;
+      color:#08110f;
+    }
+
+    .call{
+      background:#0a76ff;
+      color:#fff;
+    }
+
+    .mail{
+      background:#101827;
+      color:#fff;
+      border:1px solid var(--line);
+    }
+
+    footer{
+      background:linear-gradient(180deg,#09111e,#070d17);
+      border-top:1px solid var(--line);
+      padding:46px 0 30px;
+      color:var(--muted);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      align-items:start;
+    }
+
+    .footer-brand{
+      font-family:'Sora',sans-serif;
+      font-size:1.25rem;
+      font-weight:800;
+      color:#fff;
+      margin:0 0 10px;
+    }
+
+    .footer-links{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+    }
+
+    .footer-links a{
+      color:#d7e2f3;
+      padding:8px 0;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+    }
+
+    .footer-note{
+      text-align:center;
+      margin-top:28px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      font-size:.95rem;
+    }
+
+    .floating-wa{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:999;
+      background:#25D366;
+      color:#fff;
+      padding:14px 18px;
+      border-radius:999px;
+      font-weight:800;
+      box-shadow:0 16px 35px rgba(0,0,0,.26);
+    }
+
+    @media(min-width:981px){
+      .menu{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:8px;
+        padding-top:0;
+      }
+      .menu-toggle{
+        display:none;
+      }
+    }
+
+    @media(max-width:980px){
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:640px){
+      .site-header{
+        padding-left:12px;
+        padding-right:12px;
+      }
+
+      .header-top{
+        gap:8px;
+      }
+
+      .logo span{
+        max-width:140px;
+      }
+
+      .hero{
+        padding-top:44px;
+      }
+
+      .hero-actions,
+      .hero-meta{
+        justify-content:flex-start;
+      }
+
+      .mini-grid{
+        grid-template-columns:1fr;
+      }
+
+      .floating-wa{
+        right:12px;
+        bottom:12px;
+      }
+
+      .section{
+        padding:44px 0;
+      }
+
+      .profile-wrap{
+        width:min(360px,90vw);
+      }
+
+      .container{
+        width:100%;
+        max-width:100%;
+      }
+
+      .hero h1,
+      .hero h2,
+      .hero p{
+        text-wrap:balance;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+    }
+  </style>
 </head>
 <body>
-<a class="skip-link" href="#about">Skip to content</a>
+  <a class="skip-link" href="#about">Skip to content</a>
 
-<header class="site-header">
-  <div class="container header-top">
-    <a class="logo" href="#home" aria-label="Home">
-      <img src="assets/images/logo.jpg" alt="Jamal Fahadh Mohamed logo" class="logo-img" />
-      <span>Jamal Fahadh Mohamed</span>
-    </a>
+  <header class="site-header">
+    <div class="container header-top">
+      <a class="logo" href="#home" aria-label="Home">
+        <img src="assets/images/logo.jpg" alt="Jamal Fahadh Mohamed logo" class="logo-img" />
+        <span>Jamal Fahadh Mohamed</span>
+      </a>
 
-    <button class="menu-toggle" type="button" aria-controls="menu" aria-expanded="false" onclick="toggleMenu()">Menu</button>
-  </div>
+      <button class="menu-toggle" type="button" aria-controls="menu" aria-expanded="false" onclick="toggleMenu()">Menu</button>
+    </div>
 
-  <div class="container header-nav-wrap">
-    <nav aria-label="Primary navigation">
-      <ul class="menu" id="menu">
-        <li><a href="#about">Profile</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#portfolio">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="container header-nav-wrap">
+      <nav aria-label="Primary navigation">
+        <ul class="menu" id="menu">
+          <li><a href="#about">Profile</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<main>
-<section class="hero" id="home">
-<div class="container hero-grid">
-<div>
-<div class="eyebrow">✔ ICT professional based in Hargeisa, Somaliland, available for immediate employment.</div>
-<h1>Jamal Fahadh Mohamed</h1>
-<h2>Pearson Edexcel ICT Teacher | Digital Skills Trainer | Program Support | Software Skills Instructor</h2>
-<p>I help schools and organizations stay organized, efficient, and digitally strong through ICT teaching, program support, document management, reporting, and practical technology skills. My background includes classroom instruction, Microsoft Office, digital tools, record keeping, and supporting daily operations with professionalism and attention to detail.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#contact">Contact Me</a>
-<a class="btn btn-secondary" href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" rel="noopener">Download CV</a>
-</div>
-<div class="hero-meta">
-<span class="pill">Pearson Edexcel ICT</span>
-<span class="pill">Program Support</span>
-<span class="pill">Digital Skills Training</span>
-<span class="pill">Software Skills</span>
-</div>
-</div>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">✔ ICT professional based in Hargeisa, Somaliland, available for immediate employment.</div>
+          <h1>Jamal Fahadh Mohamed</h1>
+          <h2>Pearson Edexcel ICT Teacher | Digital Skills Trainer | Program Support | Software Skills Instructor</h2>
+          <p>I help schools and organizations stay organized, efficient, and digitally strong through ICT teaching, program support, document management, reporting, and practical technology skills. My background includes classroom instruction, Microsoft Office, digital tools, record keeping, and supporting daily operations with professionalism and attention to detail.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Contact Me</a>
+            <a class="btn btn-secondary" href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+          </div>
+          <div class="hero-meta">
+            <span class="pill">Pearson Edexcel ICT</span>
+            <span class="pill">Program Support</span>
+            <span class="pill">Digital Skills Training</span>
+            <span class="pill">Software Skills</span>
+          </div>
+        </div>
 
-<div class="hero-card">
-<div class="profile-wrap">
-<img src="assets/images/jamal-profile.jpg" alt="Portrait of Jamal Fahadh Mohamed" class="profile-img" />
-</div>
-<div class="mini-grid">
-<div class="mini"><strong>2000+</strong><span>Learners Supported</span></div>
-<div class="mini"><strong>7+</strong><span>Years Experience</span></div>
-<div class="mini"><strong>20+</strong><span>ICT Projects</span></div>
-<div class="mini"><strong>100%</strong><span>Pearson Edexcel Focus</span></div>
-</div>
-</div>
-</div>
-</section>
+        <div class="hero-card">
+          <div class="profile-wrap">
+            <img src="assets/images/jamal-profile.jpg" alt="Portrait of Jamal Fahadh Mohamed" class="profile-img" />
+          </div>
+          <div class="mini-grid">
+            <div class="mini"><strong>2000+</strong><span>Learners Supported</span></div>
+            <div class="mini"><strong>7+</strong><span>Years Experience</span></div>
+            <div class="mini"><strong>20+</strong><span>ICT Projects</span></div>
+            <div class="mini"><strong>100%</strong><span>Pearson Edexcel Focus</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="about">
-<div class="container">
-<div class="section-title">
-<h2>Professional Profile</h2>
-<p>Empowering learners and supporting organizational efficiency.</p>
-</div>
-<div class="grid-2">
-<div class="card">
-<h3>ICT Educator & Program Support Professional</h3>
-<p>I am an ICT educator, digital skills trainer, and program support professional with experience in teaching, documentation, administration, and technology-based operations. I hold a Bachelor of Business Information Technology and have worked in environments that require communication, planning, coordination, and reliable day-to-day support.</p>
-<p>My strength is combining technical knowledge with practical organization skills to help teams work more effectively while supporting learners and workplace operations.</p>
-</div>
-<div class="card">
-<h3>Teaching Philosophy</h3>
-<p>I believe technology education should be practical, engaging, and relevant to real-world applications. My goal is to develop confident, creative, and digitally responsible learners while also bringing strong support skills that improve workflow, communication, and organization.</p>
-<div style="margin-top:14px;">
-<span class="skill-chip">Practical learning</span>
-<span class="skill-chip">Student-centered delivery</span>
-<span class="skill-chip">Career readiness</span>
-</div>
-</div>
-</div>
-</div>
-</section>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Professional Profile</h2>
+          <p>Empowering learners and supporting organizational efficiency.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>ICT Educator & Program Support Professional</h3>
+            <p>I am an ICT educator, digital skills trainer, and program support professional with experience in teaching, documentation, administration, and technology-based operations. I hold a Bachelor of Business Information Technology and have worked in environments that require communication, planning, coordination, and reliable day-to-day support.</p>
+            <p>My strength is combining technical knowledge with practical organization skills to help teams work more effectively while supporting learners and workplace operations.</p>
+          </div>
+          <div class="card">
+            <h3>Teaching Philosophy</h3>
+            <p>I believe technology education should be practical, engaging, and relevant to real-world applications. My goal is to develop confident, creative, and digitally responsible learners while also bringing strong support skills that improve workflow, communication, and organization.</p>
+            <div style="margin-top:14px;">
+              <span class="skill-chip">Practical learning</span>
+              <span class="skill-chip">Student-centered delivery</span>
+              <span class="skill-chip">Career readiness</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="achievements">
-<div class="container">
-<div class="section-title">
-<h2>Key Achievements</h2>
-<p>Professional impact and accomplishments.</p>
-</div>
-<div class="stats">
-<div class="stat"><strong>2000+</strong><span>Learners Supported</span></div>
-<div class="stat"><strong>7+</strong><span>Years in ICT Education</span></div>
-<div class="stat"><strong>20+</strong><span>Projects and Digital Tasks</span></div>
-<div class="stat"><strong>100%</strong><span>Dedicated to Practical Learning</span></div>
-</div>
-</div>
-</section>
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="section-title">
+          <h2>Key Achievements</h2>
+          <p>Professional impact and accomplishments.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>2000+</strong><span>Learners Supported</span></div>
+          <div class="stat"><strong>7+</strong><span>Years in ICT Education</span></div>
+          <div class="stat"><strong>20+</strong><span>Projects and Digital Tasks</span></div>
+          <div class="stat"><strong>100%</strong><span>Dedicated to Practical Learning</span></div>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="skills">
-<div class="container">
-<div class="section-title">
-<h2>Technical Skills</h2>
-<p>Core competencies and areas of expertise.</p>
-</div>
-<div class="grid">
-<div class="card"><h3>Web Development</h3><p>HTML, CSS, Responsive Design</p></div>
-<div class="card"><h3>Microsoft Office</h3><p>Word, Excel, PowerPoint, Access</p></div>
-<div class="card"><h3>Computer Lab Management</h3><p>Maintenance, Networking, Troubleshooting</p></div>
-<div class="card"><h3>Graphic Design</h3><p>Digital Content and Creative Design</p></div>
-<div class="card"><h3>Digital Skills Training</h3><p>Beginner to Advanced Level Training</p></div>
-<div class="card"><h3>Educational Technology</h3><p>Learning Platforms and ICT Integration</p></div>
-<div class="card"><h3>ICT Support</h3><p>Technical Support, Troubleshooting, User Assistance</p></div>
-<div class="card"><h3>Networking</h3><p>LAN, Routers, Switches, Connectivity</p></div>
-<div class="card"><h3>Pearson Edexcel ICT</h3><p>Curriculum Delivery and Assessment</p></div>
-</div>
-</div>
-</section>
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-title">
+          <h2>Technical Skills</h2>
+          <p>Core competencies and areas of expertise.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><h3>Web Development</h3><p>HTML, CSS, Responsive Design</p></div>
+          <div class="card"><h3>Microsoft Office</h3><p>Word, Excel, PowerPoint, Access</p></div>
+          <div class="card"><h3>Computer Lab Management</h3><p>Maintenance, Networking, Troubleshooting</p></div>
+          <div class="card"><h3>Graphic Design</h3><p>Digital Content and Creative Design</p></div>
+          <div class="card"><h3>Digital Skills Training</h3><p>Beginner to Advanced Level Training</p></div>
+          <div class="card"><h3>Educational Technology</h3><p>Learning Platforms and ICT Integration</p></div>
+          <div class="card"><h3>ICT Support</h3><p>Technical Support, Troubleshooting, User Assistance</p></div>
+          <div class="card"><h3>Networking</h3><p>LAN, Routers, Switches, Connectivity</p></div>
+          <div class="card"><h3>Pearson Edexcel ICT</h3><p>Curriculum Delivery and Assessment</p></div>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="program-support">
-<div class="container">
-<div class="section-title">
-<h2>Program Support Skills</h2>
-<p>Skills that strengthen operations, coordination, and documentation.</p>
-</div>
-<div class="card">
-<ul class="list">
-<li>Office administration and document handling.</li>
-<li>Reporting and data entry.</li>
-<li>Digital filing and record management.</li>
-<li>Microsoft Word, Excel, PowerPoint, and Access.</li>
-<li>Scheduling, coordination, and follow-up support.</li>
-<li>Communication with staff, students, and stakeholders.</li>
-<li>Event, meeting, and activity support.</li>
-<li>Basic troubleshooting and ICT assistance.</li>
-<li>Maintaining organized digital and physical records.</li>
-<li>Supporting smooth day-to-day operations.</li>
-</ul>
-</div>
-</div>
-</section>
+    <section class="section" id="program-support">
+      <div class="container">
+        <div class="section-title">
+          <h2>Program Support Skills</h2>
+          <p>Skills that strengthen operations, coordination, and documentation.</p>
+        </div>
+        <div class="card">
+          <ul class="list">
+            <li>Office administration and document handling.</li>
+            <li>Reporting and data entry.</li>
+            <li>Digital filing and record management.</li>
+            <li>Microsoft Word, Excel, PowerPoint, and Access.</li>
+            <li>Scheduling, coordination, and follow-up support.</li>
+            <li>Communication with staff, students, and stakeholders.</li>
+            <li>Event, meeting, and activity support.</li>
+            <li>Basic troubleshooting and ICT assistance.</li>
+            <li>Maintaining organized digital and physical records.</li>
+            <li>Supporting smooth day-to-day operations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="competencies">
-<div class="container">
-<div class="section-title">
-<h2>Teaching Competencies</h2>
-<p>Practical classroom and learner support strengths.</p>
-</div>
-<div class="card">
-<ul class="list">
-<li>Lesson Planning.</li>
-<li>Classroom Management.</li>
-<li>Student Assessment.</li>
-<li>Curriculum Delivery.</li>
-<li>Differentiated Instruction.</li>
-<li>Project-Based Learning.</li>
-<li>Educational Technology.</li>
-<li>Learner Engagement.</li>
-<li>Practical ICT Training.</li>
-</ul>
-</div>
-</div>
-</section>
+    <section class="section" id="competencies">
+      <div class="container">
+        <div class="section-title">
+          <h2>Teaching Competencies</h2>
+          <p>Practical classroom and learner support strengths.</p>
+        </div>
+        <div class="card">
+          <ul class="list">
+            <li>Lesson Planning.</li>
+            <li>Classroom Management.</li>
+            <li>Student Assessment.</li>
+            <li>Curriculum Delivery.</li>
+            <li>Differentiated Instruction.</li>
+            <li>Project-Based Learning.</li>
+            <li>Educational Technology.</li>
+            <li>Learner Engagement.</li>
+            <li>Practical ICT Training.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="experience">
-<div class="container">
-<div class="section-title">
-<h2>Professional Experience</h2>
-<p>Teaching, ICT support and educational technology experience.</p>
-</div>
-<div class="grid">
-<div class="card experience-item">
-<div class="experience-top">
-<div>
-<h3 class="experience-title">ICT Teacher</h3>
-<div class="experience-meta"><strong>Elm High School</strong><br>2018 – 2025</div>
-</div>
-</div>
-<ul class="experience-bullets">
-<li>Delivered ICT lessons and supported digital learning activities.</li>
-<li>Managed computer laboratory resources and technology equipment.</li>
-<li>Prepared lesson materials, student records, and academic reports.</li>
-<li>Assisted with school ICT operations and technical support.</li>
-<li>Communicated with staff and students to ensure smooth learning delivery.</li>
-<li>Supported organization of digital resources and classroom materials.</li>
-</ul>
-</div>
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-title">
+          <h2>Professional Experience</h2>
+          <p>Teaching, ICT support and educational technology experience.</p>
+        </div>
+        <div class="grid">
+          <div class="card experience-item">
+            <div class="experience-top">
+              <div>
+                <h3 class="experience-title">ICT Teacher</h3>
+                <div class="experience-meta"><strong>Elm High School</strong><br>2018 – 2025</div>
+              </div>
+            </div>
+            <ul class="experience-bullets">
+              <li>Delivered ICT lessons and supported digital learning activities.</li>
+              <li>Managed computer laboratory resources and technology equipment.</li>
+              <li>Prepared lesson materials, student records, and academic reports.</li>
+              <li>Assisted with school ICT operations and technical support.</li>
+              <li>Communicated with staff and students to ensure smooth learning delivery.</li>
+              <li>Supported organization of digital resources and classroom materials.</li>
+            </ul>
+          </div>
 
-<div class="card experience-item">
-<div class="experience-top">
-<div>
-<h3 class="experience-title">Library Support Officer</h3>
-<div class="experience-meta"><strong>Elm High School</strong><br>2021 – 2023</div>
-</div>
-</div>
-<ul class="experience-bullets">
-<li>Managed digital cataloguing and library record systems.</li>
-<li>Organized learning materials and maintained resource accessibility.</li>
-<li>Supported students and staff with resource requests and information access.</li>
-<li>Helped improve workflow through structured documentation and filing.</li>
-<li>Assisted with daily administrative and support tasks.</li>
-</ul>
-</div>
+          <div class="card experience-item">
+            <div class="experience-top">
+              <div>
+                <h3 class="experience-title">Library Support Officer</h3>
+                <div class="experience-meta"><strong>Elm High School</strong><br>2021 – 2023</div>
+              </div>
+            </div>
+            <ul class="experience-bullets">
+              <li>Managed digital cataloguing and library record systems.</li>
+              <li>Organized learning materials and maintained resource accessibility.</li>
+              <li>Supported students and staff with resource requests and information access.</li>
+              <li>Helped improve workflow through structured documentation and filing.</li>
+              <li>Assisted with daily administrative and support tasks.</li>
+            </ul>
+          </div>
 
-<div class="card experience-item">
-<div class="experience-top">
-<div>
-<h3 class="experience-title">Computer Studies Teacher</h3>
-<div class="experience-meta"><strong>Turkana School of Technology</strong><br>2017</div>
-</div>
-</div>
-<ul class="experience-bullets">
-<li>Taught basic computer studies and digital skills.</li>
-<li>Prepared lesson notes, class materials, and student guidance support.</li>
-<li>Introduced learners to safe technology use and practical computer applications.</li>
-<li>Supported website-related learning activities and simple digital tasks.</li>
-<li>Worked with students in a structured, organized learning environment.</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
+          <div class="card experience-item">
+            <div class="experience-top">
+              <div>
+                <h3 class="experience-title">Computer Studies Teacher</h3>
+                <div class="experience-meta"><strong>Turkana School of Technology</strong><br>2017</div>
+              </div>
+            </div>
+            <ul class="experience-bullets">
+              <li>Taught basic computer studies and digital skills.</li>
+              <li>Prepared lesson notes, class materials, and student guidance support.</li>
+              <li>Introduced learners to safe technology use and practical computer applications.</li>
+              <li>Supported website-related learning activities and simple digital tasks.</li>
+              <li>Worked with students in a structured, organized learning environment.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="contributions">
-<div class="container">
-<div class="section-title">
-<h2>School Contributions</h2>
-<p>Additional responsibilities and support areas.</p>
-</div>
-<div class="card">
-<ul class="list">
-<li>ICT Laboratory Management.</li>
-<li>Educational Technology Support.</li>
-<li>Digital Resource Development.</li>
-<li>Library Technology Support.</li>
-<li>School Website Projects.</li>
-<li>Staff ICT Assistance.</li>
-</ul>
-</div>
-</div>
-</section>
+    <section class="section" id="contributions">
+      <div class="container">
+        <div class="section-title">
+          <h2>School Contributions</h2>
+          <p>Additional responsibilities and support areas.</p>
+        </div>
+        <div class="card">
+          <ul class="list">
+            <li>ICT Laboratory Management.</li>
+            <li>Educational Technology Support.</li>
+            <li>Digital Resource Development.</li>
+            <li>Library Technology Support.</li>
+            <li>School Website Projects.</li>
+            <li>Staff ICT Assistance.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="portfolio">
-<div class="container">
-<div class="section-title">
-<h2>Featured Projects</h2>
-<p>Selected educational and technology projects.</p>
-</div>
-<div class="grid">
-<div class="card">
-<img src="assets/images/school-portal.jpg" alt="School portal project preview" class="project-img" />
-<h3>School Portal</h3>
-<p>I contributed to the design and content structure of the portal to support communication and learning access.</p>
-</div>
-<div class="card">
-<img src="assets/images/library-system.jpg" alt="Library management system project preview" class="project-img" />
-<h3>Library Management System</h3>
-<p>I supported the project by helping organize the database workflow and user records.</p>
-</div>
-<div class="card">
-<img src="assets/images/student-database.jpg" alt="Student database project preview" class="project-img" />
-<h3>Student Database</h3>
-<p>I contributed to the development of a structured student record system using Microsoft Access.</p>
-</div>
-</div>
-</div>
-</section>
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Projects</h2>
+          <p>Selected educational and technology projects.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <img src="assets/images/school-portal.jpg" alt="School portal project preview" class="project-img" />
+            <h3>School Portal</h3>
+            <p>I contributed to the design and content structure of the portal to support communication and learning access.</p>
+          </div>
+          <div class="card">
+            <img src="assets/images/library-system.jpg" alt="Library management system project preview" class="project-img" />
+            <h3>Library Management System</h3>
+            <p>I supported the project by helping organize the database workflow and user records.</p>
+          </div>
+          <div class="card">
+            <img src="assets/images/student-database.jpg" alt="Student database project preview" class="project-img" />
+            <h3>Student Database</h3>
+            <p>I contributed to the development of a structured student record system using Microsoft Access.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="certifications">
-<div class="container">
-<div class="section-title">
-<h2>Certifications & Qualifications</h2>
-<p>Academic achievements and professional competencies.</p>
-</div>
-<div class="grid">
-<div class="card">
-<img src="assets/images/degree.jpg" alt="BBIT degree certificate" class="project-img" />
-<h3>Bachelor of Business Information Technology</h3>
-<p>University Degree in Business Information Technology.</p>
-</div>
-<div class="card">
-<img src="assets/images/web_cert.jpg" alt="Web design and development certificate" class="project-img" />
-<h3>Web Design & Development</h3>
-<p>Responsive website design and development skills.</p>
-</div>
-<div class="card">
-<img src="assets/images/kcse.jpg" alt="KCSE certificate" class="project-img" />
-<h3>KCSE Certificate</h3>
-<p>Kenya Certificate of Secondary Education.</p>
-</div>
-</div>
-<br /><br />
-<div class="grid">
-<div class="card"><h3>Pearson Edexcel ICT</h3><p>ICT curriculum specialist.</p></div>
-<div class="card"><h3>Microsoft Office</h3><p>Advanced office productivity skills.</p></div>
-<div class="card"><h3>Graphic Design</h3><p>Creative digital content production.</p></div>
-<div class="card"><h3>Digital Skills Training</h3><p>Technology skills development.</p></div>
-<div class="card"><h3>Educational Technology</h3><p>Technology integration in education.</p></div>
-<div class="card"><h3>Computer Lab Management</h3><p>ICT laboratory administration and support.</p></div>
-</div>
-</div>
-</section>
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-title">
+          <h2>Certifications & Qualifications</h2>
+          <p>Academic achievements and professional competencies.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <img src="assets/images/degree.jpg" alt="BBIT degree certificate" class="project-img" />
+            <h3>Bachelor of Business Information Technology</h3>
+            <p>University Degree in Business Information Technology.</p>
+          </div>
+          <div class="card">
+            <img src="assets/images/web_cert.jpg" alt="Web design and development certificate" class="project-img" />
+            <h3>Web Design & Development</h3>
+            <p>Responsive website design and development skills.</p>
+          </div>
+          <div class="card">
+            <img src="assets/images/kcse.jpg" alt="KCSE certificate" class="project-img" />
+            <h3>KCSE Certificate</h3>
+            <p>Kenya Certificate of Secondary Education.</p>
+          </div>
+        </div>
+        <br /><br />
+        <div class="grid">
+          <div class="card"><h3>Pearson Edexcel ICT</h3><p>ICT curriculum specialist.</p></div>
+          <div class="card"><h3>Microsoft Office</h3><p>Advanced office productivity skills.</p></div>
+          <div class="card"><h3>Graphic Design</h3><p>Creative digital content production.</p></div>
+          <div class="card"><h3>Digital Skills Training</h3><p>Technology skills development.</p></div>
+          <div class="card"><h3>Educational Technology</h3><p>Technology integration in education.</p></div>
+          <div class="card"><h3>Computer Lab Management</h3><p>ICT laboratory administration and support.</p></div>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="safeguarding">
-<div class="container">
-<div class="section-title">
-<h2>Safeguarding Commitment</h2>
-<p>Student wellbeing and responsible technology use.</p>
-</div>
-<div class="card">
-<p>Committed to maintaining a safe, inclusive and supportive learning environment that promotes student wellbeing, digital citizenship, child protection awareness and responsible technology use.</p>
-</div>
-</div>
-</section>
+    <section class="section" id="safeguarding">
+      <div class="container">
+        <div class="section-title">
+          <h2>Safeguarding Commitment</h2>
+          <p>Student wellbeing and responsible technology use.</p>
+        </div>
+        <div class="card">
+          <p>Committed to maintaining a safe, inclusive and supportive learning environment that promotes student wellbeing, digital citizenship, child protection awareness and responsible technology use.</p>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="testimonials">
-<div class="container">
-<div class="section-title">
-<h2>Testimonials</h2>
-<p>Feedback from former colleagues and supervisors.</p>
-</div>
-<div class="grid-2">
-<div class="card">
-<h3>Former Colleague</h3>
-<p>“Jamal is professional, supportive, and easy to work with. He communicates clearly and always contributes positively to the team.”</p>
-</div>
-<div class="card">
-<h3>Former Supervisor</h3>
-<p>“He is dependable, organized, and committed to quality work. His ICT teaching and support made a real difference in our school environment.”</p>
-</div>
-</div>
-</div>
-</section>
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Feedback from former colleagues and supervisors.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Former Colleague</h3>
+            <p>“Jamal is professional, supportive, and easy to work with. He communicates clearly and always contributes positively to the team.”</p>
+          </div>
+          <div class="card">
+            <h3>Former Supervisor</h3>
+            <p>“He is dependable, organized, and committed to quality work. His ICT teaching and support made a real difference in our school environment.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="references">
-<div class="container">
-<div class="section-title">
-<h2>Professional Documents</h2>
-<p>Reference letters available upon request, and I can facilitate contact with my referees if needed.</p>
-</div>
-<div class="doc-grid">
-<a href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" rel="noopener" class="doc-card">
-<div style="font-size:2rem;">📄</div>
-<h4>Professional CV</h4>
-<p>My academic and work history</p>
-<span style="color:#9ff2bf;font-weight:700;">View Document →</span>
-</a>
-<a href="assets/documents/ICT_COVER_LETTER.pdf" target="_blank" rel="noopener" class="doc-card">
-<div style="font-size:2rem;">✉️</div>
-<h4>Cover Letter</h4>
-<p>Professional introduction</p>
-<span style="color:#b8c6ff;font-weight:700;">View Document →</span>
-</a>
-<a href="assets/documents/sample-lesson-plan.pdf" target="_blank" rel="noopener" class="doc-card">
-<div style="font-size:2rem;">🍎</div>
-<h4>Lesson Plan</h4>
-<p>Sample teaching methodology</p>
-<span style="color:#b8c6ff;font-weight:700;">View Document →</span>
-</a>
-<a href="assets/documents/citizenship-certificate.pdf" target="_blank" rel="noopener" class="doc-card">
-<div style="font-size:2rem;">🪪</div>
-<h4>Citizenship Document</h4>
-<p>Proof of identity and citizenship</p>
-<span style="color:#b8c6ff;font-weight:700;">View Document →</span>
-</a>
-</div>
-</div>
-</section>
+    <section class="section" id="references">
+      <div class="container">
+        <div class="section-title">
+          <h2>Professional Documents</h2>
+          <p>Reference letters available upon request, and I can facilitate contact with my referees if needed.</p>
+        </div>
+        <div class="doc-grid">
+          <a href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" rel="noopener" class="doc-card">
+            <div style="font-size:2rem;">📄</div>
+            <h4>Professional CV</h4>
+            <p>My academic and work history</p>
+            <span style="color:#9ff2bf;font-weight:700;">View Document →</span>
+          </a>
+          <a href="assets/documents/ICT_COVER_LETTER.pdf" target="_blank" rel="noopener" class="doc-card">
+            <div style="font-size:2rem;">✉️</div>
+            <h4>Cover Letter</h4>
+            <p>Professional introduction</p>
+            <span style="color:#b8c6ff;font-weight:700;">View Document →</span>
+          </a>
+          <a href="assets/documents/sample-lesson-plan.pdf" target="_blank" rel="noopener" class="doc-card">
+            <div style="font-size:2rem;">🍎</div>
+            <h4>Lesson Plan</h4>
+            <p>Sample teaching methodology</p>
+            <span style="color:#b8c6ff;font-weight:700;">View Document →</span>
+          </a>
+          <a href="assets/documents/citizenship-certificate.pdf" target="_blank" rel="noopener" class="doc-card">
+            <div style="font-size:2rem;">🪪</div>
+            <h4>Citizenship Document</h4>
+            <p>Proof of identity and citizenship</p>
+            <span style="color:#b8c6ff;font-weight:700;">View Document →</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="why-me">
-<div class="container">
-<div class="section-title">
-<h2>Why Hire Me?</h2>
-<p>Reasons I can add value to your school or organization.</p>
-</div>
-<div class="card">
-<ul class="list">
-<li>7+ years ICT teaching experience.</li>
-<li>Strong classroom management.</li>
-<li>Pearson Edexcel ICT focus.</li>
-<li>Practical hands-on teaching style.</li>
-<li>Digital skills training expertise.</li>
-<li>Educational technology experience.</li>
-<li>Computer lab management skills.</li>
-<li>Immediate availability.</li>
-</ul>
-</div>
-</div>
-</section>
+    <section class="section" id="why-me">
+      <div class="container">
+        <div class="section-title">
+          <h2>Why Hire Me?</h2>
+          <p>Reasons I can add value to your school or organization.</p>
+        </div>
+        <div class="card">
+          <ul class="list">
+            <li>7+ years ICT teaching experience.</li>
+            <li>Strong classroom management.</li>
+            <li>Pearson Edexcel ICT focus.</li>
+            <li>Practical hands-on teaching style.</li>
+            <li>Digital skills training expertise.</li>
+            <li>Educational technology experience.</li>
+            <li>Computer lab management skills.</li>
+            <li>Immediate availability.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section class="section" id="contact">
-<div class="container">
-<div class="section-title">
-<h2>Contact Me</h2>
-<p>Available for ICT Teaching, Digital Skills Training, Educational Technology Projects and Consulting.</p>
-</div>
-<div class="contact-grid">
-<div class="card">
-<h3>Get In Touch</h3>
-<p>I am immediately available for:</p>
-<ul class="list">
-<li>ICT Teaching Positions.</li>
-<li>Digital Skills Training.</li>
-<li>Educational Technology Projects.</li>
-<li>Computer Lab Management.</li>
-<li>ICT Support & Technical Assistance.</li>
-<li>Website Development Projects.</li>
-</ul>
-<p style="margin-top:16px;">Let's discuss how I can contribute to your organization.</p>
-</div>
-<div class="card">
-<h3>Contact Information</h3>
-<p><strong>Name:</strong> Jamal Fahadh Mohamed</p>
-<p><strong>Phone:</strong> +252 63 6710907</p>
-<p><strong>Email:</strong> teacherfahadh@gmail.com</p>
-<p><strong>Location:</strong> Hargeisa, Somaliland</p>
-<p><strong>Website:</strong> fahadict.github.io/tech</p>
-<div style="display:flex;flex-direction:column;gap:15px;margin-top:18px;">
-<a href="https://wa.me/252636710907" class="contact-link wa">WhatsApp Me</a>
-<a href="tel:+252636710907" class="contact-link call">Call Me</a>
-<a href="mailto:teacherfahadh@gmail.com" class="contact-link mail">Email Me</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Me</h2>
+          <p>Available for ICT Teaching, Digital Skills Training, Educational Technology Projects and Consulting.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="card">
+            <h3>Get In Touch</h3>
+            <p>I am immediately available for:</p>
+            <ul class="list">
+              <li>ICT Teaching Positions.</li>
+              <li>Digital Skills Training.</li>
+              <li>Educational Technology Projects.</li>
+              <li>Computer Lab Management.</li>
+              <li>ICT Support & Technical Assistance.</li>
+              <li>Website Development Projects.</li>
+            </ul>
+            <p style="margin-top:16px;">Let's discuss how I can contribute to your organization.</p>
+          </div>
+          <div class="card">
+            <h3>Contact Information</h3>
+            <p><strong>Name:</strong> Jamal Fahadh Mohamed</p>
+            <p><strong>Phone:</strong> +252 63 6710907</p>
+            <p><strong>Email:</strong> teacherfahadh@gmail.com</p>
+            <p><strong>Location:</strong> Hargeisa, Somaliland</p>
+            <p><strong>Website:</strong> fahadict.github.io/tech</p>
+            <div style="display:flex;flex-direction:column;gap:15px;margin-top:18px;">
+              <a href="https://wa.me/252636710907" class="contact-link wa">WhatsApp Me</a>
+              <a href="tel:+252636710907" class="contact-link call">Call Me</a>
+              <a href="mailto:teacherfahadh@gmail.com" class="contact-link mail">Email Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>
-<div class="container">
-<div class="footer-grid">
-<div>
-<div class="footer-brand">Jamal Fahadh Mohamed</div>
-<p>Pearson Edexcel ICT Teacher • Digital Skills Trainer • Program Support • Software Skills Instructor</p>
-<p style="margin-top:10px;">Hargeisa, Somaliland</p>
-<p style="margin-top:10px;">Available for education, coordination, documentation, and digital support roles.</p>
-</div>
-<div>
-<h3 style="margin:0 0 12px; font-family:'Sora',sans-serif; color:#fff;">Quick Links</h3>
-<div class="footer-links">
-<a href="#about">Profile</a>
-<a href="#experience">Experience</a>
-<a href="#portfolio">Projects</a>
-<a href="#contact">Contact</a>
-<a href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" rel="noopener">CV</a>
-<a href="#home">Top</a>
-</div>
-</div>
-</div>
-<div class="footer-note">© 2026 All Rights Reserved</div>
-</div>
-</footer>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Jamal Fahadh Mohamed</div>
+          <p>Pearson Edexcel ICT Teacher • Digital Skills Trainer • Program Support • Software Skills Instructor</p>
+          <p style="margin-top:10px;">Hargeisa, Somaliland</p>
+          <p style="margin-top:10px;">Available for education, coordination, documentation, and digital support roles.</p>
+        </div>
+        <div>
+          <h3 style="margin:0 0 12px; font-family:'Sora',sans-serif; color:#fff;">Quick Links</h3>
+          <div class="footer-links">
+            <a href="#about">Profile</a>
+            <a href="#experience">Experience</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" rel="noopener">CV</a>
+            <a href="#home">Top</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-note">© 2026 All Rights Reserved</div>
+    </div>
+  </footer>
 
-<a href="https://wa.me/252636710907" target="_blank" rel="noopener" class="floating-wa">WhatsApp</a>
+  <a href="https://wa.me/252636710907" target="_blank" rel="noopener" class="floating-wa">WhatsApp</a>
 
-<script>
-function toggleMenu(){
-const menu=document.getElementById('menu');
-const btn=document.querySelector('.menu-toggle');
-menu.classList.toggle('show');
-btn.setAttribute('aria-expanded', menu.classList.contains('show'));
-}
-document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>{
-document.getElementById('menu').classList.remove('show');
-document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');
-}));
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.style.opacity='1';
-entry.target.style.transform='translateY(0)';
-}
-});
-},{threshold:0.12});
-document.querySelectorAll('section').forEach(section=>{
-section.style.opacity='0';
-section.style.transform='translateY(30px)';
-section.style.transition='all .75s ease';
-observer.observe(section);
-});
-</script>
+  <script>
+    function toggleMenu(){
+      const menu = document.getElementById('menu');
+      const btn = document.querySelector('.menu-toggle');
+      menu.classList.toggle('show');
+      btn.setAttribute('aria-expanded', menu.classList.contains('show'));
+    }
+
+    document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => {
+      document.getElementById('menu').classList.remove('show');
+      document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
+    }));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(30px)';
+      section.style.transition = 'all .75s ease';
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
