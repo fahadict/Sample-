@@ -14,8 +14,6 @@
 :root{
 --bg:#08111d;
 --bg2:#0b1626;
---surface:#111d31;
---surface2:#16253d;
 --line:rgba(255,255,255,.10);
 --text:#eef4ff;
 --muted:#a8b7d1;
@@ -33,14 +31,15 @@ background:radial-gradient(circle at top, rgba(78,203,255,.12), transparent 28%)
 color:var(--text);
 line-height:1.8;
 overflow-x:hidden;
-padding-left:env(safe-area-inset-left);
-padding-right:env(safe-area-inset-right);
+padding-left:max(16px, env(safe-area-inset-left));
+padding-right:max(16px, env(safe-area-inset-right));
 }
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 ul{margin:0;padding:0;list-style:none}
 .container{
-width:min(1200px,calc(100% - 32px));
+width:min(1200px,100%);
+max-width:calc(1200px - 32px);
 margin:0 auto;
 }
 .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -52,6 +51,8 @@ z-index:9999;
 background:rgba(5,10,18,.82);
 backdrop-filter:blur(18px);
 border-bottom:1px solid var(--line);
+padding-left:max(16px, env(safe-area-inset-left));
+padding-right:max(16px, env(safe-area-inset-right));
 }
 .navbar{
 display:flex;
@@ -419,8 +420,10 @@ box-shadow:var(--shadow);
 .floating-wa{right:12px;bottom:12px}
 .section{padding:44px 0}
 .profile-wrap{width:min(360px,90vw)}
-.container{width:calc(100% - 24px)}
-.navbar{padding-left:4px;padding-right:4px}
+.container{max-width:100%;width:100%}
+header,.container{padding-left:16px;padding-right:16px}
+.navbar{padding-left:0;padding-right:0}
+.menu{right:0;min-width:min(250px, calc(100vw - 32px))}
 }
 </style>
 </head>
@@ -480,7 +483,7 @@ box-shadow:var(--shadow);
 <img src="assets/images/jamal-profile.jpg" alt="Portrait of Jamal Fahadh Mohamed" class="profile-img" />
 </div>
 <div class="mini-grid">
-<div class="mini"><strong>500+</strong><span>Students Trained</span></div>
+<div class="mini"><strong>2000+</strong><span>Learners Supported</span></div>
 <div class="mini"><strong>7+</strong><span>Years Experience</span></div>
 <div class="mini"><strong>20+</strong><span>ICT Projects</span></div>
 <div class="mini"><strong>100%</strong><span>Pearson Edexcel Focus</span></div>
@@ -521,10 +524,10 @@ box-shadow:var(--shadow);
 <p>Professional impact and accomplishments.</p>
 </div>
 <div class="stats">
-<div class="stat"><strong>500+</strong><span>Students Trained</span></div>
-<div class="stat"><strong>7+</strong><span>Years Experience</span></div>
-<div class="stat"><strong>20+</strong><span>ICT Projects</span></div>
-<div class="stat"><strong>100%</strong><span>Pearson Edexcel Focus</span></div>
+<div class="stat"><strong>2000+</strong><span>Learners Supported</span></div>
+<div class="stat"><strong>7+</strong><span>Years in ICT Education</span></div>
+<div class="stat"><strong>20+</strong><span>Projects and Digital Tasks</span></div>
+<div class="stat"><strong>100%</strong><span>Dedicated to Practical Learning</span></div>
 </div>
 </div>
 </section>
@@ -749,16 +752,16 @@ box-shadow:var(--shadow);
 <div class="container">
 <div class="section-title">
 <h2>Testimonials</h2>
-<p>Feedback from learners and colleagues.</p>
+<p>Feedback from former colleagues and supervisors.</p>
 </div>
 <div class="grid-2">
 <div class="card">
-<h3>Ahmed Hassan</h3>
-<p>"Mr. Jamal explains ICT concepts clearly and practically. His lessons are engaging and easy to understand."</p>
+<h3>Former Colleague</h3>
+<p>“Jamal is professional, supportive, and easy to work with. He communicates clearly and always contributes positively to the team.”</p>
 </div>
 <div class="card">
-<h3>Mohamoud Ali</h3>
-<p>"Excellent trainer in Microsoft Office and Digital Skills. His teaching style makes learning enjoyable."</p>
+<h3>Former Supervisor</h3>
+<p>“He is dependable, organized, and committed to quality work. His ICT teaching and support made a real difference in our school environment.”</p>
 </div>
 </div>
 </div>
@@ -792,7 +795,7 @@ box-shadow:var(--shadow);
 <a href="assets/documents/citizenship-certificate.pdf" target="_blank" rel="noopener" class="doc-card">
 <div style="font-size:2rem;">🪪</div>
 <h4>Citizenship Document</h4>
-<p>Supporting identity and citizenship record</p>
+<p>Proof of identity and citizenship</p>
 <span style="color:#b8c6ff;font-weight:700;">View Document →</span>
 </a>
 </div>
