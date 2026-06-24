@@ -7,25 +7,28 @@
   <meta name="description" content="Professional ICT Teacher, Digital Skills Trainer, Program Support professional, and Software Skills Instructor in Hargeisa, Somaliland. Specializing in Pearson Edexcel ICT, Microsoft Office, Educational Technology, Computer Lab Management, documentation, and coordination support." />
   <meta name="keywords" content="ICT Teacher Hargeisa, Pearson Edexcel ICT, Digital Skills Trainer Somaliland, Program Support, Administrative Support, Software Skills Instructor, Computer Studies Teacher, ICT Trainer Somalia" />
   <meta name="author" content="Jamal Fahadh Mohamed" />
-  <meta name="theme-color" content="#111111" />
+  <meta name="theme-color" content="#080a0d" />
 
-  //fonts.googleapis.com" />
-  //fonts.gstatic.com" crossorigin />
-  //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root{
       --header-h: 122px;
-      --bg:#0b0d10;
-      --surface:#12151a;
-      --surface-2:#171b22;
-      --text:#f8fafc;
-      --muted:#b7c0d1;
+      --bg:#f5f7fb;
+      --surface:#ffffff;
+      --surface-2:#eef3fb;
+      --text:#0f172a;
+      --muted:#526176;
       --brand:#e71e20;
       --brand-2:#ff4b4d;
+      --accent:#e11d48;
+      --dark:#080a0d;
+      --dark-2:#111418;
       --gold:#ffbb38;
-      --line:rgba(255,255,255,.10);
-      --shadow:0 16px 38px rgba(0,0,0,.30);
+      --line:#d9e2ef;
+      --shadow:0 14px 34px rgba(15,23,42,.08);
       --radius:20px;
       --radius-lg:28px;
     }
@@ -35,10 +38,7 @@
     body{
       margin:0;
       font-family:'Inter',sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(231,30,32,.18), transparent 28%),
-        radial-gradient(circle at top right, rgba(255,187,56,.10), transparent 26%),
-        linear-gradient(180deg,#0b0d10 0%, #111418 100%);
+      background:linear-gradient(180deg,#f8fbff 0%, #eef3fb 100%);
       color:var(--text);
       line-height:1.7;
       overflow-x:hidden;
@@ -55,7 +55,7 @@
 
     .site-header{
       position:fixed;top:0;left:0;right:0;z-index:9999;
-      background:rgba(8,10,14,.90);
+      background:linear-gradient(180deg, rgba(8,10,13,.98) 0%, rgba(17,20,24,.95) 100%);
       color:#fff;
       backdrop-filter:saturate(160%) blur(16px);
       border-bottom:1px solid rgba(255,255,255,.08);
@@ -89,8 +89,8 @@
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
 
     .hero-copy,.hero-side,.card,.stat,.doc-card{
-      background:linear-gradient(180deg,#151920 0%, #101419 100%);
-      border:1px solid var(--line);
+      background:linear-gradient(180deg,#ffffff 0%, #fbfdff 100%);
+      border:1px solid rgba(29,78,216,.12);
       border-radius:26px;
       box-shadow:var(--shadow);
     }
@@ -99,48 +99,35 @@
       padding:26px;
       background:
         radial-gradient(circle at top right, rgba(231,30,32,.18), transparent 35%),
-        linear-gradient(180deg,#171b22 0%, #11151b 100%);
+        linear-gradient(180deg,#ffffff 0%, #fbfdff 100%);
     }
 
     .hero-side{padding:18px}
     .eyebrow{
       display:inline-flex;align-items:center;gap:10px;padding:9px 13px;
-      border-radius:999px;background:rgba(231,30,32,.12);border:1px solid rgba(231,30,32,.35);
-      color:#fff;font-weight:800;font-size:.92rem
+      border-radius:999px;background:#eff6ff;border:1px solid #dbeafe;
+      color:#1d4ed8;font-weight:800;font-size:.92rem
     }
 
     h1,h2,h3,h4{font-family:'Sora',sans-serif;line-height:1.1}
     .hero h1{margin:14px 0 10px;font-size:clamp(2.45rem,5vw,4.7rem);letter-spacing:-.05em}
     .hero h2{margin:0 0 16px;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.5;color:var(--muted);font-weight:600}
-    .hero p{margin:0;color:#d4dbe7;font-size:1.03rem;max-width:66ch}
+    .hero p{margin:0;color:#44546a;font-size:1.03rem;max-width:66ch}
 
     .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      border-radius:14px;padding:12px 18px;font-weight:800;border:1px solid transparent
-    }
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:14px;padding:12px 18px;font-weight:800;border:1px solid transparent}
     .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff}
-    .btn-secondary{background:#fff;border-color:#fff;color:#111}
+    .btn-secondary{background:#fff;border-color:var(--line);color:var(--text)}
 
     .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-    .pill{
-      padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.06);
-      border:1px solid var(--line);color:#fff;font-size:.9rem;font-weight:700
-    }
+    .pill{padding:8px 11px;border-radius:999px;background:#f1f5fb;border:1px solid var(--line);color:var(--text);font-size:.9rem;font-weight:700}
 
-    .profile-wrap{
-      width:min(390px,100%);margin:0 auto;aspect-ratio:1/1;border-radius:26px;padding:10px;
-      background:linear-gradient(135deg,rgba(231,30,32,.18),rgba(255,187,56,.10));
-      border:1px solid rgba(255,255,255,.10)
-    }
-    .profile-img{width:100%;height:100%;object-fit:cover;border-radius:20px;border:1px solid rgba(255,255,255,.12);background:#fff}
+    .profile-wrap{width:min(390px,100%);margin:0 auto;aspect-ratio:1/1;border-radius:26px;padding:10px;background:linear-gradient(135deg,#eef5ff,#ffffff);border:1px solid var(--line)}
+    .profile-img{width:100%;height:100%;object-fit:cover;border-radius:20px;border:1px solid #dce6f4;background:#fff}
 
     .mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}
-    .mini{
-      padding:12px;border-radius:16px;background:#0f1318;border:1px solid var(--line);
-      box-shadow:0 6px 16px rgba(0,0,0,.20);text-align:center
-    }
-    .mini strong{display:block;font-size:1.05rem;color:var(--gold);line-height:1.2}
+    .mini{padding:12px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 6px 16px rgba(16,24,40,.04);text-align:center}
+    .mini strong{display:block;font-size:1.05rem;color:var(--brand);line-height:1.2}
     .mini span{display:block;margin-top:4px;color:var(--muted);font-size:.88rem}
 
     .section{padding:14px 0;scroll-margin-top:calc(var(--header-h) + 10px)}
@@ -153,20 +140,15 @@
     .card{padding:14px;transition:transform .25s ease}
     .card:hover,.stat:hover,.doc-card:hover{transform:translateY(-5px)}
     .card h3{margin:0 0 8px;font-size:1.08rem}
-    .card p,.card li{color:#d4dbe7}
+    .card p,.card li{color:#44546a}
 
-    .skill-chip{
-      display:inline-flex;padding:7px 11px;margin:0 7px 7px 0;border-radius:999px;
-      background:rgba(231,30,32,.12);border:1px solid rgba(231,30,32,.25);color:#fff;
-      font-weight:700;font-size:.9rem
-    }
-
+    .skill-chip{display:inline-flex;padding:7px 11px;margin:0 7px 7px 0;border-radius:999px;background:#eff6ff;border:1px solid #d9e8ff;color:#1d4ed8;font-weight:700;font-size:.9rem}
     .list{padding-left:18px;list-style:disc}
     .list li{margin:8px 0}
 
     .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
     .stat{padding:14px;text-align:center;transition:transform .25s ease}
-    .stat strong{display:block;font-size:1.75rem;color:var(--brand-2);line-height:1}
+    .stat strong{display:block;font-size:1.75rem;color:var(--accent);line-height:1}
     .stat span{color:var(--muted);font-size:.95rem}
 
     .experience-item{position:relative;overflow:hidden}
@@ -175,22 +157,29 @@
     .experience-title{margin:0;font-size:1.08rem}
     .experience-meta{color:var(--muted);font-weight:700;font-size:.95rem}
     .experience-bullets{padding-left:18px;list-style:disc}
-    .experience-bullets li{margin:8px 0;color:#d4dbe7}
+    .experience-bullets li{margin:8px 0;color:#44546a}
 
     .project-img{width:100%;height:190px;object-fit:cover;border-radius:16px;margin-bottom:10px;border:1px solid var(--line);background:#fff}
 
     .doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
-    .doc-card{display:block;text-align:center;padding:14px;border-radius:18px;background:#151920;transition:.25s}
+    .doc-card{display:block;text-align:center;padding:14px;border-radius:18px;background:#fff;transition:.25s}
     .doc-card h4{margin:10px 0 6px}
     .doc-card p{margin:0 0 12px;color:var(--muted)}
 
     .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px}
     .contact-link{display:block;padding:14px 16px;border-radius:14px;font-weight:800;text-align:center}
     .wa{background:#25D366;color:#fff}
-    .call{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff}
-    .mail{background:#fff;color:#111;border:1px solid var(--line)}
+    .call{background:#1d4ed8;color:#fff}
+    .mail{background:#fff;color:var(--text);border:1px solid var(--line)}
 
-    footer{background:#080a0d;padding:30px 0 20px;color:#cbd5e1;margin-top:8px;border-top:1px solid rgba(255,255,255,.08)}
+    footer{
+      background:linear-gradient(180deg, rgba(8,10,13,.98) 0%, rgba(17,20,24,.95) 100%);
+      padding:30px 0 20px;
+      color:#cbd5e1;
+      margin-top:8px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
     .footer-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:start}
     .footer-brand{display:flex;align-items:center;gap:12px;font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:800;color:#fff;margin:0 0 10px}
     .footer-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
@@ -210,7 +199,11 @@
       .menu{display:flex;flex-direction:row;justify-content:center;flex-wrap:wrap;gap:8px;padding-top:0}
       .menu-toggle{display:none}
     }
-    @media(max-width:980px){.hero-grid,.footer-grid{grid-template-columns:1fr}}
+
+    @media(max-width:980px){
+      .hero-grid,.footer-grid{grid-template-columns:1fr}
+    }
+
     @media(max-width:640px){
       :root{--header-h:124px}
       .hero-copy,.hero-side{padding:16px}
@@ -221,7 +214,10 @@
       .grid-2{grid-template-columns:1fr}
       .container{padding:0 14px}
     }
-    @media(max-width:480px){#skills .grid{grid-template-columns:1fr}}
+
+    @media(max-width:480px){
+      #skills .grid{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
@@ -237,13 +233,13 @@
     </div>
     <div class="container header-nav-wrap">
       <nav aria-label="Primary navigation">
-        <ul class="menu" id="menunu">
-          ><a href="#about">Profile</a></l/li>
-          ><a href="#achievements">Achievements</a></l/li>
-          ><a href="#skills">Skills</a></l/li>
-          ><a href="#experience">Experience</a></l/li>
-          ><a href="#portfolio">Projects</a></l/li>
-          ><a href="#contact">Contact</a></li>
+        <ul class="menu" id="menu">
+          <li><a href="#about">Profile</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -346,17 +342,17 @@
           <p>Skills that strengthen operations, coordination, and documentation.</p>
         </div>
         <div class="card">
-          <ul class="listst">
-            >Office administration and document handling.</l/li>
-            >Reporting and data entry.</l/li>
-            >Digital filing and record management.</l/li>
-            >Microsoft Word, Excel, PowerPoint, and Access.</l/li>
-            >Scheduling, coordination, and follow-up support.</l/li>
-            >Communication with staff, students, and stakeholders.</l/li>
-            >Event, meeting, and activity support.</l/li>
-            >Basic troubleshooting and ICT assistance.</l/li>
-            >Maintaining organized digital and physical records.</l/li>
-            >Supporting smooth day-to-day operations.</li>
+          <ul class="list">
+            <li>Office administration and document handling.</li>
+            <li>Reporting and data entry.</li>
+            <li>Digital filing and record management.</li>
+            <li>Microsoft Word, Excel, PowerPoint, and Access.</li>
+            <li>Scheduling, coordination, and follow-up support.</li>
+            <li>Communication with staff, students, and stakeholders.</li>
+            <li>Event, meeting, and activity support.</li>
+            <li>Basic troubleshooting and ICT assistance.</li>
+            <li>Maintaining organized digital and physical records.</li>
+            <li>Supporting smooth day-to-day operations.</li>
           </ul>
         </div>
       </div>
@@ -369,16 +365,16 @@
           <p>Practical classroom and learner support strengths.</p>
         </div>
         <div class="card">
-          <ul class="listst">
-            >Lesson Planning.</l/li>
-            >Classroom Management.</l/li>
-            >Student Assessment.</l/li>
-            >Curriculum Delivery.</l/li>
-            >Differentiated Instruction.</l/li>
-            >Project-Based Learning.</l/li>
-            >Educational Technology.</l/li>
-            >Learner Engagement.</l/li>
-            >Practical ICT Training.</li>
+          <ul class="list">
+            <li>Lesson Planning.</li>
+            <li>Classroom Management.</li>
+            <li>Student Assessment.</li>
+            <li>Curriculum Delivery.</li>
+            <li>Differentiated Instruction.</li>
+            <li>Project-Based Learning.</li>
+            <li>Educational Technology.</li>
+            <li>Learner Engagement.</li>
+            <li>Practical ICT Training.</li>
           </ul>
         </div>
       </div>
@@ -398,13 +394,13 @@
                 <div class="experience-meta"><strong>Elm High School</strong><br>2018 – 2025</div>
               </div>
             </div>
-            <ul class="experience-bulletsts">
-              >Delivered Pearson Edexcel ICT lessons to hundreds of learners.</l/li>
-              >Supported over 2,000 students in developing practical digital skills.</l/li>
-              >Managed ICT laboratory resources and ensured operational readiness.</l/li>
-              >Prepared academic records, reports, and digital learning materials.</l/li>
-              >Assisted staff and students with ICT troubleshooting and technology integration.</l/li>
-              >Contributed to digital resource development and school technology initiatives.</li>
+            <ul class="experience-bullets">
+              <li>Delivered Pearson Edexcel ICT lessons to hundreds of learners.</li>
+              <li>Supported over 2,000 students in developing practical digital skills.</li>
+              <li>Managed ICT laboratory resources and ensured operational readiness.</li>
+              <li>Prepared academic records, reports, and digital learning materials.</li>
+              <li>Assisted staff and students with ICT troubleshooting and technology integration.</li>
+              <li>Contributed to digital resource development and school technology initiatives.</li>
             </ul>
           </div>
 
@@ -415,12 +411,12 @@
                 <div class="experience-meta"><strong>Elm High School</strong><br>2021 – 2023</div>
               </div>
             </div>
-            <ul class="experience-bulletsts">
-              >Managed digital cataloguing and library record systems.</l/li>
-              >Organized learning materials and maintained resource accessibility.</l/li>
-              >Supported students and staff with resource requests and information access.</l/li>
-              >Helped improve workflow through structured documentation and filing.</l/li>
-              >Assisted with daily administrative and support tasks.</li>
+            <ul class="experience-bullets">
+              <li>Managed digital cataloguing and library record systems.</li>
+              <li>Organized learning materials and maintained resource accessibility.</li>
+              <li>Supported students and staff with resource requests and information access.</li>
+              <li>Helped improve workflow through structured documentation and filing.</li>
+              <li>Assisted with daily administrative and support tasks.</li>
             </ul>
           </div>
 
@@ -431,12 +427,12 @@
                 <div class="experience-meta"><strong>Turkana School of Technology</strong><br>2017</div>
               </div>
             </div>
-            <ul class="experience-bulletsts">
-              >Taught basic computer studies and digital skills.</l/li>
-              >Prepared lesson notes, class materials, and student guidance support.</l/li>
-              >Introduced learners to safe technology use and practical computer applications.</l/li>
-              >Supported website-related learning activities and simple digital tasks.</l/li>
-              >Worked with students in a structured, organized learning environment.</li>
+            <ul class="experience-bullets">
+              <li>Taught basic computer studies and digital skills.</li>
+              <li>Prepared lesson notes, class materials, and student guidance support.</li>
+              <li>Introduced learners to safe technology use and practical computer applications.</li>
+              <li>Supported website-related learning activities and simple digital tasks.</li>
+              <li>Worked with students in a structured, organized learning environment.</li>
             </ul>
           </div>
         </div>
@@ -450,13 +446,13 @@
           <p>Additional responsibilities and support areas.</p>
         </div>
         <div class="card">
-          <ul class="listst">
-            >ICT Laboratory Management.</l/li>
-            >Educational Technology Support.</l/li>
-            >Digital Resource Development.</l/li>
-            >Library Technology Support.</l/li>
-            >School Website Projects.</l/li>
-            >Staff ICT Assistance.</li>
+          <ul class="list">
+            <li>ICT Laboratory Management.</li>
+            <li>Educational Technology Support.</li>
+            <li>Digital Resource Development.</li>
+            <li>Library Technology Support.</li>
+            <li>School Website Projects.</li>
+            <li>Staff ICT Assistance.</li>
           </ul>
         </div>
       </div>
@@ -556,25 +552,25 @@
             <div style="font-size:2rem;">📄</div>
             <h4>Professional CV</h4>
             <p>My academic and work history</p>
-            <span style="color:#ffbb38;font-weight:700;">View Document →</span>
+            <span style="color:#2563eb;font-weight:700;">View Document →</span>
           </a>
           <a href="assets/documents/ICT_COVER_LETTER.pdf" target="_blank" rel="noopener" class="doc-card">
             <div style="font-size:2rem;">✉️</div>
             <h4>Cover Letter</h4>
             <p>Professional introduction</p>
-            <span style="color:#ffbb38;font-weight:700;">View Document →</span>
+            <span style="color:#0ea5e9;font-weight:700;">View Document →</span>
           </a>
           <a href="assets/documents/sample-lesson-plan.pdf" target="_blank" rel="noopener" class="doc-card">
             <div style="font-size:2rem;">🍎</div>
             <h4>Lesson Plan</h4>
             <p>Sample teaching methodology</p>
-            <span style="color:#ffbb38;font-weight:700;">View Document →</span>
+            <span style="color:#2563eb;font-weight:700;">View Document →</span>
           </a>
           <a href="#passport-modal" class="doc-card" id="citizenship-trigger">
             <div style="font-size:2rem;">🪪</div>
             <h4>Citizenship Document</h4>
             <p>Click to view passport bio page</p>
-            <span style="color:#ffbb38;font-weight:700;">View Image →</span>
+            <span style="color:#0ea5e9;font-weight:700;">View Image →</span>
           </a>
         </div>
       </div>
@@ -587,15 +583,15 @@
           <p>Reasons I can add value to your school or organization.</p>
         </div>
         <div class="card">
-          <ul class="listst">
-            >7+ years ICT teaching experience.</l/li>
-            >Strong classroom management.</l/li>
-            >Pearson Edexcel ICT focus.</l/li>
-            >Practical hands-on teaching style.</l/li>
-            >Digital skills training expertise.</l/li>
-            >Educational technology experience.</l/li>
-            >Computer lab management skills.</l/li>
-            >Immediate availability.</li>
+          <ul class="list">
+            <li>7+ years ICT teaching experience.</li>
+            <li>Strong classroom management.</li>
+            <li>Pearson Edexcel ICT focus.</li>
+            <li>Practical hands-on teaching style.</li>
+            <li>Digital skills training expertise.</li>
+            <li>Educational technology experience.</li>
+            <li>Computer lab management skills.</li>
+            <li>Immediate availability.</li>
           </ul>
         </div>
       </div>
@@ -611,13 +607,13 @@
           <div class="card">
             <h3>Get In Touch</h3>
             <p>I am immediately available for:</p>
-            <ul class="listst">
-              >ICT Teaching Positions.</l/li>
-              >Digital Skills Training.</l/li>
-              >Educational Technology Projects.</l/li>
-              >Computer Lab Management.</l/li>
-              >ICT Support & Technical Assistance.</l/li>
-              >Website Development Projects.</li>
+            <ul class="list">
+              <li>ICT Teaching Positions.</li>
+              <li>Digital Skills Training.</li>
+              <li>Educational Technology Projects.</li>
+              <li>Computer Lab Management.</li>
+              <li>ICT Support & Technical Assistance.</li>
+              <li>Website Development Projects.</li>
             </ul>
             <p style="margin-top:16px;">Let's discuss how I can contribute to your organization.</p>
           </div>
