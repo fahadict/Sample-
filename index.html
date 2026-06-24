@@ -15,31 +15,40 @@
 
   <style>
     :root{
-      --header-h: 92px;
-      --bg:#f5f9ff;
+      --header-h: 94px;
+      --bg:#f7f9fc;
+      --bg-dark:#0d1117;
       --surface:#ffffff;
-      --surface-2:#eff6ff;
-      --text:#10233f;
-      --muted:#5b6b84;
+      --surface-2:#eef4ff;
+      --text:#10192b;
+      --text-dark:#eef2ff;
+      --muted:#5e6b84;
+      --muted-dark:#9aa6bf;
       --brand:#2563eb;
       --brand-2:#0ea5e9;
       --accent:#1d4ed8;
-      --line:#dbe7f5;
+      --line:#dbe5f1;
+      --line-dark:rgba(255,255,255,.10);
       --shadow:0 16px 36px rgba(16,24,40,.08);
-      --radius:22px;
-      --radius-lg:30px;
+      --shadow-dark:0 24px 54px rgba(0,0,0,.24);
+      --radius:24px;
     }
 
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth; overflow-x:hidden;}
+    html{scroll-behavior:smooth;overflow-x:hidden}
     body{
       margin:0;
       font-family:'Inter',sans-serif;
-      background:linear-gradient(180deg,#f8fbff 0%, #eef5ff 100%);
       color:var(--text);
-      line-height:1.7;
+      background:var(--bg);
       overflow-x:hidden;
       padding-top:var(--header-h);
+      transition:background-color .45s ease,color .45s ease;
+    }
+
+    body.theme-dark{
+      background:var(--bg-dark);
+      color:var(--text-dark);
     }
 
     img{max-width:100%;display:block}
@@ -57,14 +66,21 @@
       backdrop-filter:saturate(160%) blur(14px);
       border-bottom:1px solid rgba(16,24,40,.08);
       box-shadow:0 8px 24px rgba(16,24,40,.05);
+      transition:background-color .35s ease,color .35s ease,border-color .35s ease,box-shadow .35s ease;
+    }
+    .site-header.dark{
+      background:rgba(13,17,23,.86);
+      color:var(--text-dark);
+      border-bottom:1px solid var(--line-dark);
+      box-shadow:0 10px 26px rgba(0,0,0,.22);
     }
 
     .header-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
     .header-nav-wrap{padding-bottom:10px}
-
-    .logo{display:flex;align-items:center;gap:12px;min-width:0;color:var(--text)}
+    .logo{display:flex;align-items:center;gap:12px;min-width:0;color:inherit}
     .logo-img,.footer-logo{width:48px;height:48px;border-radius:14px;object-fit:cover;flex-shrink:0;background:#dbe7f5;border:1px solid var(--line)}
-    .logo span{font-family:'Sora',sans-serif;font-weight:800;font-size:1.03rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .site-header.dark .logo-img,.site-header.dark .footer-logo{border-color:rgba(255,255,255,.12);background:#1a2230}
+    .logo span{font-family:'Sora',sans-serif;font-weight:800;font-size:1.02rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
     .menu-toggle{
       display:inline-flex;align-items:center;justify-content:center;
@@ -80,23 +96,37 @@
       background:#fff;border:1px solid var(--line);
       color:var(--text);font-weight:700
     }
-    .menu a:hover{border-color:#b7cdf6;background:#f7fbff}
+    .site-header.dark .menu a{
+      background:rgba(255,255,255,.04);border-color:var(--line-dark);color:var(--text-dark)
+    }
 
-    .hero{padding:12px 0 6px}
-    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch}
+    .hero{padding:12px 0 10px;background:linear-gradient(180deg, rgba(255,255,255,.0), rgba(255,255,255,.0))}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
 
     .hero-copy,.hero-side,.card,.stat,.doc-card{
       background:linear-gradient(180deg,#ffffff 0%, #fcfdff 100%);
       border:1px solid rgba(37,99,235,.10);
-      border-radius:26px;
+      border-radius:28px;
       box-shadow:var(--shadow);
     }
 
+    .theme-dark .hero-copy,.theme-dark .hero-side,.theme-dark .card,.theme-dark .stat,.theme-dark .doc-card{
+      background:linear-gradient(180deg,#121826 0%, #0f1624 100%);
+      border-color:var(--line-dark);
+      box-shadow:var(--shadow-dark);
+      color:var(--text-dark);
+    }
+
     .hero-copy{
-      padding:28px;
+      padding:30px;
       background:
         radial-gradient(circle at top right, rgba(14,165,233,.12), transparent 34%),
         linear-gradient(180deg,#ffffff 0%, #fbfdff 100%);
+    }
+    .theme-dark .hero-copy{
+      background:
+        radial-gradient(circle at top right, rgba(14,165,233,.16), transparent 34%),
+        linear-gradient(180deg,#121826 0%, #0f1624 100%);
     }
 
     .hero-side{padding:18px}
@@ -105,47 +135,63 @@
       border-radius:999px;background:#eff6ff;border:1px solid #dbeafe;
       color:#2563eb;font-weight:800;font-size:.92rem
     }
+    .theme-dark .eyebrow{background:rgba(37,99,235,.16);border-color:rgba(59,130,246,.25);color:#bfdbfe}
 
     h1,h2,h3,h4{font-family:'Sora',sans-serif;line-height:1.1}
     .hero h1{margin:14px 0 10px;font-size:clamp(2.45rem,5vw,4.8rem);letter-spacing:-.05em}
     .hero h2{margin:0 0 16px;font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.5;color:var(--muted);font-weight:600}
+    .theme-dark .hero h2,.theme-dark .section-title p,.theme-dark .card p,.theme-dark .card li,.theme-dark .experience-meta,.theme-dark .experience-bullets li,.theme-dark .doc-card p,.theme-dark .stat span,.theme-dark .mini span,.theme-dark .footer-links a,.theme-dark footer p{color:var(--muted-dark)}
     .hero p{margin:0;color:#45607f;font-size:1.03rem;max-width:66ch}
+    .theme-dark .hero p{color:#c4cee3}
 
     .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:14px;padding:12px 18px;font-weight:800;border:1px solid transparent}
     .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff}
     .btn-secondary{background:#fff;border-color:var(--line);color:var(--text)}
+    .theme-dark .btn-secondary{background:transparent;border-color:var(--line-dark);color:var(--text-dark)}
 
     .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
     .pill{padding:8px 11px;border-radius:999px;background:#f1f7ff;border:1px solid var(--line);color:var(--text);font-size:.9rem;font-weight:700}
+    .theme-dark .pill{background:rgba(255,255,255,.04);border-color:var(--line-dark);color:var(--text-dark)}
 
     .profile-wrap{width:min(390px,100%);margin:0 auto;aspect-ratio:1/1;border-radius:26px;padding:10px;background:linear-gradient(135deg,#eef5ff,#ffffff);border:1px solid var(--line)}
+    .theme-dark .profile-wrap{background:linear-gradient(135deg,#152033,#0e1624);border-color:var(--line-dark)}
     .profile-img{width:100%;height:100%;object-fit:cover;border-radius:20px;border:1px solid #dce6f4;background:#fff}
 
     .mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}
     .mini{padding:12px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 6px 16px rgba(16,24,40,.04);text-align:center}
+    .theme-dark .mini{background:rgba(255,255,255,.03);border-color:var(--line-dark);box-shadow:none}
     .mini strong{display:block;font-size:1.05rem;color:var(--brand);line-height:1.2}
     .mini span{display:block;margin-top:4px;color:var(--muted);font-size:.88rem}
 
-    .section{padding:14px 0;scroll-margin-top:calc(var(--header-h) + 10px)}
-    .section-title{text-align:center;margin-bottom:10px}
+    .section{padding:24px 0;scroll-margin-top:calc(var(--header-h) + 10px)}
+    .section-title{text-align:center;margin-bottom:12px}
     .section-title h2{margin:0 0 6px;font-size:clamp(1.45rem,2.6vw,2.1rem);letter-spacing:-.03em}
     .section-title p{margin:0;color:var(--muted);font-size:.98rem}
 
+    .light-section{background:#fff}
+    .alt-section{background:#f3f7fd}
+    .dark-section{
+      background:linear-gradient(180deg,#0d1117 0%, #0c1220 100%);
+      color:var(--text-dark);
+    }
+
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
     .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:10px}
-    .card{padding:14px;transition:transform .25s ease}
+    .card{padding:16px;transition:transform .25s ease}
     .card:hover,.stat:hover,.doc-card:hover{transform:translateY(-5px)}
     .card h3{margin:0 0 8px;font-size:1.08rem}
     .card p,.card li{color:#45607f}
 
     .skill-chip{display:inline-flex;padding:7px 11px;margin:0 7px 7px 0;border-radius:999px;background:#eff6ff;border:1px solid #d9e8ff;color:#2563eb;font-weight:700;font-size:.9rem}
+    .theme-dark .skill-chip{background:rgba(37,99,235,.16);border-color:rgba(59,130,246,.22);color:#bfdbfe}
     .list{padding-left:18px;list-style:disc}
     .list li{margin:8px 0}
 
     .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
     .stat{padding:14px;text-align:center;transition:transform .25s ease}
     .stat strong{display:block;font-size:1.75rem;color:var(--accent);line-height:1}
+    .theme-dark .stat strong{color:#60a5fa}
     .stat span{color:var(--muted);font-size:.95rem}
 
     .experience-item{position:relative;overflow:hidden}
@@ -168,21 +214,21 @@
     .wa{background:#25D366;color:#fff}
     .call{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff}
     .mail{background:#fff;color:var(--text);border:1px solid var(--line)}
+    .theme-dark .mail{background:transparent;color:var(--text-dark);border-color:var(--line-dark)}
 
     footer{
-      background:linear-gradient(180deg,#ffffff 0%, #eff6ff 100%);
-      padding:30px 0 20px;
-      color:#5b6b84;
-      margin-top:8px;
-      border-top:1px solid var(--line);
+      background:#0b1220;
+      padding:34px 0 22px;
+      color:#cbd5e1;
+      margin-top:0;
+      border-top:1px solid rgba(255,255,255,.08);
     }
-
     .footer-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:start}
-    .footer-brand{display:flex;align-items:center;gap:12px;font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:800;color:#10233f;margin:0 0 10px}
+    .footer-brand{display:flex;align-items:center;gap:12px;font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:800;color:#fff;margin:0 0 10px}
     .footer-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-    .footer-links a{color:#5b6b84;padding:7px 0}
-    .footer-links a:hover{color:#2563eb}
-    .footer-note{text-align:center;margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:.93rem}
+    .footer-links a{color:#cbd5e1;padding:7px 0}
+    .footer-links a:hover{color:#93c5fd}
+    .footer-note{text-align:center;margin-top:18px;padding-top:12px;border-top:1px solid rgba(255,255,255,.08);font-size:.93rem}
 
     .floating-wa{position:fixed;right:16px;bottom:16px;z-index:999;background:#25D366;color:#fff;padding:14px 16px;border-radius:999px;font-weight:800;box-shadow:0 16px 35px rgba(0,0,0,.16)}
 
@@ -211,16 +257,12 @@
       .grid-2{grid-template-columns:1fr}
       .container{padding:0 14px}
     }
-
-    @media(max-width:480px){
-      #skills .grid{grid-template-columns:1fr}
-    }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#about">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" id="siteHeader">
     <div class="container header-top">
       <a class="logo" href="#home" aria-label="Home">
         <img src="assets/images/logo.jpg" alt="Jamal Fahadh Mohamed logo" class="logo-img" onerror="this.style.display='none';">
@@ -242,8 +284,8 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="home">
+  <main id="page">
+    <section class="hero light-section" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">✔ ICT professional based in Hargeisa, Somaliland, available for immediate employment.</div>
@@ -276,7 +318,7 @@
       </div>
     </section>
 
-    <section class="section" id="about">
+    <section class="section alt-section" id="about">
       <div class="container">
         <div class="section-title">
           <h2>Professional Profile</h2>
@@ -301,7 +343,7 @@
       </div>
     </section>
 
-    <section class="section" id="achievements">
+    <section class="section light-section" id="achievements">
       <div class="container">
         <div class="section-title">
           <h2>Key Achievements</h2>
@@ -316,7 +358,7 @@
       </div>
     </section>
 
-    <section class="section" id="skills">
+    <section class="section alt-section" id="skills">
       <div class="container">
         <div class="section-title">
           <h2>Technical Skills</h2>
@@ -332,7 +374,7 @@
       </div>
     </section>
 
-    <section class="section" id="program-support">
+    <section class="section dark-section" id="program-support">
       <div class="container">
         <div class="section-title">
           <h2>Program Support Skills</h2>
@@ -355,7 +397,7 @@
       </div>
     </section>
 
-    <section class="section" id="competencies">
+    <section class="section dark-section" id="competencies">
       <div class="container">
         <div class="section-title">
           <h2>Teaching Competencies</h2>
@@ -377,7 +419,7 @@
       </div>
     </section>
 
-    <section class="section" id="experience">
+    <section class="section dark-section" id="experience">
       <div class="container">
         <div class="section-title">
           <h2>Professional Experience</h2>
@@ -436,7 +478,7 @@
       </div>
     </section>
 
-    <section class="section" id="contributions">
+    <section class="section dark-section" id="contributions">
       <div class="container">
         <div class="section-title">
           <h2>School Contributions</h2>
@@ -455,7 +497,7 @@
       </div>
     </section>
 
-    <section class="section" id="portfolio">
+    <section class="section alt-section" id="portfolio">
       <div class="container">
         <div class="section-title">
           <h2>Featured Projects</h2>
@@ -481,7 +523,7 @@
       </div>
     </section>
 
-    <section class="section" id="certifications">
+    <section class="section light-section" id="certifications">
       <div class="container">
         <div class="section-title">
           <h2>Certifications & Qualifications</h2>
@@ -507,7 +549,7 @@
       </div>
     </section>
 
-    <section class="section" id="safeguarding">
+    <section class="section alt-section" id="safeguarding">
       <div class="container">
         <div class="section-title">
           <h2>Safeguarding Commitment</h2>
@@ -519,7 +561,7 @@
       </div>
     </section>
 
-    <section class="section" id="testimonials">
+    <section class="section light-section" id="testimonials">
       <div class="container">
         <div class="section-title">
           <h2>Testimonials</h2>
@@ -538,7 +580,7 @@
       </div>
     </section>
 
-    <section class="section" id="references">
+    <section class="section dark-section" id="references">
       <div class="container">
         <div class="section-title">
           <h2>Professional Documents</h2>
@@ -573,7 +615,7 @@
       </div>
     </section>
 
-    <section class="section" id="why-me">
+    <section class="section dark-section" id="why-me">
       <div class="container">
         <div class="section-title">
           <h2>Why Hire Me?</h2>
@@ -594,7 +636,7 @@
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="section dark-section" id="contact">
       <div class="container">
         <div class="section-title">
           <h2>Contact Me</h2>
@@ -646,7 +688,7 @@
           <p style="margin-top:10px;">Available for education, coordination, documentation, and digital support roles.</p>
         </div>
         <div>
-          <h3 style="margin:0 0 12px;font-family:'Sora',sans-serif;color:#10233f;">Quick Links</h3>
+          <h3 style="margin:0 0 12px;font-family:'Sora',sans-serif;color:#fff;">Quick Links</h3>
           <div class="footer-links">
             <a href="#about">Profile</a>
             <a href="#experience">Experience</a>
@@ -675,6 +717,9 @@
     const btn = document.querySelector('.menu-toggle');
     const modal = document.getElementById('passport-modal');
     const trigger = document.getElementById('citizenship-trigger');
+    const header = document.getElementById('siteHeader');
+    const darkSections = Array.from(document.querySelectorAll('.dark-section'));
+    const page = document.getElementById('page');
 
     function setMenu(open){
       menu.classList.toggle('show', open);
@@ -693,9 +738,7 @@
     });
 
     document.addEventListener('click', function(e){
-      if (window.innerWidth < 981 && !e.target.closest('.site-header')) {
-        setMenu(false);
-      }
+      if (window.innerWidth < 981 && !e.target.closest('.site-header')) setMenu(false);
     });
 
     trigger.addEventListener('click', function(e){
@@ -719,6 +762,21 @@
         setMenu(false);
       }
     });
+
+    function updateTheme(){
+      const viewportCenter = window.scrollY + window.innerHeight * 0.42;
+      const darkActive = darkSections.some(section => {
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+        return viewportCenter >= top && viewportCenter <= bottom;
+      });
+      document.body.classList.toggle('theme-dark', darkActive);
+      header.classList.toggle('dark', darkActive);
+    }
+
+    window.addEventListener('scroll', updateTheme, {passive:true});
+    window.addEventListener('resize', updateTheme);
+    updateTheme();
   </script>
 </body>
 </html>
