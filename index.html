@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jamal Fahadh Mohamed | Pearson Edexcel ICT Teacher | Digital Skills Trainer | Program Support | Software Skills Instructor</title>
   <meta name="description" content="Professional ICT Teacher, Digital Skills Trainer, Program Support professional, and Software Skills Instructor in Hargeisa, Somaliland. Specializing in Pearson Edexcel ICT, Microsoft Office, Educational Technology, Computer Lab Management, documentation, and coordination support." />
   <meta name="keywords" content="ICT Teacher Hargeisa, Pearson Edexcel ICT, Digital Skills Trainer Somaliland, Program Support, Administrative Support, Software Skills Instructor, Computer Studies Teacher, ICT Trainer Somalia" />
   <meta name="author" content="Jamal Fahadh Mohamed" />
+  <meta name="theme-color" content="#0f172a" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,717 +15,158 @@
 
   <style>
     :root{
+      --header-h: 120px;
       --bg:#f5f7fb;
       --surface:#ffffff;
-      --surface-2:#f0f4fa;
-      --surface-3:#eaf0f7;
-      --text:#142033;
-      --muted:#5d6b82;
-      --brand:#2563eb;
+      --surface-2:#eef3fb;
+      --text:#0f172a;
+      --muted:#526176;
+      --brand:#1d4ed8;
       --brand-2:#0ea5e9;
-      --line:#dbe4f0;
-      --shadow:0 14px 40px rgba(16,24,40,.08);
-      --shadow-strong:0 20px 60px rgba(16,24,40,.12);
-      --radius:22px;
+      --accent:#e11d48;
+      --dark:#0b1220;
+      --dark-2:#111827;
+      --line:#d9e2ef;
+      --shadow:0 14px 34px rgba(15,23,42,.08);
+      --radius:20px;
       --radius-lg:28px;
     }
 
-    html{
-      scroll-behavior:smooth;
-      overflow-x:hidden;
-      box-sizing:border-box;
-    }
-
-    *, *::before, *::after{
-      box-sizing:border-box;
-    }
-
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth; overflow-x:hidden;}
     body{
       margin:0;
       font-family:'Inter',sans-serif;
-      background:linear-gradient(180deg,#f8fbff 0%, #f3f7fc 100%);
+      background:linear-gradient(180deg,#f8fbff 0%, #eef3fb 100%);
       color:var(--text);
       line-height:1.7;
       overflow-x:hidden;
-      padding-left:max(0px, env(safe-area-inset-left));
-      padding-right:max(0px, env(safe-area-inset-right));
+      padding-top:var(--header-h);
     }
 
-    img{
-      max-width:100%;
-      display:block;
-    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    ul{margin:0;padding:0;list-style:none}
 
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
+    .container{width:min(1200px,100%);margin:0 auto;padding:0 18px}
 
-    ul{
-      margin:0;
-      padding:0;
-      list-style:none;
-    }
-
-    .container{
-      width:min(1180px, 100%);
-      margin:0 auto;
-      padding-left:20px;
-      padding-right:20px;
-    }
-
-    .skip-link{
-      position:absolute;
-      left:-999px;
-      top:auto;
-      width:1px;
-      height:1px;
-      overflow:hidden;
-    }
-
-    .skip-link:focus{
-      left:16px;
-      top:16px;
-      width:auto;
-      height:auto;
-      padding:10px 14px;
-      background:#fff;
-      color:#000;
-      border-radius:10px;
-      z-index:10000;
-      box-shadow:var(--shadow);
-    }
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:16px;top:16px;width:auto;height:auto;padding:10px 14px;background:#fff;color:#000;border-radius:10px;z-index:10000;box-shadow:var(--shadow)}
 
     .site-header{
-      position:sticky;
-      top:0;
-      z-index:9999;
-      background:rgba(255,255,255,.88);
-      backdrop-filter:blur(16px);
-      -webkit-backdrop-filter:blur(16px);
-      border-bottom:1px solid rgba(219,228,240,.9);
-      box-shadow:0 1px 0 rgba(255,255,255,.7);
-      padding-left:max(12px, env(safe-area-inset-left));
-      padding-right:max(12px, env(safe-area-inset-right));
-    }
-
-    .header-top{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding:14px 0;
-    }
-
-    .header-nav-wrap{
-      padding-bottom:14px;
-    }
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      min-width:0;
-      font-family:'Sora',sans-serif;
-      font-weight:800;
+      position:fixed;top:0;left:0;right:0;z-index:9999;
+      background:rgba(255,255,255,.92);
       color:var(--text);
-    }
-
-    .logo-img{
-      width:42px;
-      height:42px;
-      border-radius:12px;
-      object-fit:cover;
-      flex-shrink:0;
-      background:#e8eef7;
-      border:1px solid var(--line);
-    }
-
-    .logo span{
-      display:block;
-      max-width:220px;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-
-    .menu-toggle{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      background:#fff;
-      border:1px solid var(--line);
-      color:var(--text);
-      border-radius:14px;
-      padding:10px 14px;
-      font-size:1rem;
-      cursor:pointer;
-      box-shadow:0 6px 18px rgba(16,24,40,.06);
-    }
-
-    .menu-toggle:focus,
-    .btn:focus,
-    .doc-card:focus,
-    .contact-link:focus{
-      outline:2px solid var(--brand);
-      outline-offset:3px;
-    }
-
-    .menu{
-      display:none;
-      flex-direction:column;
-      gap:8px;
-      padding-top:8px;
-    }
-
-    .menu.show{
-      display:flex;
-    }
-
-    .menu a{
-      display:block;
-      padding:12px 14px;
-      border-radius:12px;
-      background:var(--surface);
-      border:1px solid var(--line);
-      color:var(--text);
-      font-weight:600;
-      box-shadow:0 8px 24px rgba(16,24,40,.04);
-    }
-
-    .menu a:hover,
-    .menu a:focus{
-      background:#f8fbff;
-      outline:none;
-    }
-
-    .hero{
-      padding:34px 0 18px;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.12fr .88fr;
-      gap:24px;
-      align-items:center;
-    }
-
-    .hero-copy{
-      background:var(--surface);
-      border:1px solid var(--line);
-      border-radius:var(--radius-lg);
-      padding:28px;
-      box-shadow:var(--shadow);
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius:999px;
-      background:#eff6ff;
-      border:1px solid #d9e8ff;
-      color:#1d4ed8;
-      font-weight:700;
-      font-size:.92rem;
-      max-width:100%;
-      overflow-wrap:anywhere;
-    }
-
-    h1,h2,h3,h4{
-      font-family:'Sora',sans-serif;
-    }
-
-    .hero h1{
-      margin:16px 0 10px;
-      font-size:clamp(2.4rem,4.6vw,4.8rem);
-      line-height:1.02;
-      letter-spacing:-.04em;
-      overflow-wrap:anywhere;
-    }
-
-    .hero h2{
-      margin:0 0 16px;
-      font-size:clamp(1rem,1.6vw,1.22rem);
-      line-height:1.5;
-      color:var(--muted);
-      font-weight:600;
-      overflow-wrap:anywhere;
-    }
-
-    .hero p{
-      margin:0;
-      color:#44546a;
-      font-size:1.03rem;
-      max-width:62ch;
-      overflow-wrap:anywhere;
-    }
-
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:24px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      border-radius:14px;
-      padding:12px 18px;
-      font-weight:800;
-      border:1px solid transparent;
-      transition:.25s;
-      white-space:nowrap;
-    }
-
-    .btn:hover{
-      transform:translateY(-2px);
-    }
-
-    .btn-primary{
-      background:linear-gradient(135deg,var(--brand),var(--brand-2));
-      color:#fff;
-      box-shadow:0 14px 30px rgba(37,99,235,.22);
-    }
-
-    .btn-secondary{
-      background:#fff;
-      border-color:var(--line);
-      color:var(--text);
-    }
-
-    .hero-meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:18px;
-    }
-
-    .pill{
-      padding:9px 12px;
-      border-radius:999px;
-      background:var(--surface-2);
-      border:1px solid var(--line);
-      color:var(--text);
-      font-size:.92rem;
-      font-weight:600;
-    }
-
-    .hero-side{
-      background:linear-gradient(180deg,#ffffff 0%, #f7fbff 100%);
-      border:1px solid var(--line);
-      border-radius:var(--radius-lg);
-      padding:20px;
-      box-shadow:var(--shadow);
-    }
-
-    .profile-wrap{
-      width:min(420px,100%);
-      margin:0 auto;
-      aspect-ratio:1/1;
-      border-radius:30px;
-      padding:10px;
-      background:linear-gradient(135deg,#eaf2ff,#f3f8ff);
-      border:1px solid var(--line);
-    }
-
-    .profile-img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      border-radius:22px;
-      border:1px solid #dce6f4;
-      background:#fff;
-    }
-
-    .mini-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:12px;
-      margin-top:16px;
-    }
-
-    .mini{
-      padding:16px;
-      border-radius:18px;
-      background:#fff;
-      border:1px solid var(--line);
-      box-shadow:0 8px 22px rgba(16,24,40,.04);
-      text-align:center;
-    }
-
-    .mini strong{
-      display:block;
-      font-size:1.2rem;
-      color:var(--brand);
-      line-height:1.2;
-    }
-
-    .mini span{
-      display:block;
-      margin-top:4px;
-      color:var(--muted);
-      font-size:.92rem;
-    }
-
-    .section{
-      padding:42px 0;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:22px;
-    }
-
-    .section-title h2{
-      margin:0 0 8px;
-      font-size:clamp(1.6rem,2.8vw,2.4rem);
-      letter-spacing:-.03em;
-    }
-
-    .section-title p{
-      margin:0;
-      color:var(--muted);
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:18px;
-    }
-
-    .grid-2{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:18px;
-    }
-
-    .card{
-      background:var(--surface);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:22px;
-      box-shadow:var(--shadow);
-    }
-
-    .card h3{
-      margin:0 0 10px;
-      font-size:1.15rem;
-    }
-
-    .card p,
-    .card li{
-      color:#44546a;
-    }
-
-    .skill-chip{
-      display:inline-flex;
-      padding:8px 12px;
-      margin:0 8px 8px 0;
-      border-radius:999px;
-      background:#eff6ff;
-      border:1px solid #d9e8ff;
-      color:#1d4ed8;
-      font-weight:600;
-      font-size:.92rem;
-    }
-
-    .list{
-      padding-left:20px;
-      list-style:disc;
-    }
-
-    .list li{
-      margin:10px 0;
-    }
-
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-      gap:16px;
-    }
-
-    .stat{
-      padding:20px;
-      border-radius:20px;
-      background:linear-gradient(180deg,#ffffff, #f7fbff);
-      border:1px solid var(--line);
-      text-align:center;
-      box-shadow:var(--shadow);
-    }
-
-    .stat strong{
-      display:block;
-      font-size:2rem;
-      color:var(--brand);
-      line-height:1;
-    }
-
-    .stat span{
-      color:var(--muted);
-    }
-
-    .experience-item{
-      position:relative;
-      overflow:hidden;
-    }
-
-    .experience-item::before{
-      content:'';
-      position:absolute;
-      left:0;
-      top:0;
-      bottom:0;
-      width:4px;
-      background:linear-gradient(180deg,var(--brand),var(--brand-2));
-    }
-
-    .experience-top{
-      display:flex;
-      justify-content:space-between;
-      gap:14px;
-      flex-wrap:wrap;
-      align-items:flex-start;
-      margin-bottom:10px;
-    }
-
-    .experience-title{
-      margin:0;
-      font-size:1.15rem;
-    }
-
-    .experience-meta{
-      color:var(--muted);
-      font-weight:600;
-    }
-
-    .experience-bullets{
-      padding-left:20px;
-      list-style:disc;
-    }
-
-    .experience-bullets li{
-      margin:10px 0;
-      color:#44546a;
-    }
-
-    .project-img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      border-radius:18px;
-      margin-bottom:14px;
-      border:1px solid var(--line);
-      background:#fff;
-    }
-
-    .doc-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:16px;
-    }
-
-    .doc-card{
-      display:block;
-      text-align:center;
-      padding:22px;
-      border-radius:20px;
-      background:#fff;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      transition:.25s;
-    }
-
-    .doc-card:hover{
-      transform:translateY(-4px);
-    }
-
-    .doc-card h4{
-      margin:10px 0 6px;
-    }
-
-    .doc-card p{
-      margin:0 0 12px;
-      color:var(--muted);
-    }
-
-    .contact-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:18px;
-    }
-
-    .contact-link{
-      display:block;
-      padding:14px 16px;
-      border-radius:16px;
-      font-weight:800;
-      text-align:center;
-    }
-
-    .wa{
-      background:#25D366;
-      color:#fff;
-    }
-
-    .call{
-      background:#2563eb;
-      color:#fff;
-    }
-
-    .mail{
-      background:#fff;
-      color:var(--text);
-      border:1px solid var(--line);
-    }
-
-    footer{
-      background:#ffffff;
-      border-top:1px solid var(--line);
-      padding:40px 0 28px;
-      color:var(--muted);
-      margin-top:10px;
-    }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:24px;
-      align-items:start;
-    }
-
-    .footer-brand{
-      font-family:'Sora',sans-serif;
-      font-size:1.2rem;
-      font-weight:800;
-      color:var(--text);
-      margin:0 0 10px;
-    }
-
-    .footer-links{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:10px;
-    }
-
-    .footer-links a{
-      color:#44546a;
-      padding:8px 0;
-    }
-
-    .footer-links a:hover{
-      color:var(--brand);
-    }
-
-    .footer-note{
-      text-align:center;
-      margin-top:24px;
-      padding-top:16px;
-      border-top:1px solid var(--line);
-      font-size:.95rem;
-    }
-
-    .floating-wa{
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      z-index:999;
-      background:#25D366;
-      color:#fff;
-      padding:14px 18px;
-      border-radius:999px;
-      font-weight:800;
-      box-shadow:0 16px 35px rgba(0,0,0,.16);
-    }
-
-    @media(min-width:981px){
-      .menu{
-        display:flex;
-        flex-direction:row;
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:8px;
-        padding-top:0;
-      }
-      .menu-toggle{
-        display:none;
-      }
-    }
-
-    @media(max-width:980px){
-      .hero-grid,
-      .footer-grid{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media(max-width:640px){
-      .site-header{
-        padding-left:12px;
-        padding-right:12px;
-      }
-
-      .header-top{
-        gap:8px;
-      }
-
-      .logo span{
-        max-width:140px;
-      }
-
-      .hero{
-        padding-top:22px;
-      }
-
-      .hero-copy{
-        padding:20px;
-      }
-
-      .hero-side{
-        padding:16px;
-      }
-
-      .hero-actions,
-      .hero-meta{
-        justify-content:flex-start;
-      }
-
-      .mini-grid{
-        grid-template-columns:1fr;
-      }
-
-      .floating-wa{
-        right:12px;
-        bottom:12px;
-      }
-
-      .section{
-        padding:36px 0;
-      }
-
-      .profile-wrap{
-        width:min(360px,100%);
-      }
-
-      .btn{
-        width:100%;
-      }
-
-      .hero-actions{
-        flex-direction:column;
-      }
-
-      .container{
-        padding-left:16px;
-        padding-right:16px;
-      }
-    }
+      backdrop-filter:saturate(160%) blur(14px);
+      border-bottom:1px solid rgba(15,23,42,.08);
+      box-shadow:0 10px 26px rgba(15,23,42,.06);
+    }
+
+    .header-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0 8px}
+    .header-nav-wrap{padding-bottom:10px}
+
+    .logo{display:flex;align-items:center;gap:12px;min-width:0;color:var(--text)}
+    .logo-img,.footer-logo{width:54px;height:54px;border-radius:14px;object-fit:cover;flex-shrink:0;background:#dbe6f5;border:1px solid var(--line)}
+    .logo span{font-family:'Sora',sans-serif;font-weight:800;font-size:1.05rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+    .menu-toggle{display:inline-flex;align-items:center;justify-content:center;background:var(--dark);border:1px solid var(--dark);color:#fff;border-radius:14px;padding:11px 15px;font-size:1rem;cursor:pointer;box-shadow:var(--shadow)}
+    .menu{display:none;flex-direction:column;gap:8px;padding-top:8px}
+    .menu.show{display:flex}
+    .menu a{display:block;padding:12px 14px;border-radius:12px;background:#fff;border:1px solid var(--line);color:var(--text);font-weight:700}
+    .menu a:hover{border-color:#bfd0ea;background:#f8fbff}
+
+    .hero{padding:10px 0 6px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+
+    .hero-copy,.hero-side,.card,.stat,.doc-card{background:linear-gradient(180deg,#ffffff 0%, #fbfdff 100%);border:1px solid rgba(29,78,216,.12);border-radius:26px;box-shadow:var(--shadow)}
+    .hero-copy{padding:26px}
+    .hero-side{padding:18px}
+
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 13px;border-radius:999px;background:#eff6ff;border:1px solid #dbeafe;color:#1d4ed8;font-weight:800;font-size:.92rem;overflow-wrap:anywhere}
+
+    h1,h2,h3,h4{font-family:'Sora',sans-serif;line-height:1.1}
+    .hero h1{margin:14px 0 10px;font-size:clamp(2.45rem,5vw,4.7rem);letter-spacing:-.05em}
+    .hero h2{margin:0 0 16px;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.5;color:var(--muted);font-weight:600}
+    .hero p{margin:0;color:#44546a;font-size:1.03rem;max-width:66ch}
+
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:14px;padding:12px 18px;font-weight:800;border:1px solid transparent}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff}
+    .btn-secondary{background:#fff;border-color:var(--line);color:var(--text)}
+
+    .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .pill{padding:8px 11px;border-radius:999px;background:#f1f5fb;border:1px solid var(--line);color:var(--text);font-size:.9rem;font-weight:700}
+
+    .profile-wrap{width:min(390px,100%);margin:0 auto;aspect-ratio:1/1;border-radius:26px;padding:10px;background:linear-gradient(135deg,#eef5ff,#ffffff);border:1px solid var(--line)}
+    .profile-img{width:100%;height:100%;object-fit:cover;border-radius:20px;border:1px solid #dce6f4;background:#fff}
+
+    .mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}
+    .mini{padding:12px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 6px 16px rgba(16,24,40,.04);text-align:center}
+    .mini strong{display:block;font-size:1.05rem;color:var(--brand);line-height:1.2}
+    .mini span{display:block;margin-top:4px;color:var(--muted);font-size:.88rem}
+
+    .section{padding:14px 0;scroll-margin-top:calc(var(--header-h) + 10px)}
+    .section-title{text-align:center;margin-bottom:10px}
+    .section-title h2{margin:0 0 6px;font-size:clamp(1.45rem,2.6vw,2.1rem);letter-spacing:-.03em}
+    .section-title p{margin:0;color:var(--muted);font-size:.98rem}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+    .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:10px}
+    .card{padding:14px;transition:transform .25s ease}
+    .card:hover,.stat:hover,.doc-card:hover{transform:translateY(-5px)}
+    .card h3{margin:0 0 8px;font-size:1.08rem}
+    .card p,.card li{color:#44546a}
+
+    .skill-chip{display:inline-flex;padding:7px 11px;margin:0 7px 7px 0;border-radius:999px;background:#eff6ff;border:1px solid #d9e8ff;color:#1d4ed8;font-weight:700;font-size:.9rem}
+    .list{padding-left:18px;list-style:disc}
+    .list li{margin:8px 0}
+
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+    .stat{padding:14px;text-align:center;transition:transform .25s ease}
+    .stat strong{display:block;font-size:1.75rem;color:var(--accent);line-height:1}
+    .stat span{color:var(--muted);font-size:.95rem}
+
+    .experience-item{position:relative;overflow:hidden}
+    .experience-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--brand),var(--brand-2))}
+    .experience-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-bottom:8px}
+    .experience-title{margin:0;font-size:1.08rem}
+    .experience-meta{color:var(--muted);font-weight:700;font-size:.95rem}
+    .experience-bullets{padding-left:18px;list-style:disc}
+    .experience-bullets li{margin:8px 0;color:#44546a}
+
+    .project-img{width:100%;height:190px;object-fit:cover;border-radius:16px;margin-bottom:10px;border:1px solid var(--line);background:#fff}
+
+    .doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+    .doc-card{display:block;text-align:center;padding:14px;border-radius:18px;background:#fff;transition:.25s}
+    .doc-card h4{margin:10px 0 6px}
+    .doc-card p{margin:0 0 12px;color:var(--muted)}
+
+    .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px}
+    .contact-link{display:block;padding:14px 16px;border-radius:14px;font-weight:800;text-align:center}
+    .wa{background:#25D366;color:#fff}
+    .call{background:#1d4ed8;color:#fff}
+    .mail{background:#fff;color:var(--text);border:1px solid var(--line)}
+
+    footer{background:linear-gradient(135deg,var(--dark),var(--dark-2));padding:30px 0 20px;color:#cbd5e1;margin-top:8px}
+    .footer-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:start}
+    .footer-brand{display:flex;align-items:center;gap:12px;font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:800;color:#fff;margin:0 0 10px}
+    .footer-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    .footer-links a{color:#cbd5e1;padding:7px 0}
+    .footer-links a:hover{color:#93c5fd}
+    .footer-note{text-align:center;margin-top:18px;padding-top:12px;border-top:1px solid rgba(255,255,255,.08);font-size:.93rem}
+
+    .floating-wa{position:fixed;right:16px;bottom:16px;z-index:999;background:#25D366;color:#fff;padding:14px 16px;border-radius:999px;font-weight:800;box-shadow:0 16px 35px rgba(0,0,0,.16)}
+
+    .modal{display:none;position:fixed;inset:0;background:rgba(15,23,42,.78);z-index:10000;padding:20px;align-items:center;justify-content:center}
+    .modal.show{display:flex}
+    .modal-content{width:min(900px,100%);background:#fff;border-radius:22px;padding:16px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+    .modal-close{position:absolute;top:10px;right:12px;width:40px;height:40px;border:none;border-radius:999px;background:#0f172a;color:#fff;font-size:1.2rem;cursor:pointer}
+    .modal-img{width:100%;max-height:80vh;object-fit:contain;border-radius:14px;background:#f8fbff}
+
+    @media(min-width:981px){.menu{display:flex;flex-direction:row;justify-content:center;flex-wrap:wrap;gap:8px;padding-top:0}.menu-toggle{display:none}}
+    @media(max-width:980px){.hero-grid,.footer-grid{grid-template-columns:1fr}}
+    @media(max-width:640px){:root{--header-h:124px}.hero-copy,.hero-side{padding:16px}.mini-grid{grid-template-columns:1fr}.btn{width:100%}.hero-actions{flex-direction:column}.grid{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.container{padding:0 14px}}
+    @media(max-width:480px){#skills .grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -733,13 +175,11 @@
   <header class="site-header">
     <div class="container header-top">
       <a class="logo" href="#home" aria-label="Home">
-        <img src="assets/images/logo.jpg" alt="Jamal Fahadh Mohamed logo" class="logo-img" />
+        <img src="assets/images/logo.jpg" alt="Jamal Fahadh Mohamed logo" class="logo-img" onerror="this.style.display='none';">
         <span>Jamal Fahadh Mohamed</span>
       </a>
-
-      <button class="menu-toggle" type="button" aria-controls="menu" aria-expanded="false" onclick="toggleMenu()">Menu</button>
+      <button class="menu-toggle" type="button" aria-controls="menu" aria-expanded="false">Menu</button>
     </div>
-
     <div class="container header-nav-wrap">
       <nav aria-label="Primary navigation">
         <ul class="menu" id="menu">
@@ -761,7 +201,7 @@
           <div class="eyebrow">✔ ICT professional based in Hargeisa, Somaliland, available for immediate employment.</div>
           <h1>Jamal Fahadh Mohamed</h1>
           <h2>Pearson Edexcel ICT Teacher | Digital Skills Trainer | Program Support | Software Skills Instructor</h2>
-          <p>I help schools and organizations stay organized, efficient, and digitally strong through ICT teaching, program support, document management, reporting, and practical technology skills. My background includes classroom instruction, Microsoft Office, digital tools, record keeping, and supporting daily operations with professionalism and attention to detail.</p>
+          <p>Experienced ICT professional with over seven years of service in education, digital skills training, educational technology, ICT support, program coordination, documentation, and administrative operations. I have strong experience in Pearson Edexcel ICT curriculum delivery, learner assessment, computer laboratory management, digital transformation initiatives, stakeholder communication, reporting, and operational support. My work is defined by a practical technical foundation, strong organizational ability, and a consistent focus on improving learning outcomes and operational efficiency.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Contact Me</a>
             <a class="btn btn-secondary" href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" rel="noopener">Download CV</a>
@@ -776,7 +216,7 @@
 
         <div class="hero-side">
           <div class="profile-wrap">
-            <img src="assets/images/jamal-profile.jpg" alt="Portrait of Jamal Fahadh Mohamed" class="profile-img" />
+            <img src="assets/images/jamal-profile.jpg" alt="Portrait of Jamal Fahadh Mohamed" class="profile-img">
           </div>
           <div class="mini-grid">
             <div class="mini"><strong>2000+</strong><span>Learners Supported</span></div>
@@ -797,13 +237,13 @@
         <div class="grid-2">
           <div class="card">
             <h3>ICT Educator & Program Support Professional</h3>
-            <p>I am an ICT educator, digital skills trainer, and program support professional with experience in teaching, documentation, administration, and technology-based operations. I hold a Bachelor of Business Information Technology and have worked in environments that require communication, planning, coordination, and reliable day-to-day support.</p>
-            <p>My strength is combining technical knowledge with practical organization skills to help teams work more effectively while supporting learners and workplace operations.</p>
+            <p>Experienced ICT professional with over seven years of service in education, digital skills training, educational technology, ICT support, program coordination, documentation, and administrative operations.</p>
+            <p>I have strong experience in Pearson Edexcel ICT curriculum delivery, learner assessment, computer laboratory management, digital transformation initiatives, stakeholder communication, reporting, and operational support.</p>
           </div>
           <div class="card">
             <h3>Teaching Philosophy</h3>
-            <p>I believe technology education should be practical, engaging, and relevant to real-world applications. My goal is to develop confident, creative, and digitally responsible learners while also bringing strong support skills that improve workflow, communication, and organization.</p>
-            <div style="margin-top:14px;">
+            <p>I believe technology education should be practical, engaging, and relevant to real-world applications. My goal is to develop confident, creative, and digitally responsible learners.</p>
+            <div style="margin-top:12px;">
               <span class="skill-chip">Practical learning</span>
               <span class="skill-chip">Student-centered delivery</span>
               <span class="skill-chip">Career readiness</span>
@@ -835,15 +275,11 @@
           <p>Core competencies and areas of expertise.</p>
         </div>
         <div class="grid">
-          <div class="card"><h3>Web Development</h3><p>HTML, CSS, Responsive Design</p></div>
-          <div class="card"><h3>Microsoft Office</h3><p>Word, Excel, PowerPoint, Access</p></div>
-          <div class="card"><h3>Computer Lab Management</h3><p>Maintenance, Networking, Troubleshooting</p></div>
-          <div class="card"><h3>Graphic Design</h3><p>Digital Content and Creative Design</p></div>
-          <div class="card"><h3>Digital Skills Training</h3><p>Beginner to Advanced Level Training</p></div>
-          <div class="card"><h3>Educational Technology</h3><p>Learning Platforms and ICT Integration</p></div>
-          <div class="card"><h3>ICT Support</h3><p>Technical Support, Troubleshooting, User Assistance</p></div>
-          <div class="card"><h3>Networking</h3><p>LAN, Routers, Switches, Connectivity</p></div>
-          <div class="card"><h3>Pearson Edexcel ICT</h3><p>Curriculum Delivery and Assessment</p></div>
+          <div class="card"><h3>ICT Teaching</h3><p>Pearson Edexcel ICT, curriculum delivery, learner assessment, classroom support.</p></div>
+          <div class="card"><h3>Digital Skills</h3><p>Microsoft Office, educational technology, digital training, and practical computer use.</p></div>
+          <div class="card"><h3>ICT Support</h3><p>Computer lab management, troubleshooting, networking, and technical assistance.</p></div>
+          <div class="card"><h3>Administration</h3><p>Documentation, reporting, records management, coordination, and communication.</p></div>
+          <div class="card"><h3>Creative & Web</h3><p>Web development, graphic design, and digital content development.</p></div>
         </div>
       </div>
     </section>
@@ -908,12 +344,12 @@
               </div>
             </div>
             <ul class="experience-bullets">
-              <li>Delivered ICT lessons and supported digital learning activities.</li>
-              <li>Managed computer laboratory resources and technology equipment.</li>
-              <li>Prepared lesson materials, student records, and academic reports.</li>
-              <li>Assisted with school ICT operations and technical support.</li>
-              <li>Communicated with staff and students to ensure smooth learning delivery.</li>
-              <li>Supported organization of digital resources and classroom materials.</li>
+              <li>Delivered Pearson Edexcel ICT lessons to hundreds of learners.</li>
+              <li>Supported over 2,000 students in developing practical digital skills.</li>
+              <li>Managed ICT laboratory resources and ensured operational readiness.</li>
+              <li>Prepared academic records, reports, and digital learning materials.</li>
+              <li>Assisted staff and students with ICT troubleshooting and technology integration.</li>
+              <li>Contributed to digital resource development and school technology initiatives.</li>
             </ul>
           </div>
 
@@ -979,17 +415,17 @@
         </div>
         <div class="grid">
           <div class="card">
-            <img src="assets/images/school-portal.jpg" alt="School portal project preview" class="project-img" />
+            <img src="assets/images/school-portal.jpg" alt="School portal project preview" class="project-img">
             <h3>School Portal</h3>
             <p>I contributed to the design and content structure of the portal to support communication and learning access.</p>
           </div>
           <div class="card">
-            <img src="assets/images/library-system.jpg" alt="Library management system project preview" class="project-img" />
+            <img src="assets/images/library-system.jpg" alt="Library management system project preview" class="project-img">
             <h3>Library Management System</h3>
             <p>I supported the project by helping organize the database workflow and user records.</p>
           </div>
           <div class="card">
-            <img src="assets/images/student-database.jpg" alt="Student database project preview" class="project-img" />
+            <img src="assets/images/student-database.jpg" alt="Student database project preview" class="project-img">
             <h3>Student Database</h3>
             <p>I contributed to the development of a structured student record system using Microsoft Access.</p>
           </div>
@@ -1005,29 +441,20 @@
         </div>
         <div class="grid">
           <div class="card">
-            <img src="assets/images/degree.jpg" alt="BBIT degree certificate" class="project-img" />
+            <img src="assets/images/degree.jpg" alt="BBIT degree certificate" class="project-img">
             <h3>Bachelor of Business Information Technology</h3>
             <p>University Degree in Business Information Technology.</p>
           </div>
           <div class="card">
-            <img src="assets/images/web_cert.jpg" alt="Web design and development certificate" class="project-img" />
+            <img src="assets/images/web_cert.jpg" alt="Web design and development certificate" class="project-img">
             <h3>Web Design & Development</h3>
             <p>Responsive website design and development skills.</p>
           </div>
           <div class="card">
-            <img src="assets/images/kcse.jpg" alt="KCSE certificate" class="project-img" />
+            <img src="assets/images/kcse.jpg" alt="KCSE certificate" class="project-img">
             <h3>KCSE Certificate</h3>
             <p>Kenya Certificate of Secondary Education.</p>
           </div>
-        </div>
-        <br /><br />
-        <div class="grid">
-          <div class="card"><h3>Pearson Edexcel ICT</h3><p>ICT curriculum specialist.</p></div>
-          <div class="card"><h3>Microsoft Office</h3><p>Advanced office productivity skills.</p></div>
-          <div class="card"><h3>Graphic Design</h3><p>Creative digital content production.</p></div>
-          <div class="card"><h3>Digital Skills Training</h3><p>Technology skills development.</p></div>
-          <div class="card"><h3>Educational Technology</h3><p>Technology integration in education.</p></div>
-          <div class="card"><h3>Computer Lab Management</h3><p>ICT laboratory administration and support.</p></div>
         </div>
       </div>
     </section>
@@ -1088,11 +515,11 @@
             <p>Sample teaching methodology</p>
             <span style="color:#2563eb;font-weight:700;">View Document →</span>
           </a>
-          <a href="assets/documents/citizenship-certificate.pdf" target="_blank" rel="noopener" class="doc-card">
+          <a href="#passport-modal" class="doc-card" id="citizenship-trigger">
             <div style="font-size:2rem;">🪪</div>
             <h4>Citizenship Document</h4>
-            <p>Proof of identity and citizenship</p>
-            <span style="color:#0ea5e9;font-weight:700;">View Document →</span>
+            <p>Click to view passport bio page</p>
+            <span style="color:#0ea5e9;font-weight:700;">View Image →</span>
           </a>
         </div>
       </div>
@@ -1147,7 +574,7 @@
             <p><strong>Email:</strong> teacherfahadh@gmail.com</p>
             <p><strong>Location:</strong> Hargeisa, Somaliland</p>
             <p><strong>Website:</strong> fahadict.github.io/tech</p>
-            <div style="display:flex;flex-direction:column;gap:15px;margin-top:18px;">
+            <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;">
               <a href="https://wa.me/252636710907" class="contact-link wa">WhatsApp Me</a>
               <a href="tel:+252636710907" class="contact-link call">Call Me</a>
               <a href="mailto:teacherfahadh@gmail.com" class="contact-link mail">Email Me</a>
@@ -1162,13 +589,16 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand">Jamal Fahadh Mohamed</div>
-          <p>Pearson Edexcel ICT Teacher • Digital Skills Trainer • Program Support • Software Skills Instructor</p>
+          <div class="footer-brand">
+            <img src="assets/images/logo.jpg" alt="Jamal Fahadh Mohamed logo" class="footer-logo" onerror="this.style.display='none';">
+            <span>Jamal Fahadh Mohamed</span>
+          </div>
+          <p>Pearson Edexcel ICT Teacher -  Digital Skills Trainer -  Program Support -  Software Skills Instructor</p>
           <p style="margin-top:10px;">Hargeisa, Somaliland</p>
           <p style="margin-top:10px;">Available for education, coordination, documentation, and digital support roles.</p>
         </div>
         <div>
-          <h3 style="margin:0 0 12px; font-family:'Sora',sans-serif; color:var(--text);">Quick Links</h3>
+          <h3 style="margin:0 0 12px;font-family:'Sora',sans-serif;color:#fff;">Quick Links</h3>
           <div class="footer-links">
             <a href="#about">Profile</a>
             <a href="#experience">Experience</a>
@@ -1185,33 +615,61 @@
 
   <a href="https://wa.me/252636710907" target="_blank" rel="noopener" class="floating-wa">WhatsApp</a>
 
+  <div class="modal" id="passport-modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" type="button" aria-label="Close modal" onclick="closeModal()">×</button>
+      <img src="assets/images/passport-bio-page.jpg" alt="Passport bio page" class="modal-img">
+    </div>
+  </div>
+
   <script>
-    function toggleMenu(){
-      const menu = document.getElementById('menu');
-      const btn = document.querySelector('.menu-toggle');
-      menu.classList.toggle('show');
-      btn.setAttribute('aria-expanded', menu.classList.contains('show'));
+    const menu = document.getElementById('menu');
+    const btn = document.querySelector('.menu-toggle');
+    const modal = document.getElementById('passport-modal');
+    const trigger = document.getElementById('citizenship-trigger');
+
+    function setMenu(open){
+      menu.classList.toggle('show', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     }
 
-    document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => {
-      document.getElementById('menu').classList.remove('show');
-      document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
-    }));
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      setMenu(!menu.classList.contains('show'));
+    });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 981) setMenu(false);
       });
-    }, { threshold: 0.12 });
+    });
 
-    document.querySelectorAll('section').forEach(section => {
-      section.style.opacity = '0';
-      section.style.transform = 'translateY(24px)';
-      section.style.transition = 'all .7s ease';
-      observer.observe(section);
+    document.addEventListener('click', function(e){
+      if (window.innerWidth < 981 && !e.target.closest('.site-header')) {
+        setMenu(false);
+      }
+    });
+
+    trigger.addEventListener('click', function(e){
+      e.preventDefault();
+      modal.classList.add('show');
+      modal.setAttribute('aria-hidden', 'false');
+    });
+
+    function closeModal(){
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){
+        closeModal();
+        setMenu(false);
+      }
     });
   </script>
 </body>
