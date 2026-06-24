@@ -12,10 +12,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
     :root{
-      --header-h: 132px;
       --bg:#f4f7fb;
       --surface:#ffffff;
       --surface-2:#eef4ff;
@@ -23,12 +23,13 @@
       --muted:#475569;
       --brand:#2563eb;
       --brand-2:#22d3ee;
+      --line:#d7e0ef;
       --dark:#0f172a;
       --dark-2:#111827;
-      --line:#d7e0ef;
       --shadow:0 12px 30px rgba(15,23,42,.08);
       --radius:18px;
       --radius-lg:24px;
+      --header-h:132px;
     }
 
     *{box-sizing:border-box}
@@ -145,6 +146,7 @@
       gap:8px;
       padding-top:8px;
     }
+
     .menu.show{display:flex}
 
     .menu a{
@@ -158,7 +160,7 @@
     }
 
     .hero{
-      padding:8px 0 6px;
+      padding:20px 0 8px;
     }
 
     .hero-grid{
@@ -195,7 +197,9 @@
       overflow-wrap:anywhere;
     }
 
-    h1,h2,h3,h4{font-family:'Sora',sans-serif}
+    h1,h2,h3,h4{
+      font-family:'Sora',sans-serif;
+    }
 
     .hero h1{
       margin:14px 0 10px;
@@ -318,12 +322,12 @@
 
     .section{
       padding:14px 0;
-      scroll-margin-top: calc(var(--header-h) + 10px);
+      scroll-margin-top:calc(var(--header-h) + 10px);
     }
 
     .section-title{
       text-align:center;
-      margin-bottom:10px;
+      margin-bottom:12px;
     }
 
     .section-title h2{
@@ -376,7 +380,11 @@
       font-size:.9rem;
     }
 
-    .list{padding-left:18px;list-style:disc}
+    .list{
+      padding-left:18px;
+      list-style:disc;
+    }
+
     .list li{margin:8px 0}
 
     .stats{
@@ -563,50 +571,6 @@
       box-shadow:0 16px 35px rgba(0,0,0,.16);
     }
 
-    .modal{
-      display:none;
-      position:fixed;
-      inset:0;
-      background:rgba(15,23,42,.78);
-      z-index:10000;
-      padding:20px;
-      align-items:center;
-      justify-content:center;
-    }
-
-    .modal.show{display:flex}
-
-    .modal-content{
-      width:min(900px,100%);
-      background:#fff;
-      border-radius:22px;
-      padding:16px;
-      position:relative;
-      box-shadow:0 30px 80px rgba(0,0,0,.35);
-    }
-
-    .modal-close{
-      position:absolute;
-      top:10px;
-      right:12px;
-      width:40px;
-      height:40px;
-      border:none;
-      border-radius:999px;
-      background:#0f172a;
-      color:#fff;
-      font-size:1.2rem;
-      cursor:pointer;
-    }
-
-    .modal-img{
-      width:100%;
-      max-height:80vh;
-      object-fit:contain;
-      border-radius:14px;
-      background:#f8fbff;
-    }
-
     @media(min-width:981px){
       .menu{
         display:flex;
@@ -632,10 +596,6 @@
       .grid{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
       .container{padding:0 14px}
-    }
-
-    @media(max-width:480px){
-      #skills .grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -671,7 +631,7 @@
           <div class="eyebrow">✔ ICT professional based in Hargeisa, Somaliland, available for immediate employment.</div>
           <h1>Jamal Fahadh Mohamed</h1>
           <h2>Pearson Edexcel ICT Teacher | Digital Skills Trainer | Program Support | Software Skills Instructor</h2>
-          <p>Experienced ICT professional with over seven years of service in education, digital skills training, educational technology, ICT support, program coordination, documentation, and administrative operations. I have strong experience in Pearson Edexcel ICT curriculum delivery, learner assessment, computer laboratory management, digital transformation initiatives, stakeholder communication, reporting, and operational support. My work is defined by a practical technical foundation, strong organizational ability, and a consistent focus on improving learning outcomes and operational efficiency.</p>
+          <p>Experienced ICT professional with over seven years of service in education, digital skills training, educational technology, ICT support, program coordination, documentation, and administrative operations.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Contact Me</a>
             <a class="btn btn-secondary" href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" rel="noopener">Download CV</a>
@@ -692,7 +652,7 @@
             <div class="mini"><strong>2000+</strong><span>Learners Supported</span></div>
             <div class="mini"><strong>7+</strong><span>Years Experience</span></div>
             <div class="mini"><strong>20+</strong><span>ICT Projects</span></div>
-            <div class="mini"><strong>100%</strong><span>Pearson Edexcel Focus</span></div>
+            <div class="mini"><strong>100%</strong><span>Practical Focus</span></div>
           </div>
         </div>
       </div>
@@ -770,30 +730,6 @@
             <li>Communication with staff, students, and stakeholders.</li>
             <li>Event, meeting, and activity support.</li>
             <li>Basic troubleshooting and ICT assistance.</li>
-            <li>Maintaining organized digital and physical records.</li>
-            <li>Supporting smooth day-to-day operations.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="competencies">
-      <div class="container">
-        <div class="section-title">
-          <h2>Teaching Competencies</h2>
-          <p>Practical classroom and learner support strengths.</p>
-        </div>
-        <div class="card">
-          <ul class="list">
-            <li>Lesson Planning.</li>
-            <li>Classroom Management.</li>
-            <li>Student Assessment.</li>
-            <li>Curriculum Delivery.</li>
-            <li>Differentiated Instruction.</li>
-            <li>Project-Based Learning.</li>
-            <li>Educational Technology.</li>
-            <li>Learner Engagement.</li>
-            <li>Practical ICT Training.</li>
           </ul>
         </div>
       </div>
@@ -807,72 +743,35 @@
         </div>
         <div class="grid">
           <div class="card experience-item">
-            <div class="experience-top">
-              <div>
-                <h3 class="experience-title">ICT Teacher</h3>
-                <div class="experience-meta"><strong>Elm High School</strong><br>2018 – 2025</div>
-              </div>
-            </div>
+            <h3 class="experience-title">ICT Teacher</h3>
+            <div class="experience-meta"><strong>Elm High School</strong> | 2018 – 2025</div>
             <ul class="experience-bullets">
-              <li>Delivered Pearson Edexcel ICT lessons to hundreds of learners.</li>
-              <li>Supported over 2,000 students in developing practical digital skills.</li>
-              <li>Managed ICT laboratory resources and ensured operational readiness.</li>
-              <li>Prepared academic records, reports, and digital learning materials.</li>
-              <li>Assisted staff and students with ICT troubleshooting and technology integration.</li>
-              <li>Contributed to digital resource development and school technology initiatives.</li>
+              <li>Delivered Pearson Edexcel ICT lessons.</li>
+              <li>Supported learners in developing practical digital skills.</li>
+              <li>Managed ICT laboratory resources and readiness.</li>
+              <li>Prepared reports, records, and learning materials.</li>
             </ul>
           </div>
 
           <div class="card experience-item">
-            <div class="experience-top">
-              <div>
-                <h3 class="experience-title">Library Support Officer</h3>
-                <div class="experience-meta"><strong>Elm High School</strong><br>2021 – 2023</div>
-              </div>
-            </div>
+            <h3 class="experience-title">Library Support Officer</h3>
+            <div class="experience-meta"><strong>Elm High School</strong> | 2021 – 2023</div>
             <ul class="experience-bullets">
-              <li>Managed digital cataloguing and library record systems.</li>
-              <li>Organized learning materials and maintained resource accessibility.</li>
-              <li>Supported students and staff with resource requests and information access.</li>
-              <li>Helped improve workflow through structured documentation and filing.</li>
-              <li>Assisted with daily administrative and support tasks.</li>
+              <li>Managed digital cataloguing and library records.</li>
+              <li>Organized learning materials and access systems.</li>
+              <li>Supported students and staff with information requests.</li>
             </ul>
           </div>
 
           <div class="card experience-item">
-            <div class="experience-top">
-              <div>
-                <h3 class="experience-title">Computer Studies Teacher</h3>
-                <div class="experience-meta"><strong>Turkana School of Technology</strong><br>2017</div>
-              </div>
-            </div>
+            <h3 class="experience-title">Computer Studies Teacher</h3>
+            <div class="experience-meta"><strong>Turkana School of Technology</strong> | 2017</div>
             <ul class="experience-bullets">
               <li>Taught basic computer studies and digital skills.</li>
-              <li>Prepared lesson notes, class materials, and student guidance support.</li>
-              <li>Introduced learners to safe technology use and practical computer applications.</li>
-              <li>Supported website-related learning activities and simple digital tasks.</li>
-              <li>Worked with students in a structured, organized learning environment.</li>
+              <li>Prepared lesson notes, class materials, and guidance support.</li>
+              <li>Introduced learners to safe technology use.</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contributions">
-      <div class="container">
-        <div class="section-title">
-          <h2>School Contributions</h2>
-          <p>Additional responsibilities and support areas.</p>
-        </div>
-        <div class="card">
-          <ul class="list">
-            <li>ICT Laboratory Management.</li>
-            <li>Educational Technology Support.</li>
-            <li>Digital Resource Development.</li>
-            <li>Library Technology Support.</li>
-            <li>School Website Projects.</li>
-            <li>Staff ICT Assistance.</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -887,17 +786,17 @@
           <div class="card">
             <img src="assets/images/school-portal.jpg" alt="School portal project preview" class="project-img">
             <h3>School Portal</h3>
-            <p>I contributed to the design and content structure of the portal to support communication and learning access.</p>
+            <p>Contributed to the structure and content flow of the portal to improve communication and learning access.</p>
           </div>
           <div class="card">
             <img src="assets/images/library-system.jpg" alt="Library management system project preview" class="project-img">
             <h3>Library Management System</h3>
-            <p>I supported the project by helping organize the database workflow and user records.</p>
+            <p>Supported database workflow and record organization.</p>
           </div>
           <div class="card">
             <img src="assets/images/student-database.jpg" alt="Student database project preview" class="project-img">
             <h3>Student Database</h3>
-            <p>I contributed to the development of a structured student record system using Microsoft Access.</p>
+            <p>Contributed to a structured student record system using Microsoft Access.</p>
           </div>
         </div>
       </div>
@@ -913,7 +812,7 @@
           <div class="card">
             <img src="assets/images/degree.jpg" alt="BBIT degree certificate" class="project-img">
             <h3>Bachelor of Business Information Technology</h3>
-            <p>University Degree in Business Information Technology.</p>
+            <p>University degree in Business Information Technology.</p>
           </div>
           <div class="card">
             <img src="assets/images/web_cert.jpg" alt="Web design and development certificate" class="project-img">
@@ -929,93 +828,6 @@
       </div>
     </section>
 
-    <section class="section" id="safeguarding">
-      <div class="container">
-        <div class="section-title">
-          <h2>Safeguarding Commitment</h2>
-          <p>Student wellbeing and responsible technology use.</p>
-        </div>
-        <div class="card">
-          <p>Committed to maintaining a safe, inclusive and supportive learning environment that promotes student wellbeing, digital citizenship, child protection awareness and responsible technology use.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="testimonials">
-      <div class="container">
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Feedback from former colleagues and supervisors.</p>
-        </div>
-        <div class="grid-2">
-          <div class="card">
-            <h3>Former Colleague</h3>
-            <p>“Jamal is professional, supportive, and easy to work with. He communicates clearly and always contributes positively to the team.”</p>
-          </div>
-          <div class="card">
-            <h3>Former Supervisor</h3>
-            <p>“He is dependable, organized, and committed to quality work. His ICT teaching and support made a real difference in our school environment.”</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="references">
-      <div class="container">
-        <div class="section-title">
-          <h2>Professional Documents</h2>
-          <p>Reference letters available upon request, and I can facilitate contact with my referees if needed.</p>
-        </div>
-        <div class="doc-grid">
-          <a href="assets/documents/Jamal_Fahadh_CV.pdf" target="_blank" rel="noopener" class="doc-card">
-            <div style="font-size:2rem;">📄</div>
-            <h4>Professional CV</h4>
-            <p>My academic and work history</p>
-            <span style="color:#2563eb;font-weight:700;">View Document →</span>
-          </a>
-          <a href="assets/documents/ICT_COVER_LETTER.pdf" target="_blank" rel="noopener" class="doc-card">
-            <div style="font-size:2rem;">✉️</div>
-            <h4>Cover Letter</h4>
-            <p>Professional introduction</p>
-            <span style="color:#0ea5e9;font-weight:700;">View Document →</span>
-          </a>
-          <a href="assets/documents/sample-lesson-plan.pdf" target="_blank" rel="noopener" class="doc-card">
-            <div style="font-size:2rem;">🍎</div>
-            <h4>Lesson Plan</h4>
-            <p>Sample teaching methodology</p>
-            <span style="color:#2563eb;font-weight:700;">View Document →</span>
-          </a>
-          <a href="#passport-modal" class="doc-card" id="citizenship-trigger">
-            <div style="font-size:2rem;">🪪</div>
-            <h4>Citizenship Document</h4>
-            <p>Click to view passport bio page</p>
-            <span style="color:#0ea5e9;font-weight:700;">View Image →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="why-me">
-      <div class="container">
-        <div class="section-title">
-          <h2>Why Hire Me?</h2>
-          <p>Reasons I can add value to your school or organization.</p>
-        </div>
-        <div class="card">
-          <ul class="list">
-            <li>7+ years ICT teaching experience.</li>
-            <li>Strong classroom management.</li>
-            <li>Pearson Edexcel ICT focus.</li>
-            <li>Practical hands-on teaching style.</li>
-            <li>Digital skills training expertise.</li>
-            <li>Educational technology experience.</li>
-            <li>Computer lab management skills.</li>
-            <li>Immediate availability.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="contact">
       <div class="container">
         <div class="section-title">
@@ -1025,7 +837,6 @@
         <div class="contact-grid">
           <div class="card">
             <h3>Get In Touch</h3>
-            <p>I am immediately available for:</p>
             <ul class="list">
               <li>ICT Teaching Positions.</li>
               <li>Digital Skills Training.</li>
@@ -1034,7 +845,6 @@
               <li>ICT Support & Technical Assistance.</li>
               <li>Website Development Projects.</li>
             </ul>
-            <p style="margin-top:16px;">Let's discuss how I can contribute to your organization.</p>
           </div>
 
           <div class="card">
@@ -1043,7 +853,6 @@
             <p><strong>Phone:</strong> +252 63 6710907</p>
             <p><strong>Email:</strong> teacherfahadh@gmail.com</p>
             <p><strong>Location:</strong> Hargeisa, Somaliland</p>
-            <p><strong>Website:</strong> fahadict.github.io/tech</p>
             <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;">
               <a href="https://wa.me/252636710907" class="contact-link wa">WhatsApp Me</a>
               <a href="tel:+252636710907" class="contact-link call">Call Me</a>
@@ -1065,7 +874,6 @@
           </div>
           <p>Pearson Edexcel ICT Teacher • Digital Skills Trainer • Program Support • Software Skills Instructor</p>
           <p style="margin-top:10px;">Hargeisa, Somaliland</p>
-          <p style="margin-top:10px;">Available for education, coordination, documentation, and digital support roles.</p>
         </div>
         <div>
           <h3 style="margin:0 0 12px;font-family:'Sora',sans-serif;color:#fff;">Quick Links</h3>
@@ -1085,26 +893,16 @@
 
   <a href="https://wa.me/252636710907" target="_blank" rel="noopener" class="floating-wa">WhatsApp</a>
 
-  <div class="modal" id="passport-modal" aria-hidden="true">
-    <div class="modal-content">
-      <button class="modal-close" type="button" aria-label="Close modal" onclick="closeModal()">×</button>
-      <img src="assets/images/passport-bio-page.jpg" alt="Passport bio page" class="modal-img">
-    </div>
-  </div>
-
   <script>
     const menu = document.getElementById('menu');
     const btn = document.querySelector('.menu-toggle');
-    const modal = document.getElementById('passport-modal');
-    const trigger = document.getElementById('citizenship-trigger');
 
     function setMenu(open){
       menu.classList.toggle('show', open);
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     }
 
-    btn.addEventListener('click', function(e){
-      e.preventDefault();
+    btn.addEventListener('click', function(){
       setMenu(!menu.classList.contains('show'));
     });
 
@@ -1116,28 +914,6 @@
 
     document.addEventListener('click', function(e){
       if (window.innerWidth < 981 && !e.target.closest('.site-header')) {
-        setMenu(false);
-      }
-    });
-
-    trigger.addEventListener('click', function(e){
-      e.preventDefault();
-      modal.classList.add('show');
-      modal.setAttribute('aria-hidden', 'false');
-    });
-
-    function closeModal(){
-      modal.classList.remove('show');
-      modal.setAttribute('aria-hidden', 'true');
-    }
-
-    modal.addEventListener('click', function(e){
-      if(e.target === modal) closeModal();
-    });
-
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Escape'){
-        closeModal();
         setMenu(false);
       }
     });
