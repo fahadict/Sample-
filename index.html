@@ -65,8 +65,10 @@
     }
 
     p{
-      font-size:1.05rem;
-      line-height:1.9;
+      font-size:1.06rem;
+      line-height:1.95;
+      margin:0 0 1.25rem;
+      letter-spacing:0.01em;
     }
 
     .container{
@@ -353,11 +355,11 @@
     }
 
     .profile-ring{
-      width:500px;
-      height:500px;
-      padding:12px;
+      width:620px;
+      height:620px;
+      padding:14px;
       background:linear-gradient(135deg,var(--accent),var(--neutral));
-      border-radius:24px;
+      border-radius:28px;
       box-shadow:var(--shadow);
       overflow:hidden;
     }
@@ -367,8 +369,8 @@
       height:100%;
       object-fit:cover;
       object-position:center top;
-      border-radius:18px;
-      border:6px solid #111c30;
+      border-radius:20px;
+      border:7px solid #111c30;
     }
 
     .snapshot{
@@ -422,7 +424,7 @@
     }
 
     .profile-card{
-      padding:42px;
+      padding:44px;
       border-radius:24px;
     }
 
@@ -456,8 +458,19 @@
     .cta-box p{
       color:var(--body-text);
       font-size:1.03rem;
-      line-height:1.85;
+      line-height:1.95;
       font-weight:500;
+    }
+
+    .profile-card p + p,
+    .timeline-content p + p,
+    .contact-card p + p,
+    .project-card p + p,
+    .certificate-card p + p,
+    .testimonial-card p + p,
+    .why-card p + p,
+    .safeguard-card p + p{
+      margin-top:1rem;
     }
 
     .highlights-grid,
@@ -504,7 +517,7 @@
 
     .timeline-content{
       background:var(--surface);
-      padding:32px;
+      padding:34px;
       border-radius:24px;
       flex:1;
       border:1px solid var(--border);
@@ -566,21 +579,26 @@
       gap:28px;
     }
 
-    .project-image,
-    .certificate-card img,
-    .document-card img{
+    .project-image{
       width:100%;
-      aspect-ratio:16/9;
+      height:320px;
       object-fit:cover;
       object-position:center;
-      border-radius:16px;
-      margin-bottom:16px;
+      border-radius:18px;
+      margin-bottom:18px;
       background:#fff;
     }
 
     .certificate-card img{
+      width:100%;
+      height:360px;
       object-fit:contain;
-      padding:12px;
+      object-position:center;
+      padding:18px;
+      background:#fff;
+      border-radius:18px;
+      margin-bottom:18px;
+      box-shadow:inset 0 0 0 1px rgba(0,0,0,.04);
     }
 
     .project-tag{
@@ -802,15 +820,27 @@
 
     .call-float{
       bottom:100px;
-      background:var(--neutral);
+      background:#128C7E;
       font-size:1.3rem;
       color:#fff;
     }
 
     .whatsapp-float{
       bottom:25px;
-      background:var(--accent);
+      background:#25D366;
       font-size:1.5rem;
+      color:#fff;
+    }
+
+    .call-float:hover,
+    .call-float:focus-visible{
+      background:#075E54;
+      color:#fff;
+    }
+
+    .whatsapp-float:hover,
+    .whatsapp-float:focus-visible{
+      background:#128C7E;
       color:#fff;
     }
 
@@ -875,8 +905,17 @@
       }
 
       .profile-ring{
-        width:380px;
-        height:380px;
+        width:420px;
+        height:420px;
+      }
+
+      .project-image{
+        height:260px;
+      }
+
+      .certificate-card img{
+        height:300px;
+        padding:16px;
       }
     }
 
@@ -912,8 +951,21 @@
       }
 
       .profile-ring{
-        width:320px;
-        height:320px;
+        width:340px;
+        height:340px;
+      }
+
+      .project-image{
+        height:240px;
+      }
+
+      .certificate-card img{
+        height:250px;
+        padding:14px;
+      }
+
+      p{
+        line-height:1.9;
       }
     }
 
@@ -985,7 +1037,7 @@
           <div class="hero-media">
             <div class="profile-wrapper">
               <div class="profile-ring">
-                <img src="assets/images/jamal-profile.jpg" alt="Jamal Fahadh Mohamed" class="profile-img" />
+                <img src="assets/images/jamal-profile.jpg" alt="Jamal Fahadh Mohamed" class="profile-img" fetchpriority="high" decoding="async" />
               </div>
             </div>
           </div>
@@ -1227,21 +1279,21 @@
 
         <div class="projects-grid">
           <div class="project-card">
-            <img src="assets/images/school-portal.jpg" alt="School portal project" class="project-image" loading="lazy" />
+            <img src="assets/images/school-portal.jpg" alt="School portal project" class="project-image" loading="lazy" decoding="async" />
             <span class="project-tag">Web Systems</span>
             <h3>School Portal</h3>
             <p>Contributed to content structure and access design for communication and learning support.</p>
           </div>
 
           <div class="project-card">
-            <img src="assets/images/library-system.jpg" alt="Library management system project" class="project-image" loading="lazy" />
+            <img src="assets/images/library-system.jpg" alt="Library management system project" class="project-image" loading="lazy" decoding="async" />
             <span class="project-tag">Information Management</span>
             <h3>Library Management System</h3>
             <p>Supported record organization and workflow improvements for better resource access.</p>
           </div>
 
           <div class="project-card">
-            <img src="assets/images/student-database.jpg" alt="Student database project" class="project-image" loading="lazy" />
+            <img src="assets/images/student-database.jpg" alt="Student database project" class="project-image" loading="lazy" decoding="async" />
             <span class="project-tag">Database</span>
             <h3>Student Database</h3>
             <p>Helped structure a student record system using Microsoft Access.</p>
@@ -1259,19 +1311,19 @@
 
         <div class="certificate-grid">
           <div class="certificate-card">
-            <img src="assets/images/degree.jpg" alt="Bachelor degree certificate" loading="lazy" />
+            <img src="assets/images/degree.jpg" alt="Bachelor degree certificate" loading="lazy" decoding="async" />
             <h3>Bachelor of Business Information Technology</h3>
             <p>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
           </div>
 
           <div class="certificate-card">
-            <img src="assets/images/web_cert.jpg" alt="Web development certificate" loading="lazy" />
+            <img src="assets/images/web_cert.jpg" alt="Web development certificate" loading="lazy" decoding="async" />
             <h3>Web Development Certificate</h3>
             <p>E-Commerce, Web Design, and Entrepreneurship</p>
           </div>
 
           <div class="certificate-card">
-            <img src="assets/images/kcse.jpg" alt="KCSE certificate" loading="lazy" />
+            <img src="assets/images/kcse.jpg" alt="KCSE certificate" loading="lazy" decoding="async" />
             <h3>Kenya Certificate of Secondary Education</h3>
             <p>Pesoda Annex High School, Migori, Kenya</p>
           </div>
@@ -1495,7 +1547,7 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <script>
+  <script defer>
     const menu = document.getElementById('menu');
     const btn = document.querySelector('.menu-toggle');
 
