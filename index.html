@@ -22,8 +22,9 @@
       --neutral:#80756b;
       --surface:#f7f1e7;
       --surface-2:#eee4d7;
-      --text:#f8f5ef;
-      --dark-text:#1f2430;
+      --text:#fdfbf7;
+      --dark-text:#1a1f2b;
+      --body-text:#2b3240;
       --muted:#d9d2c7;
       --border:rgba(128,117,107,.28);
       --shadow:0 16px 40px rgba(0,0,0,.18);
@@ -45,8 +46,9 @@
     body{
       background:var(--primary);
       color:var(--text);
-      line-height:1.8;
+      line-height:1.85;
       overflow-x:hidden;
+      font-size:16px;
     }
 
     img{
@@ -60,6 +62,11 @@
 
     ul{
       list-style:none;
+    }
+
+    p{
+      font-size:1.05rem;
+      line-height:1.9;
     }
 
     .container{
@@ -103,6 +110,7 @@
       font-weight:900;
       margin-bottom:10px;
       color:#fff;
+      line-height:1.15;
     }
 
     .section-title p{
@@ -285,37 +293,26 @@
       box-shadow:0 10px 20px rgba(154,77,85,.16);
     }
 
-    .hero-subtitle,
-    .hero-description,
-    .profile-card p,
-    .highlight-item,
-    .competency-card li,
-    .project-card p,
-    .certificate-card p,
-    .language-card span,
-    .testimonial-card p,
-    .why-card p,
-    .safeguard-card p{
-      color:#d7d1c8;
-    }
-
     .hero-subtitle{
       font-size:1.12rem;
       font-weight:700;
       margin-bottom:18px;
+      color:#fff;
     }
 
     .hero-description{
-      font-size:1.03rem;
+      font-size:1.08rem;
       max-width:800px;
       margin-bottom:28px;
       margin-left:auto;
       margin-right:auto;
-      padding:18px 20px;
-      background:rgba(255,255,255,.06);
+      padding:22px 24px;
+      background:rgba(247,241,231,.98);
+      color:var(--body-text);
       border-left:5px solid var(--accent);
-      border-radius:14px;
-      backdrop-filter:blur(8px);
+      border-radius:16px;
+      box-shadow:0 16px 40px rgba(0,0,0,.10);
+      line-height:1.95;
     }
 
     .hero-badges{
@@ -443,6 +440,26 @@
       font-size:1.2rem;
     }
 
+    .profile-card p,
+    .highlight-item,
+    .competency-card li,
+    .project-card p,
+    .certificate-card p,
+    .language-card span,
+    .testimonial-card p,
+    .why-card p,
+    .safeguard-card p,
+    .timeline-content p,
+    .timeline-content li,
+    .contact-card p,
+    .availability-box p,
+    .cta-box p{
+      color:var(--body-text);
+      font-size:1.03rem;
+      line-height:1.85;
+      font-weight:500;
+    }
+
     .highlights-grid,
     .competency-grid,
     .language-grid,
@@ -532,7 +549,7 @@
     }
 
     .experience-block li{
-      color:var(--dark-text);
+      color:var(--body-text);
       margin-bottom:10px;
     }
 
@@ -610,12 +627,6 @@
       font-size:2.35rem;
       margin-bottom:18px;
       color:var(--accent);
-    }
-
-    .availability-box p{
-      max-width:860px;
-      margin:auto;
-      color:var(--neutral);
     }
 
     .availability-items{
@@ -705,8 +716,9 @@
     .cta-box p{
       max-width:850px;
       margin:auto;
-      font-size:1.04rem;
       color:#fff;
+      font-size:1.08rem;
+      line-height:1.9;
     }
 
     .cta-buttons{
@@ -826,7 +838,6 @@
         width:260px;
         box-shadow:var(--shadow);
         align-items:flex-start;
-        border:1px solid var(--border);
       }
 
       .menu a{
