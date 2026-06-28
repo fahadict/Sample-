@@ -7,7 +7,7 @@
   <meta name="description" content="Jamal Fahadh Mohamed is an ICT teacher, digital skills trainer, and program support professional in Hargeisa, Somaliland." />
   <meta name="keywords" content="ICT Teacher, Digital Skills Trainer, Program Support, Software Skills Instructor, Hargeisa Somaliland" />
   <meta name="author" content="Jamal Fahadh Mohamed" />
-  <meta name="theme-color" content="#7c3aed" />
+  <meta name="theme-color" content="#0b1120" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,17 +16,17 @@
 
   <style>
     :root{
-      --primary:#12071f;
-      --secondary:#1f1140;
-      --accent:#f97316;
+      --primary:#0b1120;
+      --secondary:#1e293b;
+      --accent:#facc15;
+      --orange:#f97316;
       --purple:#7c3aed;
-      --purple-dark:#4c1d95;
+      --dark-purple:#2e1065;
       --text:#ffffff;
-      --muted:#d8d0e6;
-      --card:#1a102c;
-      --card-2:#241339;
-      --border:rgba(255,255,255,.08);
-      --shadow:0 18px 45px rgba(0,0,0,.28);
+      --muted:#cbd5e1;
+      --card:#111827;
+      --border:#334155;
+      --shadow:0 15px 40px rgba(0,0,0,.25);
       --container:1200px;
     }
 
@@ -43,10 +43,7 @@
     }
 
     body{
-      background:
-        radial-gradient(circle at top left, rgba(124,58,237,.18), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(249,115,22,.14), transparent 28%),
-        var(--primary);
+      background:var(--primary);
       color:var(--text);
       line-height:1.8;
       overflow-x:hidden;
@@ -105,18 +102,12 @@
       font-size:2.35rem;
       font-weight:900;
       margin-bottom:10px;
-      color:#fff;
-    }
-
-    .section-title h2 span{
-      color:var(--accent);
     }
 
     .section-title p{
       color:var(--muted);
       max-width:760px;
       margin:auto;
-      font-size:1.02rem;
     }
 
     header{
@@ -125,9 +116,9 @@
       left:0;
       width:100%;
       z-index:999;
-      background:rgba(18,7,31,.92);
+      background:rgba(11,17,32,.95);
       backdrop-filter:blur(12px);
-      border-bottom:1px solid var(--border);
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
 
     .navbar{
@@ -146,12 +137,11 @@
       font-weight:800;
       font-size:1.05rem;
       white-space:nowrap;
-      color:#fff;
     }
 
     .logo-box{
-      background:linear-gradient(135deg,var(--purple),var(--accent));
-      color:#fff;
+      background:var(--accent);
+      color:#000;
       font-weight:900;
       padding:8px 10px;
       border-radius:10px;
@@ -166,7 +156,7 @@
     }
 
     .menu a{
-      color:#fff;
+      color:white;
       font-size:.92rem;
       font-weight:600;
       transition:.3s;
@@ -180,21 +170,20 @@
 
     .cv-btn{
       padding:12px 20px;
-      border:1px solid rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.15);
       border-radius:12px;
       font-size:.85rem;
       font-weight:700;
-      color:#fff;
+      color:white;
       transition:.3s;
       white-space:nowrap;
       flex-shrink:0;
-      background:rgba(255,255,255,.02);
     }
 
     .cv-btn:hover,
     .cv-btn:focus-visible{
       background:var(--accent);
-      color:#fff;
+      color:black;
       outline:none;
     }
 
@@ -218,10 +207,19 @@
       padding-top:148px;
       padding-bottom:108px;
       background:
-        radial-gradient(circle at top right, rgba(124,58,237,.45) 0%, transparent 30%),
-        radial-gradient(circle at bottom left, rgba(249,115,22,.30) 0%, transparent 25%),
+        radial-gradient(circle at top right, rgba(250,204,21,.45) 0%, transparent 28%),
+        radial-gradient(circle at bottom left, rgba(249,115,22,.38) 0%, transparent 26%),
         linear-gradient(135deg, #2e1065 0%, #7c3aed 45%, #f97316 100%);
       overflow:hidden;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(255,255,255,.08);
+      pointer-events:none;
     }
 
     .hero-grid{
@@ -232,6 +230,8 @@
       max-width:1200px;
       margin:0 auto;
       padding:0 32px;
+      position:relative;
+      z-index:1;
     }
 
     .hero-copy{
@@ -269,63 +269,56 @@
       font-weight:900;
       line-height:1.06;
       margin-bottom:14px;
+      color:#000;
+      text-shadow:2px 2px 0 rgba(255,255,255,.35), 0 10px 25px rgba(0,0,0,.18);
     }
 
     .hero h1 span{
-      color:#fff7ed;
+      color:#000;
     }
 
     .hero-role{
       display:inline-block;
       padding:10px 18px;
-      background:rgba(255,255,255,.18);
-      color:#fff;
+      background:#facc15;
+      color:#000;
       font-weight:800;
       font-size:.85rem;
       text-transform:uppercase;
       border-radius:10px;
       margin-bottom:22px;
       letter-spacing:.4px;
-      border:1px solid rgba(255,255,255,.14);
-      backdrop-filter:blur(8px);
+      border:1px solid rgba(0,0,0,.12);
+      position:relative;
+      z-index:1;
     }
 
     .hero-subtitle,
     .hero-description,
-    .profile-card p,
-    .highlight-item,
-    .competency-card li,
-    .project-card p,
-    .certificate-card p,
-    .language-card span,
-    .testimonial-card p,
-    .why-card p,
-    .safeguard-card p,
-    .contact-item p,
-    .availability-box p{
-      color:var(--muted);
+    .hero-badge{
+      position:relative;
+      z-index:1;
     }
 
     .hero-subtitle{
       font-size:1.12rem;
-      font-weight:600;
+      font-weight:700;
       margin-bottom:18px;
-      max-width:900px;
-      margin-left:auto;
-      margin-right:auto;
+      color:#111;
     }
 
     .hero-description{
-      font-size:1.05rem;
+      font-size:1.03rem;
       max-width:800px;
       margin-bottom:28px;
       margin-left:auto;
       margin-right:auto;
       padding:18px 20px;
-      border-left:4px solid rgba(255,255,255,.35);
-      background:rgba(255,255,255,.08);
+      border-left:4px solid #000;
+      background:rgba(255,255,255,.35);
       border-radius:14px;
       backdrop-filter:blur(8px);
+      color:#111;
     }
 
     .hero-badges{
@@ -337,11 +330,11 @@
     .hero-badge{
       padding:12px 18px;
       border-radius:999px;
-      background:rgba(255,255,255,.11);
-      border:1px solid rgba(255,255,255,.14);
-      font-weight:700;
+      background:rgba(255,255,255,.40);
+      border:1px solid rgba(0,0,0,.10);
+      font-weight:800;
       font-size:.9rem;
-      color:#fff;
+      color:#000;
       box-shadow:0 8px 18px rgba(0,0,0,.14);
       backdrop-filter:blur(10px);
     }
@@ -356,8 +349,8 @@
       width:500px;
       height:500px;
       padding:12px;
-      background:linear-gradient(135deg,var(--accent),var(--purple));
-      border-radius:28px;
+      background:linear-gradient(135deg,#facc15,#f97316);
+      border-radius:24px;
       box-shadow:var(--shadow);
       overflow:hidden;
     }
@@ -367,8 +360,8 @@
       height:100%;
       object-fit:cover;
       object-position:center top;
-      border-radius:20px;
-      border:6px solid rgba(255,255,255,.75);
+      border-radius:18px;
+      border:6px solid var(--primary);
     }
 
     .snapshot{
@@ -381,7 +374,26 @@
       gap:22px;
     }
 
-    .snapshot-card,
+    .snapshot-card{
+      background:#111827;
+      padding:32px;
+      border-radius:20px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.05);
+      box-shadow:var(--shadow);
+    }
+
+    .snapshot-card h3{
+      font-size:2.2rem;
+      font-weight:900;
+      color:var(--accent);
+    }
+
+    .executive-profile{
+      max-width:1000px;
+      margin:auto;
+    }
+
     .profile-card,
     .highlight-item,
     .competency-card,
@@ -393,33 +405,11 @@
     .testimonial-card,
     .why-card,
     .safeguard-card{
-      background:linear-gradient(180deg, var(--card), var(--card-2));
+      background:#111827;
       padding:22px;
-      border-radius:18px;
-      border:1px solid var(--border);
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.05);
       box-shadow:var(--shadow);
-    }
-
-    .snapshot-card{
-      text-align:center;
-      padding:32px 22px;
-    }
-
-    .snapshot-card h3{
-      font-size:2.2rem;
-      font-weight:900;
-      color:var(--accent);
-      margin-bottom:6px;
-    }
-
-    .snapshot-card p{
-      color:var(--muted);
-      font-weight:600;
-    }
-
-    .executive-profile{
-      max-width:1000px;
-      margin:auto;
     }
 
     .profile-card{
@@ -436,17 +426,9 @@
     .testimonial-card h3,
     .why-card h3,
     .safeguard-card h3{
-      color:#fff;
+      color:var(--accent);
       margin-bottom:14px;
       font-size:1.2rem;
-    }
-
-    .profile-card p{
-      margin-bottom:16px;
-      padding:14px 16px;
-      border-left:4px solid var(--accent);
-      background:rgba(255,255,255,.04);
-      border-radius:12px;
     }
 
     .highlights-grid,
@@ -462,26 +444,12 @@
 
     .highlight-item{
       text-align:center;
-      padding:28px 22px;
-      border-top:4px solid var(--accent);
-    }
-
-    .highlight-item::before{
-      content:"✦";
-      display:block;
-      color:var(--purple);
-      font-size:1.2rem;
-      margin-bottom:10px;
     }
 
     .competency-card ul,
     .contact-list{
       padding-left:18px;
       list-style:disc;
-    }
-
-    .competency-card li{
-      margin-bottom:10px;
     }
 
     .timeline{
@@ -502,27 +470,25 @@
       border-radius:50%;
       margin-top:12px;
       flex-shrink:0;
-      box-shadow:0 0 0 6px rgba(249,115,22,.12);
     }
 
     .timeline-content{
-      background:linear-gradient(180deg, var(--card), var(--card-2));
+      background:#111827;
       padding:32px;
       border-radius:24px;
       flex:1;
-      border:1px solid var(--border);
+      border:1px solid rgba(255,255,255,.05);
       box-shadow:var(--shadow);
     }
 
     .timeline-year{
       display:inline-block;
       padding:8px 14px;
-      background:rgba(249,115,22,.15);
-      color:#fff;
+      background:rgba(250,204,21,.15);
+      color:var(--accent);
       font-weight:700;
       border-radius:999px;
       margin-bottom:15px;
-      border:1px solid rgba(249,115,22,.24);
     }
 
     .timeline-content h3{
@@ -532,9 +498,8 @@
     }
 
     .timeline-content h4{
-      color:#f3e8ff;
+      color:var(--muted);
       margin-bottom:18px;
-      font-weight:600;
     }
 
     .experience-block{
@@ -545,14 +510,6 @@
       color:var(--accent);
       margin-bottom:8px;
       font-size:1rem;
-    }
-
-    .experience-block p{
-      color:var(--muted);
-      padding:14px 16px;
-      background:rgba(255,255,255,.04);
-      border-left:4px solid var(--purple);
-      border-radius:12px;
     }
 
     .experience-block ul{
@@ -597,20 +554,19 @@
 
     .project-tag{
       display:inline-block;
-      background:rgba(249,115,22,.15);
-      color:#fff;
+      background:rgba(250,204,21,.15);
+      color:var(--accent);
       padding:8px 14px;
       border-radius:999px;
       font-size:.8rem;
       font-weight:700;
       margin-bottom:18px;
-      border:1px solid rgba(249,115,22,.22);
     }
 
     .document-card{
       display:block;
       text-align:center;
-      color:#fff;
+      color:white;
       transition:.3s;
     }
 
@@ -618,7 +574,6 @@
     .document-card:focus-visible{
       transform:translateY(-8px);
       outline:none;
-      border-color:var(--accent);
     }
 
     .document-card i{
@@ -628,7 +583,7 @@
     }
 
     .availability-box{
-      background:linear-gradient(135deg,var(--purple-dark),var(--purple),var(--accent));
+      background:linear-gradient(135deg,#111827,#1e293b);
       padding:56px;
       border-radius:30px;
       text-align:center;
@@ -638,16 +593,12 @@
     .availability-box h2{
       font-size:2.35rem;
       margin-bottom:18px;
-      color:#fff;
     }
 
     .availability-box p{
       max-width:860px;
       margin:auto;
-      color:#fff7ed;
-      padding:14px 18px;
-      background:rgba(255,255,255,.08);
-      border-radius:14px;
+      color:var(--muted);
     }
 
     .availability-items{
@@ -658,16 +609,14 @@
     }
 
     .availability-items div{
-      background:rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
       padding:18px;
       border-radius:16px;
       font-weight:600;
-      color:#fff;
-      border:1px solid rgba(255,255,255,.12);
     }
 
     .availability-items i{
-      color:#ffd28a;
+      color:var(--accent);
       margin-right:10px;
     }
 
@@ -683,22 +632,12 @@
       margin-bottom:20px;
       align-items:flex-start;
       color:var(--muted);
-      padding:14px 16px;
-      background:rgba(255,255,255,.04);
-      border-radius:12px;
-      border-left:4px solid var(--accent);
     }
 
     .contact-item i{
       color:var(--accent);
       font-size:1.2rem;
       margin-top:4px;
-    }
-
-    .contact-item strong{
-      color:#fff;
-      display:block;
-      margin-bottom:2px;
     }
 
     .action-buttons{
@@ -708,12 +647,12 @@
     }
 
     .action-btn{
-      background:#27163d;
+      background:#1f2937;
       padding:15px;
       border-radius:14px;
       text-align:center;
       color:#fff;
-      border:1px solid rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.05);
       transition:.3s ease;
       font-weight:600;
     }
@@ -722,7 +661,6 @@
     .action-btn:focus-visible{
       transform:translateY(-4px);
       outline:none;
-      border-color:var(--accent);
     }
 
     .action-btn i{
@@ -731,11 +669,11 @@
     }
 
     .cta-box{
-      background:linear-gradient(135deg,var(--purple),var(--accent));
+      background:linear-gradient(135deg,#facc15,#f59e0b);
       padding:66px 38px;
       border-radius:30px;
       text-align:center;
-      color:#fff;
+      color:#000;
       box-shadow:var(--shadow);
     }
 
@@ -748,10 +686,6 @@
       max-width:850px;
       margin:auto;
       font-size:1.04rem;
-      color:#fff7ed;
-      padding:14px 18px;
-      background:rgba(255,255,255,.10);
-      border-radius:14px;
     }
 
     .cta-buttons{
@@ -770,21 +704,19 @@
     }
 
     .btn-primary-cta{
-      background:#fff;
-      color:var(--purple-dark);
+      background:#000;
+      color:#fff;
     }
 
     .btn-secondary-cta{
-      background:rgba(255,255,255,.16);
-      color:#fff;
-      border:1px solid rgba(255,255,255,.18);
+      background:#fff;
+      color:#000;
     }
 
     footer{
       margin-top:92px;
       padding:58px 0 20px;
-      background:#0b0616;
-      border-top:1px solid var(--border);
+      background:#020617;
     }
 
     .footer-content{
@@ -792,7 +724,7 @@
     }
 
     .footer-content p{
-      color:#d8d0e6;
+      color:#cbd5e1;
     }
 
     .footer-links{
@@ -804,7 +736,7 @@
     }
 
     .footer-links a{
-      color:#d8d0e6;
+      color:#cbd5e1;
     }
 
     .footer-links a:hover,
@@ -814,7 +746,7 @@
     }
 
     .copyright{
-      color:#a999c5;
+      color:#94a3b8;
       font-size:.9rem;
     }
 
@@ -834,9 +766,9 @@
 
     .call-float{
       bottom:100px;
-      background:var(--accent);
+      background:#facc15;
       font-size:1.3rem;
-      color:#fff;
+      color:#000;
     }
 
     .whatsapp-float{
@@ -863,7 +795,7 @@
         position:absolute;
         top:80px;
         right:0;
-        background:#1a102c;
+        background:#111827;
         flex-direction:column;
         padding:20px;
         border-radius:16px;
@@ -1047,7 +979,7 @@
     <section id="about" class="animate-section">
       <div class="container">
         <div class="section-title">
-          <h2>Executive <span>Profile</span></h2>
+          <h2>Executive Profile</h2>
           <p>Dedicated to learner success, digital growth, and efficient operations.</p>
         </div>
 
@@ -1065,13 +997,12 @@
     <section id="teaching-philosophy" class="animate-section">
       <div class="container">
         <div class="section-title">
-          <h2>Teaching <span>Philosophy</span></h2>
+          <h2>Teaching Philosophy</h2>
           <p>A practical, learner-centered approach to ICT education.</p>
         </div>
 
         <div class="profile-card">
-          <p>I believe students learn best when lessons are practical, clear, and connected to real tasks they can use beyond the classroom.</p>
-          <p>My teaching style focuses on guided practice, confidence-building, problem solving, and steady progress through hands-on activities.</p>
+          <p>I believe students learn best when lessons are practical, clear, and connected to real tasks they can use beyond the classroom. My teaching style focuses on guided practice, confidence-building, problem solving, and steady progress through hands-on activities.</p>
           <p>I aim to create a respectful, inclusive environment where learners feel supported to ask questions, make mistakes, and improve their digital skills step by step.</p>
         </div>
       </div>
@@ -1080,7 +1011,7 @@
     <section id="competencies" class="animate-section">
       <div class="container">
         <div class="section-title">
-          <h2>Core <span>Competencies</span></h2>
+          <h2>Core Competencies</h2>
           <p>Technical, teaching, program support, and administrative capabilities.</p>
         </div>
 
@@ -1151,7 +1082,7 @@
     <section id="achievements" class="animate-section">
       <div class="container">
         <div class="section-title">
-          <h2>Career <span>Highlights</span></h2>
+          <h2>Career Highlights</h2>
           <p>Key achievements and professional contributions.</p>
         </div>
 
@@ -1169,7 +1100,7 @@
     <section id="experience" class="animate-section">
       <div class="container">
         <div class="section-title">
-          <h2>Professional <span>Experience</span></h2>
+          <h2>Professional Experience</h2>
           <p>Teaching, ICT support, and program coordination experience.</p>
         </div>
 
@@ -1250,7 +1181,7 @@
     <section id="projects" class="animate-section">
       <div class="container">
         <div class="section-title">
-          <h2>Projects & <span>Contributions</span></h2>
+          <h2>Projects & Contributions</h2>
           <p>Selected educational and digital initiatives.</p>
         </div>
 
@@ -1282,7 +1213,7 @@
     <section id="certificates" class="animate-section">
       <div class="container">
         <div class="section-title">
-          <h2>Certificates & <span>Qualifications</span></h2>
+          <h2>Certificates & Qualifications</h2>
           <p>Academic and professional credentials.</p>
         </div>
 
@@ -1311,7 +1242,7 @@
     <section id="safeguarding" class="animate-section">
       <div class="container">
         <div class="section-title">
-          <h2>Safeguarding <span>Commitment</span></h2>
+          <h2>Safeguarding Commitment</h2>
           <p>Protecting learners, data, and learning spaces.</p>
         </div>
 
@@ -1363,7 +1294,7 @@
     <section id="documents" class="animate-section">
       <div class="container">
         <div class="section-title">
-          <h2>Professional <span>Documents</span></h2>
+          <h2>Professional Documents</h2>
           <p>Quick access to supporting documents and qualifications.</p>
         </div>
 
@@ -1398,7 +1329,7 @@
     <section id="why-hire-me" class="animate-section">
       <div class="container">
         <div class="section-title">
-          <h2>Why Hire <span>Me</span></h2>
+          <h2>Why Hire Me</h2>
           <p>Clear reasons schools and institutions value my contribution.</p>
         </div>
 
@@ -1443,7 +1374,7 @@
     <section id="contact" class="animate-section">
       <div class="container">
         <div class="section-title">
-          <h2>Contact <span>Me</span></h2>
+          <h2>Contact Me</h2>
           <p>Let's discuss ICT teaching, digital training, and program support opportunities.</p>
         </div>
 
