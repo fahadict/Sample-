@@ -7,7 +7,7 @@
   <meta name="description" content="Jamal Fahadh Mohamed is an ICT teacher, digital skills trainer, and program support professional in Hargeisa, Somaliland." />
   <meta name="keywords" content="ICT Teacher, Digital Skills Trainer, Program Support, Software Skills Instructor, Hargeisa Somaliland" />
   <meta name="author" content="Jamal Fahadh Mohamed" />
-  <meta name="theme-color" content="#2e1065" />
+  <meta name="theme-color" content="#fceed1" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,17 +16,16 @@
 
   <style>
     :root{
-      --primary:#0b1120;
-      --secondary:#1e293b;
-      --accent:#facc15;
-      --orange:#f97316;
-      --purple:#7c3aed;
-      --dark-purple:#2e1065;
-      --text:#ffffff;
-      --muted:#cbd5e1;
-      --card:#111827;
-      --border:#334155;
-      --shadow:0 15px 40px rgba(0,0,0,.25);
+      --bg:#fceed1;
+      --surface:#fffaf0;
+      --surface-2:#fff1d9;
+      --purple:#7d3cff;
+      --yellow:#f2d53c;
+      --red:#c80e13;
+      --text:#1f1f24;
+      --muted:#5f5a66;
+      --border:#e7d6b4;
+      --shadow:0 16px 40px rgba(56,35,90,.12);
       --container:1200px;
     }
 
@@ -43,7 +42,7 @@
     }
 
     body{
-      background:var(--primary);
+      background:var(--bg);
       color:var(--text);
       line-height:1.8;
       overflow-x:hidden;
@@ -102,6 +101,7 @@
       font-size:2.35rem;
       font-weight:900;
       margin-bottom:10px;
+      color:var(--purple);
     }
 
     .section-title p{
@@ -116,9 +116,9 @@
       left:0;
       width:100%;
       z-index:999;
-      background:rgba(11,17,32,.95);
+      background:rgba(252,238,209,.92);
       backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(255,255,255,.08);
+      border-bottom:1px solid rgba(125,60,255,.12);
     }
 
     .navbar{
@@ -137,14 +137,16 @@
       font-weight:800;
       font-size:1.05rem;
       white-space:nowrap;
+      color:var(--text);
     }
 
     .logo-box{
-      background:var(--accent);
-      color:#000;
+      background:var(--purple);
+      color:#fff;
       font-weight:900;
       padding:8px 10px;
       border-radius:10px;
+      box-shadow:0 10px 20px rgba(125,60,255,.18);
     }
 
     .menu{
@@ -156,34 +158,36 @@
     }
 
     .menu a{
-      color:white;
+      color:var(--text);
       font-size:.92rem;
-      font-weight:600;
+      font-weight:700;
       transition:.3s;
     }
 
     .menu a:hover,
     .menu a:focus-visible{
-      color:var(--accent);
+      color:var(--purple);
       outline:none;
     }
 
     .cv-btn{
       padding:12px 20px;
-      border:1px solid rgba(255,255,255,.15);
+      border:1px solid rgba(125,60,255,.18);
       border-radius:12px;
       font-size:.85rem;
-      font-weight:700;
-      color:white;
+      font-weight:800;
+      color:var(--purple);
+      background:#fff;
       transition:.3s;
       white-space:nowrap;
       flex-shrink:0;
+      box-shadow:0 10px 24px rgba(0,0,0,.05);
     }
 
     .cv-btn:hover,
     .cv-btn:focus-visible{
-      background:var(--accent);
-      color:black;
+      background:var(--purple);
+      color:#fff;
       outline:none;
     }
 
@@ -193,12 +197,12 @@
       cursor:pointer;
       background:none;
       border:none;
-      color:#fff;
+      color:var(--purple);
       flex-shrink:0;
     }
 
     .menu-toggle:focus-visible{
-      outline:2px solid var(--accent);
+      outline:2px solid var(--purple);
       outline-offset:4px;
       border-radius:10px;
     }
@@ -207,19 +211,10 @@
       padding-top:148px;
       padding-bottom:108px;
       background:
-        radial-gradient(circle at top right, rgba(250,204,21,.45) 0%, transparent 28%),
-        radial-gradient(circle at bottom left, rgba(249,115,22,.38) 0%, transparent 26%),
-        linear-gradient(135deg, #2e1065 0%, #7c3aed 45%, #f97316 100%);
+        radial-gradient(circle at top right, rgba(125,60,255,.16) 0%, transparent 30%),
+        radial-gradient(circle at bottom left, rgba(242,213,60,.18) 0%, transparent 28%),
+        linear-gradient(180deg, #fceed1 0%, #f9e4b7 100%);
       overflow:hidden;
-      position:relative;
-    }
-
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:rgba(255,255,255,.08);
-      pointer-events:none;
     }
 
     .hero-grid{
@@ -230,8 +225,6 @@
       max-width:1200px;
       margin:0 auto;
       padding:0 32px;
-      position:relative;
-      z-index:1;
     }
 
     .hero-copy{
@@ -269,42 +262,46 @@
       font-weight:900;
       line-height:1.06;
       margin-bottom:14px;
-      color:#000;
-      text-shadow:2px 2px 0 rgba(255,255,255,.35), 0 10px 25px rgba(0,0,0,.18);
+      color:var(--purple);
     }
 
     .hero h1 span{
-      color:#000;
+      color:var(--red);
     }
 
     .hero-role{
       display:inline-block;
       padding:10px 18px;
-      background:#facc15;
-      color:#000;
+      background:var(--purple);
+      color:#fff;
       font-weight:800;
       font-size:.85rem;
       text-transform:uppercase;
       border-radius:10px;
       margin-bottom:22px;
       letter-spacing:.4px;
-      border:1px solid rgba(0,0,0,.12);
-      position:relative;
-      z-index:1;
+      box-shadow:0 10px 20px rgba(125,60,255,.16);
     }
 
     .hero-subtitle,
     .hero-description,
-    .hero-badge{
-      position:relative;
-      z-index:1;
+    .profile-card p,
+    .highlight-item,
+    .competency-card li,
+    .project-card p,
+    .certificate-card p,
+    .language-card span,
+    .testimonial-card p,
+    .why-card p,
+    .safeguard-card p{
+      color:var(--muted);
     }
 
     .hero-subtitle{
       font-size:1.12rem;
       font-weight:700;
       margin-bottom:18px;
-      color:#111;
+      color:var(--text);
     }
 
     .hero-description{
@@ -314,11 +311,10 @@
       margin-left:auto;
       margin-right:auto;
       padding:18px 20px;
-      border-left:4px solid #000;
-      background:rgba(255,255,255,.35);
+      background:rgba(255,255,255,.6);
+      border-left:5px solid var(--purple);
       border-radius:14px;
-      backdrop-filter:blur(8px);
-      color:#111;
+      box-shadow:var(--shadow);
     }
 
     .hero-badges{
@@ -330,13 +326,27 @@
     .hero-badge{
       padding:12px 18px;
       border-radius:999px;
-      background:rgba(255,255,255,.40);
-      border:1px solid rgba(0,0,0,.10);
+      background:#fff;
+      border:1px solid rgba(125,60,255,.14);
       font-weight:800;
       font-size:.9rem;
-      color:#000;
-      box-shadow:0 8px 18px rgba(0,0,0,.14);
-      backdrop-filter:blur(10px);
+      color:var(--text);
+      box-shadow:0 8px 18px rgba(0,0,0,.08);
+    }
+
+    .hero-badge:nth-child(2){
+      background:rgba(125,60,255,.12);
+      color:var(--purple);
+    }
+
+    .hero-badge:nth-child(3){
+      background:rgba(242,213,60,.22);
+      color:#7a5a00;
+    }
+
+    .hero-badge:nth-child(4){
+      background:rgba(200,14,19,.12);
+      color:var(--red);
     }
 
     .profile-wrapper{
@@ -349,7 +359,7 @@
       width:500px;
       height:500px;
       padding:12px;
-      background:linear-gradient(135deg,#facc15,#f97316);
+      background:linear-gradient(135deg,var(--purple),var(--yellow));
       border-radius:24px;
       box-shadow:var(--shadow);
       overflow:hidden;
@@ -361,7 +371,7 @@
       object-fit:cover;
       object-position:center top;
       border-radius:18px;
-      border:6px solid var(--primary);
+      border:6px solid var(--bg);
     }
 
     .snapshot{
@@ -375,18 +385,18 @@
     }
 
     .snapshot-card{
-      background:#111827;
+      background:var(--surface);
       padding:32px;
       border-radius:20px;
       text-align:center;
-      border:1px solid rgba(255,255,255,.05);
+      border:1px solid var(--border);
       box-shadow:var(--shadow);
     }
 
     .snapshot-card h3{
       font-size:2.2rem;
       font-weight:900;
-      color:var(--accent);
+      color:var(--purple);
     }
 
     .executive-profile{
@@ -405,10 +415,10 @@
     .testimonial-card,
     .why-card,
     .safeguard-card{
-      background:#111827;
+      background:var(--surface);
       padding:22px;
       border-radius:16px;
-      border:1px solid rgba(255,255,255,.05);
+      border:1px solid var(--border);
       box-shadow:var(--shadow);
     }
 
@@ -426,7 +436,7 @@
     .testimonial-card h3,
     .why-card h3,
     .safeguard-card h3{
-      color:var(--accent);
+      color:var(--purple);
       margin-bottom:14px;
       font-size:1.2rem;
     }
@@ -466,26 +476,27 @@
     .timeline-dot{
       width:18px;
       height:18px;
-      background:var(--accent);
+      background:var(--yellow);
       border-radius:50%;
       margin-top:12px;
       flex-shrink:0;
+      box-shadow:0 0 0 4px rgba(125,60,255,.12);
     }
 
     .timeline-content{
-      background:#111827;
+      background:var(--surface);
       padding:32px;
       border-radius:24px;
       flex:1;
-      border:1px solid rgba(255,255,255,.05);
+      border:1px solid var(--border);
       box-shadow:var(--shadow);
     }
 
     .timeline-year{
       display:inline-block;
       padding:8px 14px;
-      background:rgba(250,204,21,.15);
-      color:var(--accent);
+      background:rgba(125,60,255,.12);
+      color:var(--purple);
       font-weight:700;
       border-radius:999px;
       margin-bottom:15px;
@@ -493,7 +504,7 @@
 
     .timeline-content h3{
       margin-bottom:8px;
-      color:#fff;
+      color:var(--text);
       font-size:1.45rem;
     }
 
@@ -507,7 +518,7 @@
     }
 
     .experience-block h5{
-      color:var(--accent);
+      color:var(--red);
       margin-bottom:8px;
       font-size:1rem;
     }
@@ -544,7 +555,7 @@
       object-position:center;
       border-radius:16px;
       margin-bottom:16px;
-      background:#111827;
+      background:#fff;
     }
 
     .certificate-card img{
@@ -554,8 +565,8 @@
 
     .project-tag{
       display:inline-block;
-      background:rgba(250,204,21,.15);
-      color:var(--accent);
+      background:rgba(125,60,255,.12);
+      color:var(--purple);
       padding:8px 14px;
       border-radius:999px;
       font-size:.8rem;
@@ -566,7 +577,7 @@
     .document-card{
       display:block;
       text-align:center;
-      color:white;
+      color:var(--text);
       transition:.3s;
     }
 
@@ -579,20 +590,22 @@
     .document-card i{
       font-size:2rem;
       margin-bottom:20px;
-      color:var(--accent);
+      color:var(--purple);
     }
 
     .availability-box{
-      background:linear-gradient(135deg,#111827,#1e293b);
+      background:linear-gradient(135deg,#fff,#fff7e4);
       padding:56px;
       border-radius:30px;
       text-align:center;
       box-shadow:var(--shadow);
+      border:1px solid var(--border);
     }
 
     .availability-box h2{
       font-size:2.35rem;
       margin-bottom:18px;
+      color:var(--purple);
     }
 
     .availability-box p{
@@ -609,14 +622,16 @@
     }
 
     .availability-items div{
-      background:rgba(255,255,255,.05);
+      background:rgba(125,60,255,.08);
       padding:18px;
       border-radius:16px;
-      font-weight:600;
+      font-weight:700;
+      color:var(--text);
+      border:1px solid rgba(125,60,255,.12);
     }
 
     .availability-items i{
-      color:var(--accent);
+      color:var(--purple);
       margin-right:10px;
     }
 
@@ -635,7 +650,7 @@
     }
 
     .contact-item i{
-      color:var(--accent);
+      color:var(--purple);
       font-size:1.2rem;
       margin-top:4px;
     }
@@ -647,33 +662,34 @@
     }
 
     .action-btn{
-      background:#1f2937;
+      background:#fff;
       padding:15px;
       border-radius:14px;
       text-align:center;
-      color:#fff;
-      border:1px solid rgba(255,255,255,.05);
+      color:var(--text);
+      border:1px solid var(--border);
       transition:.3s ease;
-      font-weight:600;
+      font-weight:700;
     }
 
     .action-btn:hover,
     .action-btn:focus-visible{
       transform:translateY(-4px);
       outline:none;
+      background:rgba(125,60,255,.08);
     }
 
     .action-btn i{
       margin-right:8px;
-      color:var(--accent);
+      color:var(--purple);
     }
 
     .cta-box{
-      background:linear-gradient(135deg,#facc15,#f59e0b);
+      background:linear-gradient(135deg,var(--purple),#5f2dd8 55%,var(--yellow));
       padding:66px 38px;
       border-radius:30px;
       text-align:center;
-      color:#000;
+      color:#fff;
       box-shadow:var(--shadow);
     }
 
@@ -686,6 +702,7 @@
       max-width:850px;
       margin:auto;
       font-size:1.04rem;
+      color:#fff;
     }
 
     .cta-buttons{
@@ -700,23 +717,24 @@
     .btn-secondary-cta{
       padding:16px 32px;
       border-radius:50px;
-      font-weight:700;
+      font-weight:800;
     }
 
     .btn-primary-cta{
-      background:#000;
-      color:#fff;
+      background:var(--yellow);
+      color:#2b2200;
     }
 
     .btn-secondary-cta{
       background:#fff;
-      color:#000;
+      color:var(--purple);
     }
 
     footer{
       margin-top:92px;
       padding:58px 0 20px;
-      background:#020617;
+      background:#fff7e4;
+      border-top:1px solid var(--border);
     }
 
     .footer-content{
@@ -724,7 +742,7 @@
     }
 
     .footer-content p{
-      color:#cbd5e1;
+      color:var(--muted);
     }
 
     .footer-links{
@@ -736,17 +754,18 @@
     }
 
     .footer-links a{
-      color:#cbd5e1;
+      color:var(--text);
+      font-weight:700;
     }
 
     .footer-links a:hover,
     .footer-links a:focus-visible{
-      color:var(--accent);
+      color:var(--purple);
       outline:none;
     }
 
     .copyright{
-      color:#94a3b8;
+      color:var(--muted);
       font-size:.9rem;
     }
 
@@ -766,14 +785,14 @@
 
     .call-float{
       bottom:100px;
-      background:#facc15;
+      background:var(--yellow);
       font-size:1.3rem;
       color:#000;
     }
 
     .whatsapp-float{
       bottom:25px;
-      background:#25d366;
+      background:var(--red);
       font-size:1.5rem;
       color:#fff;
     }
@@ -795,13 +814,14 @@
         position:absolute;
         top:80px;
         right:0;
-        background:#111827;
+        background:#fffaf0;
         flex-direction:column;
         padding:20px;
         border-radius:16px;
         width:260px;
         box-shadow:var(--shadow);
         align-items:flex-start;
+        border:1px solid var(--border);
       }
 
       .menu.show{
@@ -869,6 +889,11 @@
 
       .footer-links{
         gap:14px;
+      }
+
+      .competency-card li{
+        flex-direction:column;
+        align-items:flex-start;
       }
 
       .profile-ring{
@@ -1197,303 +1222,4 @@
             <img src="assets/images/library-system.jpg" alt="Library management system project" class="project-image" loading="lazy" />
             <span class="project-tag">Information Management</span>
             <h3>Library Management System</h3>
-            <p>Supported record organization and workflow improvements for better resource access.</p>
-          </div>
-
-          <div class="project-card">
-            <img src="assets/images/student-database.jpg" alt="Student database project" class="project-image" loading="lazy" />
-            <span class="project-tag">Database</span>
-            <h3>Student Database</h3>
-            <p>Helped structure a student record system using Microsoft Access.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="certificates" class="animate-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Certificates & Qualifications</h2>
-          <p>Academic and professional credentials.</p>
-        </div>
-
-        <div class="certificate-grid">
-          <div class="certificate-card">
-            <img src="assets/images/degree.jpg" alt="Bachelor degree certificate" loading="lazy" />
-            <h3>Bachelor of Business Information Technology</h3>
-            <p>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
-          </div>
-
-          <div class="certificate-card">
-            <img src="assets/images/web_cert.jpg" alt="Web development certificate" loading="lazy" />
-            <h3>Web Development Certificate</h3>
-            <p>E-Commerce, Web Design, and Entrepreneurship</p>
-          </div>
-
-          <div class="certificate-card">
-            <img src="assets/images/kcse.jpg" alt="KCSE certificate" loading="lazy" />
-            <h3>Kenya Certificate of Secondary Education</h3>
-            <p>Pesoda Annex High School, Migori, Kenya</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="safeguarding" class="animate-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Safeguarding Commitment</h2>
-          <p>Protecting learners, data, and learning spaces.</p>
-        </div>
-
-        <div class="safeguard-grid">
-          <div class="safeguard-card">
-            <h3>Safe Learning Spaces</h3>
-            <p>I maintain respectful, orderly, and supervised environments where learners feel safe and supported.</p>
-          </div>
-
-          <div class="safeguard-card">
-            <h3>Responsible Practice</h3>
-            <p>I follow professional boundaries, appropriate communication, and child protection expectations.</p>
-          </div>
-
-          <div class="safeguard-card">
-            <h3>Digital Safety</h3>
-            <p>I promote safe technology use, responsible online behavior, and careful handling of records and devices.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="testimonials" class="animate-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Feedback from learners and colleagues.</p>
-        </div>
-
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <h3>Principal, Elm High School</h3>
-            <p>"Jamal consistently demonstrated professionalism and dedication in ICT teaching and student support. His practical approach helped learners improve their confidence and performance."</p>
-          </div>
-
-          <div class="testimonial-card">
-            <h3>Administrator, Elm High School</h3>
-            <p>"He was reliable, organized, and effective in handling both teaching and administrative support tasks. His communication and record-keeping were always strong."</p>
-          </div>
-
-          <div class="testimonial-card">
-            <h3>Colleague</h3>
-            <p>"Jamal showed a strong commitment to digital learning and technical support. He worked with care, discipline, and a clear focus on learner success."</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="documents" class="animate-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Professional Documents</h2>
-          <p>Quick access to supporting documents and qualifications.</p>
-        </div>
-
-        <div class="document-grid">
-          <a href="assets/documents/Jamal_Fahadh_CV.pdf" class="document-card">
-            <i class="fas fa-file-pdf"></i>
-            <h3>Curriculum Vitae</h3>
-            <p>Download and review my latest CV.</p>
-          </a>
-
-          <a href="assets/documents/ICT_COVER_LETTER.pdf" class="document-card">
-            <i class="fas fa-file-lines"></i>
-            <h3>Cover Letter</h3>
-            <p>Professional cover letter for applications.</p>
-          </a>
-
-          <a href="assets/documents/sample-lesson-plan.pdf" class="document-card">
-            <i class="fas fa-chalkboard-user"></i>
-            <h3>Lesson Plan Sample</h3>
-            <p>Example of my teaching preparation and structure.</p>
-          </a>
-
-          <a href="assets/images/passport-bio-page.jpg" class="document-card">
-            <i class="fas fa-id-card"></i>
-            <h3>Citizenship Document</h3>
-            <p>Identity and citizenship supporting document.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="why-hire-me" class="animate-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Why Hire Me</h2>
-          <p>Clear reasons schools and institutions value my contribution.</p>
-        </div>
-
-        <div class="why-grid">
-          <div class="why-card">
-            <h3>Practical Delivery</h3>
-            <p>I teach with real examples, simple explanations, and hands-on exercises that improve learner confidence quickly.</p>
-          </div>
-
-          <div class="why-card">
-            <h3>Reliable Support</h3>
-            <p>I can handle teaching, coordination, documentation, and day-to-day ICT support with consistency.</p>
-          </div>
-
-          <div class="why-card">
-            <h3>Student Focus</h3>
-            <p>I prioritize learner progress, classroom discipline, and positive outcomes in every session.</p>
-          </div>
-
-          <div class="why-card">
-            <h3>Adaptable Skills</h3>
-            <p>I work comfortably across classrooms, labs, offices, and digital systems.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="availability" class="animate-section">
-      <div class="container">
-        <div class="availability-box">
-          <h2>Available Immediately</h2>
-          <p>Open to ICT Teaching, Digital Skills Training, Program Support, Educational Technology, Computer Lab Management, Administrative Support, and School Coordination opportunities.</p>
-          <div class="availability-items">
-            <div><i class="fas fa-location-dot"></i>Hargeisa, Somaliland</div>
-            <div><i class="fas fa-briefcase"></i>Full-Time Opportunities</div>
-            <div><i class="fas fa-folder-open"></i>Professional Documents Available</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="animate-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Contact Me</h2>
-          <p>Let's discuss ICT teaching, digital training, and program support opportunities.</p>
-        </div>
-
-        <div class="contact-wrapper">
-          <div class="contact-card">
-            <h3>Contact Information</h3>
-            <div class="contact-item">
-              <i class="fas fa-user"></i>
-              <div><strong>Name</strong><p>Jamal Fahadh Mohamed</p></div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <div><strong>Phone</strong><p>+252 63 6710907</p></div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <div><strong>Email</strong><p>teacherfahadh@gmail.com</p></div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-location-dot"></i>
-              <div><strong>Location</strong><p>Hargeisa, Somaliland</p></div>
-            </div>
-          </div>
-
-          <div class="contact-card">
-            <h3>Quick Actions</h3>
-            <div class="action-buttons">
-              <a href="assets/documents/Jamal_Fahadh_CV.pdf" class="action-btn"><i class="fas fa-file-pdf"></i>View CV</a>
-              <a href="assets/documents/ICT_COVER_LETTER.pdf" class="action-btn"><i class="fas fa-file-lines"></i>View Cover Letter</a>
-              <a href="tel:+252636710907" class="action-btn"><i class="fas fa-phone"></i>Call Me</a>
-              <a href="mailto:teacherfahadh@gmail.com" class="action-btn"><i class="fas fa-envelope"></i>Email Me</a>
-              <a href="https://wa.me/252636710907" class="action-btn"><i class="fab fa-whatsapp"></i>WhatsApp</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-cta">
-      <div class="container">
-        <div class="cta-box">
-          <h2>Ready to Support Learning and ICT Operations?</h2>
-          <p>I am available immediately to support schools and organizations through professional ICT teaching, digital skills training, program support, documentation, and technology coordination.</p>
-          <div class="cta-buttons">
-            <a href="tel:+252636710907" class="btn-primary-cta">Call Me</a>
-            <a href="mailto:teacherfahadh@gmail.com" class="btn-secondary-cta">Email Me</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <h3>Jamal Fahadh Mohamed</h3>
-        <p>ICT Teacher | Digital Skills Trainer | Program Support | Software Skills Instructor</p>
-        <div class="footer-links">
-          <a href="#about">About</a>
-          <a href="#competencies">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#certificates">Certificates</a>
-          <a href="#safeguarding">Safeguarding</a>
-          <a href="#documents">Documents</a>
-          <a href="#why-hire-me">Why Hire Me</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <p class="copyright">© 2026 Jamal Fahadh Mohamed. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <a href="tel:+252636710907" class="call-float" aria-label="Call Jamal Fahadh Mohamed">
-    <i class="fas fa-phone"></i>
-  </a>
-  <a href="https://wa.me/252636710907" class="whatsapp-float" aria-label="WhatsApp Jamal Fahadh Mohamed">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <script>
-    const menu = document.getElementById('menu');
-    const btn = document.querySelector('.menu-toggle');
-
-    btn.addEventListener('click', () => {
-      const open = menu.classList.toggle('show');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    });
-
-    document.querySelectorAll('.menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth < 950) {
-          menu.classList.remove('show');
-          btn.setAttribute('aria-expanded', 'false');
-          btn.setAttribute('aria-label', 'Open menu');
-        }
-      });
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && menu.classList.contains('show')) {
-        menu.classList.remove('show');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.setAttribute('aria-label', 'Open menu');
-        btn.focus();
-      }
-    });
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('show-animation');
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section').forEach(section => {
-      section.classList.add('animate-section');
-      observer.observe(section);
-    });
-  </script>
-</body>
-</html>
+            <p>Supported record organization and workflow improvements for better reso
